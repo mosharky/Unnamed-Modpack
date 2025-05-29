@@ -1,0 +1,16 @@
+filename = 'lazyyyyy-lexforge-core-0.14.12.jar'
+name = 'lazyyyyy'
+side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '5cb2f6420bb0a458cb1df98d76fc7aaa699e55566b0bba29cb377399113ba939f1cf07e47c7cd30863bb5f43887b0252ae5cc2a5d83fee1144db2c4bdddf65d3'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/U8A8WZbk/versions/7Y6Sfnpw/lazyyyyy-lexforge-core-0.14.12.jar'
+
+[update.modrinth]
+mod-id = 'U8A8WZbk'
+version = '7Y6Sfnpw'
