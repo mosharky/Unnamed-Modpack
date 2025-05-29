@@ -13,6 +13,8 @@ minecraft/config/embeddium-fingerprint.json
 minecraft/config/mc2discord.toml
 minecraft/config/cpm.json
 minecraft/config/everycomp-hazardous.properties
+minecraft/config/asyncparticles/asyncparticles-mixin.properties
+minecraft/config/packetfixer.properties
 
 # mods
 minecraft/mods/.connector/
@@ -58,8 +60,6 @@ minecraft/.qmenu_opened.marker
 # dev environment stuff
 .probe/
 .vscode/probe.code-snippets
-minecraft/kubejs/config/client.properties
-minecraft/kubejs/config/common.properties
 
 # launcher-related
 minecraft/.curseclient
