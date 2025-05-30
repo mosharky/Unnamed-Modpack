@@ -34,8 +34,9 @@ minecraft/schematics/
 minecraft/XaeroWorldMap/
 minecraft/XaeroWaypoints*/
 minecraft/modernfix/
-minecraft/worldicons
-minecraft/.lazyyyyy
+minecraft/worldicons/
+minecraft/.lazyyyyy/
+minecraft/mod_data/
 
 # root files
 minecraft/knownkeys.txt
@@ -67,4 +68,4 @@ minecraft/icon.png
 minecraft/server-resource-packs/
 minecraft/coremods/
 minecraft/texturepacks/
-minecraftminecraftinstance.json
+minecraft/minecraftinstance.json

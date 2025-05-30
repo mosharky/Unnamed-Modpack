@@ -29,8 +29,6 @@
         "**/minecraft/XaeroWorldMap/": true,
         "**/minecraft/XaeroWaypoints*/": true,
         "**/minecraft/modernfix/": true,
-        "minecraft/worldicons": true,
-        "minecraft/.lazyyyyy": true,
         "minecraft/knownkeys.txt": true,
         "minecraft/options.txt": true,
         "minecraft/resourcepacks/Quark Programmer Art.zip": true,
@@ -58,6 +56,11 @@
         "**/minecraft/server-resource-packs/": true,
         "**/minecraft/coremods/": true,
         "**/minecraft/texturepacks/": true,
-        "**/minecraftminecraftinstance.json": true
+        "minecraft/config/asyncparticles/asyncparticles-mixin.properties": true,
+        "minecraft/config/packetfixer.properties": true,
+        "**/minecraft/worldicons/": true,
+        "**/minecraft/.lazyyyyy/": true,
+        "**/minecraft/mod_data/": true,
+        "minecraft/minecraftinstance.json": true
     }
 }

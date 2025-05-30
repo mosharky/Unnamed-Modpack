@@ -1,4 +1,4 @@
-// priority: 1000
+// priority: 100
 
 /*
 // disabled Geocluster ores
@@ -33,5 +33,4 @@ const disabledGeoclusterOres = [
 let overworldBiomes
 ServerEvents.tags('worldgen/biome', e => {
     overworldBiomes = e.get('minecraft:is_overworld').getObjectIds()
-    console.log(overworldBiomes)
 })

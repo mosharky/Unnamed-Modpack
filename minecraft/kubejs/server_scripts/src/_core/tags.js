@@ -1,7 +1,10 @@
-/**
- * @param {TagEvent.Block} e 
- */
-function blockTags(e) {
+/** @param {$TagEventJS_} e */
+function coreItemTags(e) {
+
+}
+
+/** @param {$TagEventJS_} e */
+function coreBlockTags(e) {
     e.add('snowrealmagic:containables', [
         // /geocluster:.*sample/
     ])
@@ -14,10 +17,13 @@ function blockTags(e) {
     // e.add('minecraft:logs', ['natures_spirit:alluaudia', 'natures_spirit:stripped_alluaudia'])
 }
 
-
-/**
- * @param {TagEvent.EntityType} e 
- */
-function entityTags(e) {
+/** @param {$TagEventJS_} e */
+function coreEntityTags(e) {
     // e.add('kubejs:surface_mod_entities', /.*surface:.*/)
+}
+
+
+/** @param {$TagEventJS_} e */
+function coreBiomeTags(e) {
+    
 }

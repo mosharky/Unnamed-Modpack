@@ -5,37 +5,36 @@ ServerEvents.tags('item', e => {
 })
 
 ServerEvents.tags('block', e => {
-    blockTags(e)
+    coreBlockTags(e)
 })
 
 ServerEvents.tags('entity_type', e => {
-    entityTags(e)
+    coreEntityTags(e)
 })
 
 ServerEvents.tags('worldgen/biome', e => {
-    biomeTags(e)
+    coreBiomeTags(e)
 })
 
 
 
 ServerEvents.recipes(e => {
-    // replacing
+    coreRecipes(e)
 
-    // fully remove everything in fullRemovals
-    global.fullRemovals.forEach(removal => {
+    // Fully removing any recipe tied to items in REMOVALS
+    global.REMOVALS.all.forEach(removal => {
         e.remove({ input: removal})
         e.remove({ output: removal})
     })
 
-    // adding
 })
 
 
 
 
-// Must be here for fullRemovals logic to work
+// Must be here for removal logic to work (I think)
 ServerEvents.tags('item', e => {
-    e.removeAllTagsFrom(global.fullRemovals)
+    e.removeAllTagsFrom(global.REMOVALS.getAsArray())
 })
 
 
@@ -43,3 +42,8 @@ ServerEvents.tags('item', e => {
 ServerEvents.loaded(e => {
     //e.getServer().getLevel().difficulty
 })
+
+ServerEvents.highPriorityData(e => {
+    coreWorldgen(e)
+})
+
