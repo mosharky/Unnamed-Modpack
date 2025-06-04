@@ -1,7 +1,8 @@
-global.REMOVALS.all
-    .add('natures_spirit:beach_grass')
-    .add('natures_spirit:tall_beach_grass')
-    .add(/natures_spirit:.*pink_sand.*/)
+global.REMOVALS.add([
+    'natures_spirit:beach_grass',
+    'natures_spirit:tall_beach_grass',
+    /natures_spirit:.*pink_sand.*/,
+])
 
 
 // The rest of the pink sand blocks should be swapped from structures if needed

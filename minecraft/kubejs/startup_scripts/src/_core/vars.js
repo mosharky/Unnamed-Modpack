@@ -2,17 +2,22 @@
 
 global.REMOVALS = {
     all: new Set(),
-    getAsArray: function() {
-        return Array.from(this.all)
+    add: function (entry) {
+        if (entry instanceof Array) {
+            this.all = new Set(this.getAsArray().concat(entry))
+        } else {
+            this.all.add(entry) 
+        }
     },
-    getBlocks: function() {
+    getAsArray: function () { return Array.from(this.all) },
+    getBlocks: function () {
         let blockSet = new Set()
         this.all.forEach(entry => {
             if (Item.of(entry).isBlock()) blockSet.add(entry)
         })
         return blockSet
     },
-    getItems: function() {
+    getItems: function () {
         let itemSet = new Set()
         this.all.forEach(entry => {
             if (!Item.of(entry).isBlock()) itemSet.add(entry)

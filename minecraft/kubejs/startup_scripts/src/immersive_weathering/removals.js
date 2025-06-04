@@ -1,3 +1,4 @@
-global.REMOVALS.all
-    .add('immersive_weathering:loam')
-    .add('immersive_weathering:loamy_farmland')
+global.REMOVALS.add([
+    'immersive_weathering:loam',
+    'immersive_weathering:loamy_farmland',
+])

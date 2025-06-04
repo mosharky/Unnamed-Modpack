@@ -1,5 +1,6 @@
-global.REMOVALS.all
-    .add(/environmental:.*willow.*/)
-    .add('environmental:cattail')
-    .add('environmental:cattail_fluff')
-    .add('environmental:cattail_fluff_block')
+global.REMOVALS.add([
+    /environmental:.*willow.*/,
+    'environmental:cattail',
+    'environmental:cattail_fluff',
+    'environmental:cattail_fluff_block',
+])

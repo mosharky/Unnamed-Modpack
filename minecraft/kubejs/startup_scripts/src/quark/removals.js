@@ -1,5 +1,6 @@
-global.REMOVALS.all
-    .add(/quark:.*blossom.*/)
-    .add(/quark:.*ancient(?!_tome).*/)
-    .add(/quark:.*azalea(?!.*hedge).*/)
-    .add(/quark:.*permafrost.*/)
+global.REMOVALS.add([
+    /quark:.*blossom.*/,
+    /quark:.*ancient(?!_tome).*/,
+    /quark:.*azalea(?!.*hedge).*/,
+    /quark:.*permafrost.*/,
+])
