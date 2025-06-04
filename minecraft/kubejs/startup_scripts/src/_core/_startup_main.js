@@ -8,5 +8,8 @@ global.REMOVALS.all.forEach(entry => {
     }
 })
 
-console.log('REMOVALS SET:')
+// Changing blockswap config with KubeJS!
+processBlockswapConfig()
+
+console.log('REMOVALS:')
 console.log(global.REMOVALS.getAsArray())

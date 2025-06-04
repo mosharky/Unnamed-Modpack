@@ -61,7 +61,7 @@ function removeFeatures(event, features, biomes, step, id) {
         step: step
     }
     id == undefined
-        ? event.addJson(`kubejs:lithostitched/worldgen_modifier/remove_feature_${nameProcess(features)}`, obj)
+        ? event.addJson(`kubejs:lithostitched/worldgen_modifier/remove_feature/${nameProcess(features)}`, obj)
         : event.addJson(`kubejs:lithostitched/worldgen_modifier/${id}`, obj)
     
 }
@@ -83,7 +83,7 @@ function addFeatures(event, features, biomes, step, id) {
         step: step
     }
     id == undefined
-        ? event.addJson(`kubejs:lithostitched/worldgen_modifier/add_feature_${nameProcess(features)}`, obj)
+        ? event.addJson(`kubejs:lithostitched/worldgen_modifier/add_feature/${nameProcess(features)}`, obj)
         : event.addJson(`kubejs:lithostitched/worldgen_modifier/${id}`, obj)
 }
 
@@ -102,15 +102,15 @@ function copyPasteFeature(event, modId, featureType, featureId) {
 }
 
 /**
- * Replace/add feature in location featureToReplace
+ * Registers a feature in location featureId
  * @param {$DataPackEventJS_} event - highPriorityData event
  * @param {String} type - CONFIGURED or PLACED
- * @param {String} featureToReplace - Feature id
- * @param {Object} featureReplaceWith - Feature JSON object
+ * @param {String} featureId - Feature ID (i.e. `minecraft:oak_tree`)
+ * @param {Object} featureJson - Feature JSON object
  */
-function replaceFeature(event, type, featureToReplace, featureReplaceWith) {
-    let replaceIdSplit = featureToReplace.split(':')
-    event.addJson(`${replaceIdSplit[0]}:worldgen/${type}_feature/${replaceIdSplit[1]}`, featureReplaceWith)
+function registerFeature(event, type, featureId, featureJson) {
+    let replaceIdSplit = featureId.split(':')
+    event.addJson(`${replaceIdSplit[0]}:worldgen/${type}_feature/${replaceIdSplit[1]}`, featureJson)
 }
 
 /**
@@ -132,14 +132,14 @@ function removeBiomeModifier(event, modifier) {
  * @param {String | Array.<String>} biomes - A biome ID, or biome tag, or an array of biomes
  * @param {Optional | String} id - Modifier ID
  */
-function removeBiomeSpawns(event, mobs, biomes) {
+function removeSpawns(event, mobs, biomes) {
     let obj = {
         type: 'lithostitched:remove_biome_spawns',
         biomes: biomes,
         mobs: mobs
     }
     id == undefined
-        ? event.addJson(`kubejs:lithostitched/worldgen_modifier/remove_spawn_${nameProcess(mobs)}`, obj)
+        ? event.addJson(`kubejs:lithostitched/worldgen_modifier/remove_spawn/${nameProcess(mobs)}`, obj)
         : event.addJson(`kubejs:lithostitched/worldgen_modifier/${id}`, obj)
 }
 

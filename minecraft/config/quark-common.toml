@@ -1308,7 +1308,7 @@
 
 			[world.permafrost.generation_settings.dimensions]
 				"Is Blacklist" = false
-				Dimensions = ["minecraft:overworld"]
+				Dimensions = []
 
 			[world.permafrost.generation_settings.biomes]
 

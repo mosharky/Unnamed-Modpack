@@ -35,7 +35,7 @@ global.readJsonFileFromMod = (type, modId, resourceLocation) => {
     let string = reader.lines().collect($Collectors.joining("\n"))
     reader.close()
     pack.listPacks().forEach(packResource => packResource.close())
-    return JsonIO.parse(string)
+    return JsonIO.toObject(JsonIO.parse(string))
 }
 
 global.readJsonFolderFromMod = (type, modId, folder, predicate) => {

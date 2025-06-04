@@ -14,6 +14,7 @@ ServerEvents.tags('entity_type', e => {
 
 ServerEvents.tags('worldgen/biome', e => {
     coreBiomeTags(e)
+    upgradeAquaticBiomeTags(e)
 })
 
 
@@ -45,5 +46,6 @@ ServerEvents.loaded(e => {
 
 ServerEvents.highPriorityData(e => {
     coreWorldgen(e)
+    naturesSpiritWorldgen(e)
 })
 

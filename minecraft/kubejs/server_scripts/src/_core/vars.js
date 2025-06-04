@@ -34,3 +34,7 @@ let overworldBiomes
 ServerEvents.tags('worldgen/biome', e => {
     overworldBiomes = e.get('minecraft:is_overworld').getObjectIds()
 })
+
+
+// This will need to be changed for NeoForge on 1.21.1
+const disableJson = { conditions: [{ type: 'forge:false' }] }
