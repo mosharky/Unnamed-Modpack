@@ -1,3 +1,5 @@
-global.REMOVALS.add([
-    /atmospheric:.*aspen.*/,
-])
+function atmosphericRemovals() {
+    global.REMOVALS.add([
+        /atmospheric:.*aspen.*/,
+    ])
+}
