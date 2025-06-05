@@ -1,6 +1,6 @@
 
 [general]
-	"Enable 'q' Button" = true
+	"Enable 'q' Button" = false
 	"'q' Button on the Right" = false
 	"Disable Q Menu Effects" = false
 	#How many advancements deep you can see in the advancement screen. Vanilla is 2.
@@ -24,11 +24,11 @@
 	#This will have various knock-on effects but might make the Weald more common, or appear closer to modded biomes. Who knows?
 	"Terrablender Modify Vanilla Anyway" = false
 	#Set to false to disable the popup message telling you that you can config quark in the q menu
-	"Enable Onboarding" = true
+	"Enable Onboarding" = false
 	#The amount of slots the chest button system should seek when trying to figure out if a container should be eligible for them.
 	"Chest Button Slot Target" = 27
 	#Set this to false to not generate the Quark Programmer Art resource pack
-	"Generate Programmer Art" = true
+	"Generate Programmer Art" = false
 
 	[general.chest_button_offsets]
 		"Player X" = 0
@@ -111,15 +111,15 @@
 	"Celebratory Lamps" = false
 	"Compressed Blocks" = true
 	"Duskbound Blocks" = true
-	"Framed Glass" = false
+	"Framed Glass" = true
 	"Glass Item Frame" = true
-	"Gold Bars" = true
+	"Gold Bars" = false
 	Grate = true
 	Hedges = true
 	"Hollow Logs" = true
 	"Industrial Palette" = true
 	"Japanese Palette" = true
-	"Leaf Carpet" = true
+	"Leaf Carpet" = false
 	Midori = true
 	"More Brick Types" = true
 	"More Mud Blocks" = true
@@ -127,7 +127,7 @@
 	"Nether Brick Fence Gate" = true
 	"Rainbow Lamps" = true
 	"Raw Metal Bricks" = true
-	Rope = false
+	Rope = true
 	"Shear Vines" = true
 	Shingles = true
 	"Soul Sandstone" = true
@@ -189,7 +189,7 @@
 
 	[building.industrial_palette]
 		"Enable Iron Plates" = true
-		"Enable Iron Ladder" = true
+		"Enable Iron Ladder" = false
 
 	[building.japanese_palette]
 		"Enable Paper Blocks" = true
@@ -776,10 +776,10 @@
 	"Fallen Logs" = true
 	"Glimmering Weald" = true
 	"Monster Box" = true
-	"Nether Obsidian Spikes" = true
+	"Nether Obsidian Spikes" = false
 	"New Stone Types" = true
-	"No More Lava Pockets" = true
-	Permafrost = true
+	"No More Lava Pockets" = false
+	Permafrost = false
 	"Spiral Spires" = true
 
 	[world.ancient_wood]
@@ -1347,13 +1347,13 @@
 				"Is Blacklist" = false
 
 [mobs]
-	Crabs = true
+	Crabs = false
 	Forgotten = true
-	Foxhound = true
-	Shiba = true
+	Foxhound = false
+	Shiba = false
 	Stonelings = true
-	Toretoise = true
-	Wraith = true
+	Toretoise = false
+	Wraith = false
 
 	[mobs.crabs]
 		"Enable Brewing" = true
