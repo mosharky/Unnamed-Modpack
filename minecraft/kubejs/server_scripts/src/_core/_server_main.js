@@ -2,6 +2,7 @@
 
 ServerEvents.tags('item', e => {
 
+    e.removeAllTagsFrom(global.REMOVALS.getAsArray())
 })
 
 ServerEvents.tags('block', e => {
@@ -18,7 +19,6 @@ ServerEvents.tags('worldgen/biome', e => {
 })
 
 
-
 ServerEvents.recipes(e => {
     coreRecipes(e)
 
@@ -29,15 +29,6 @@ ServerEvents.recipes(e => {
     })
 
 })
-
-
-
-
-// Must be here for removal logic to work (I think)
-ServerEvents.tags('item', e => {
-    e.removeAllTagsFrom(global.REMOVALS.getAsArray())
-})
-
 
 
 ServerEvents.loaded(e => {

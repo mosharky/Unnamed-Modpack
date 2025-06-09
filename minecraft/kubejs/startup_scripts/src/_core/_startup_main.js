@@ -4,10 +4,12 @@
 StartupEvents.postInit(e => {
     // Adding items to global.REMOVALS and global.BLOCKSWAP_CONFIG
     atmosphericRemovals()
+    autumnityRemovals()
     environmentalRemovals()
     immersiveWeatheringRemovals()
     naturesSpiritRemovals()
     quarkRemovals()
+    woodworksRemovals()
 
     // Changing blockswap config with KubeJS!
     processBlockswapConfig()

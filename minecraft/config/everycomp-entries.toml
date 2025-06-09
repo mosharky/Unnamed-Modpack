@@ -75,15 +75,15 @@
 			rosewood = true
 			morado = true
 			yucca = true
-			aspen = true
+			aspen = false
 			laurel = true
 			kousa = true
 
 		[types.wood_type.environmental]
-			willow = true
+			willow = false
 			pine = true
 			plum = true
-			wisteria = true
+			wisteria = false
 
 		[types.wood_type.endergetic]
 			poise = true
@@ -127,22 +127,22 @@
 			red_blossom = false
 
 		[types.leaves_type.environmental]
-			pink_wisteria = true
-			blue_wisteria = true
-			purple_wisteria = true
-			white_wisteria = true
+			pink_wisteria = false
+			blue_wisteria = false
+			purple_wisteria = false
+			white_wisteria = false
 			cheerful_plum = true
 			moody_plum = true
 			hibiscus = true
-			willow = true
+			willow = false
 			pine = true
 			plum = true
-			wisteria = true
+			wisteria = false
 
 		[types.leaves_type.autumnity]
-			yellow_maple = true
-			orange_maple = true
-			red_maple = true
+			yellow_maple = false
+			orange_maple = false
+			red_maple = false
 			maple = true
 
 		[types.leaves_type.upgrade_aquatic]
@@ -153,8 +153,8 @@
 			morado = true
 			flowering_morado = true
 			yucca = true
-			aspen = true
-			green_aspen = true
+			aspen = false
+			green_aspen = false
 			laurel = true
 			dry_laurel = true
 			kousa = true
@@ -522,10 +522,10 @@
 		[types.cut_block_type.atmospheric]
 			rosewood = true
 			morado = true
-			ivory_travertine = true
-			peach_travertine = true
-			persimmon_travertine = true
-			saffron_travertine = true
+			ivory_travertine = false
+			peach_travertine = false
+			persimmon_travertine = false
+			saffron_travertine = false
 			dolerite = true
 			polished_dolerite = true
 			arid_sandstone = true
@@ -682,10 +682,10 @@
 			vertical_planks = true
 			post = true
 			trapped_chest = true
-			bookshelf = true
-			chest = true
+			bookshelf = false
+			chest = false
 			stripped_post = true
-			ladder = true
+			ladder = false
 			hollow_log = true
 			vertical_slab = true
 
@@ -700,8 +700,8 @@
 
 		[entries.leaves_type.quark]
 			hedge = true
-			leaf_carpet = true
+			leaf_carpet = false
 
 		[entries.leaves_type.woodworks]
-			leaf_pile = true
+			leaf_pile = false
 
