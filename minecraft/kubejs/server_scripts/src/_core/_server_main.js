@@ -46,4 +46,5 @@ ServerEvents.highPriorityData(e => {
 
 MoreJSEvents.structureLoad(e => {
     coreStructures(e)
+    naturesSpiritStructures(e)
 })

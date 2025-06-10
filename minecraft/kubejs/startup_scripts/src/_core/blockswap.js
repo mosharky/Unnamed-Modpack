@@ -8,6 +8,8 @@ StartupEvents.postInit(e => {
         state_swapper: [],
         swapper: new Map()  // its a map because objects can't have regex as their keys
     }
+
+    global.SWAPPER = new Map()
 })
 
 function processBlockswapConfig() {
@@ -25,4 +27,14 @@ function processBlockswapConfig() {
     global.BLOCKSWAP_CONFIG.swapper = swapperObj
 
     JsonIO.write('config/blockswap/block_swap.json5', global.BLOCKSWAP_CONFIG)
+}
+
+
+function processSwapper() {
+    global.SWAPPER.forEach((value, key, map) => {
+        if (key instanceof RegExp) {
+            Ingredient.of(key).itemIds.forEach(match => global.SWAPPER.set(match, value))
+            global.SWAPPER.delete(key)
+        }
+    })
 }

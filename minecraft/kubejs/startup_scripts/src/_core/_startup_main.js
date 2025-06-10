@@ -13,6 +13,8 @@ StartupEvents.postInit(e => {
 
     // Changing blockswap config with KubeJS!
     processBlockswapConfig()
+    // Virtual blockwsap (without using the blockswap mod)
+    processSwapper()
 
     // Because not all KubeJS methods support regex
     global.REMOVALS.all.forEach(entry => {

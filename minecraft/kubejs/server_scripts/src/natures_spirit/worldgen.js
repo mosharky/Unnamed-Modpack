@@ -173,3 +173,9 @@ function naturesSpiritWorldgen(e) {
         }
     })
 }
+
+
+/** @param {$StructureLoadEventJS_} e  */
+function naturesSpiritStructures(e) {
+    // TODO: Replace vanilla chests with everycomp chests
+}
