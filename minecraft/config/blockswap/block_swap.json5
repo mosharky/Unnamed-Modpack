@@ -3,8 +3,5 @@
 	"generate_all_known_states": false,
 	"retro_gen": false,
 	"state_swapper": [],
-	"swapper": {
-		"natures_spirit:pink_sandstone": "atmospheric:red_arid_sandstone",
-		"natures_spirit:pink_sand": "atmospheric:red_arid_sand"
-	}
+	"swapper": {}
 }

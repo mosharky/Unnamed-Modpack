@@ -1,7 +1,6 @@
 // priority: -1
 
 ServerEvents.tags('item', e => {
-
     e.removeAllTagsFrom(global.REMOVALS.getAsArray())
 })
 
@@ -37,6 +36,10 @@ ServerEvents.loaded(e => {
 
 ServerEvents.highPriorityData(e => {
     coreWorldgen(e)
+    atmosphericWorldgen(e)
+    autumnityWorldgen(e)
+    environmentalWorldgen(e)
+    immersiveWeatheringWorldgen(e)
     naturesSpiritWorldgen(e)
 })
 

@@ -7,6 +7,6 @@ function naturesSpiritRemovals() {
 
 
     // The rest of the pink sand blocks should be swapped from structures if needed
-    global.BLOCKSWAP_CONFIG.swapper.set('natures_spirit:pink_sandstone', 'atmospheric:red_arid_sandstone')
-    global.BLOCKSWAP_CONFIG.swapper.set('natures_spirit:pink_sand', 'atmospheric:red_arid_sand')
+    // global.BLOCKSWAP_CONFIG.swapper.set('natures_spirit:pink_sandstone', 'atmospheric:red_arid_sandstone')
+    // global.BLOCKSWAP_CONFIG.swapper.set('natures_spirit:pink_sand', 'atmospheric:red_arid_sand')
 }

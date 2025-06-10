@@ -49,7 +49,7 @@ function nameProcess(input) {
  * @param {$DataPackEventJS_} event - highPriorityData event
  * @param {String | Array.<String>} features - The placed feature ID string or array of ID strings
  * @param {String | Array.<String>} biomes - A biome ID, or biome tag, or an array of biomes
- * @param {String} step - The generation step. Defaults as 'any'
+ * @param {String} step - The generation step
  * @param {Optional | String} id - Modifier ID
  */
 function removeFeatures(event, features, biomes, step, id) {
@@ -71,7 +71,7 @@ function removeFeatures(event, features, biomes, step, id) {
  * @param {$DataPackEventJS_} event - highPriorityData event
  * @param {String | Array.<String>} features - The placed feature ID string or array of ID strings
  * @param {String | Array.<String>} biomes - A biome ID, or biome tag, or an array of biomes
- * @param {String} step - The generation step. Defaults as 'any'
+ * @param {String} step - The generation step
  * @param {Optional | String} id - Modifier ID
  */
 function addFeatures(event, features, biomes, step, id) {

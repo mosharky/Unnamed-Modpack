@@ -1,4 +1,4 @@
-/** @param {DataPackEventJS_} e  */
+/** @param {$DataPackEventJS_} e  */
 function coreWorldgen(e) {
 
     removeFeatures(e, ['minecraft:spring_lava', 'minecraft:spring_lava_frozen'], '#kubejs:all_biomes', 'fluid_springs')

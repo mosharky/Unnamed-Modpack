@@ -1,7 +1,7 @@
-/** @param {DataPackEventJS_} e  */
+/** @param {$DataPackEventJS_} e  */
 function environmentalWorldgen(e) {
     // Disable Marsh biome
-    e.addJson('environmental:blueprint/modded_biome_slices/marsh', disableJson)
+    // e.addJson('environmental:blueprint/modded_biome_slices/marsh', disableJson)
 
     // Disable biome modifiers
     removeBiomeModifier(e, 'environmental:add_feature/cattails')
@@ -11,5 +11,5 @@ function environmentalWorldgen(e) {
     addFeatures(e, 'environmental:patch_duckweed_swamp', [
         'minecraft:swamp',
         'natures_spirit:marsh'
-    ], 'vegetal_decoration', 'kubejs:add_feature/swamp_vegetation')
+    ], 'vegetal_decoration', 'swamp_vegetation')
 }
