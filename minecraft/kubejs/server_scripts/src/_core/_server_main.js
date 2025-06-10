@@ -43,3 +43,7 @@ ServerEvents.highPriorityData(e => {
     naturesSpiritWorldgen(e)
 })
 
+
+MoreJSEvents.structureLoad(e => {
+    coreStructures(e)
+})
