@@ -2,5 +2,5 @@
 function atmosphericWorldgen(e) {
     
     // Disable Aspen Parkland biome
-    // e.addJson('atmospheric:blueprint/modded_biome_slices/aspen', disableJson)
+    e.addJson('atmospheric:blueprint/modded_biome_slices/aspen', disableBiomeSliceJson)
 }

@@ -29,6 +29,27 @@ Steps (in order):
 
 const PLACED = 'placed'
 const CONFIGURED = 'configured'
+const disableBiomeSliceJson = {
+    levels: ['minecraft:overworld'],
+    weight: 0,
+    provider: {
+        type: "blueprint:multi_noise",
+        areas: { 'environmental:marsh_area': "environmental:marsh" },
+        biomes: [{ // Not sure if this field is needed but whatever
+            biome: 'blueprint:original_source_marker',
+            parameters: {
+                continentalness: [1.0, 1.1],
+                depth: 0.0,
+                erosion: [-1.0, 1.0],
+                humidity: [-1.0, 1.0],
+                offset: 0.0,
+                temperature: [-1.0, 1.0],
+                weirdness: [-1.0, 1.0]
+            }
+        }],
+        only_map_from_areas: true
+    }
+}
 
 
 /**
@@ -63,7 +84,7 @@ function removeFeatures(event, features, biomes, step, id) {
     id == undefined
         ? event.addJson(`kubejs:lithostitched/worldgen_modifier/remove_feature/${nameProcess(features)}`, obj)
         : event.addJson(`kubejs:lithostitched/worldgen_modifier/${id}`, obj)
-    
+
 }
 
 /**
