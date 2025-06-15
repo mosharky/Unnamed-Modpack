@@ -35,7 +35,7 @@
 			coralstone = true
 
 		[types.stone_type.natures_spirit]
-			pink_sandstone = true
+			pink_sandstone = false
 			white_chalk = true
 			light_gray_chalk = true
 			gray_chalk = true
@@ -101,7 +101,7 @@
 			fir = true
 			willow = true
 			aspen = true
-			maple = true
+			maple = false
 			cypress = true
 			olive = true
 			joshua = true
@@ -192,6 +192,19 @@
 			larch = true
 			mahogany = true
 			saxaul = true
+
+	[types.cake]
+
+		[types.cake.natures_spirit]
+			cheese_block = true
+
+		[types.cake.neapolitan]
+			vanilla_cake = true
+			chocolate_cake = true
+			strawberry_cake = true
+			banana_cake = true
+			mint_cake = true
+			adzuki_cake = true
 
 	[types.cut_block_type]
 
@@ -522,10 +535,10 @@
 		[types.cut_block_type.atmospheric]
 			rosewood = true
 			morado = true
-			ivory_travertine = false
-			peach_travertine = false
-			persimmon_travertine = false
-			saffron_travertine = false
+			ivory_travertine = true
+			peach_travertine = true
+			persimmon_travertine = true
+			saffron_travertine = true
 			dolerite = true
 			polished_dolerite = true
 			arid_sandstone = true
@@ -617,19 +630,6 @@
 			stone_tile = true
 			blackstone_tile = true
 
-	[types.cake]
-
-		[types.cake.natures_spirit]
-			cheese_block = true
-
-		[types.cake.neapolitan]
-			vanilla_cake = true
-			chocolate_cake = true
-			strawberry_cake = true
-			banana_cake = true
-			mint_cake = true
-			adzuki_cake = true
-
 #Disables specific entries
 [entries]
 
@@ -681,7 +681,7 @@
 		[entries.wood_type.quark]
 			vertical_planks = true
 			post = true
-			trapped_chest = true
+			trapped_chest = false
 			bookshelf = false
 			chest = false
 			stripped_post = true

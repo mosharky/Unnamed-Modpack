@@ -8,12 +8,12 @@ function coreWorldgen(e) {
 let removedBlocks = global.REMOVALS.getBlocks()
 /** @param {$StructureLoadEventJS_} e  */
 function coreStructures(e) {
-    console.log(`Structure: ${e.getId()} has loaded!`)
+    if (global.DEBUG_MODE) console.log(`Structure: ${e.getId()} has loaded!`)
     e.forEachPalettes(palette => {
         palette.forEach(block => {
             // Have to use `${block.getId()}` because of a Rhino bug
             if (removedBlocks.has(`${block.getId()}`) && global.SWAPPER.get(`${block.getId()}`) == undefined) {
-                console.log(`Structure: '${e.getId()}' contains illegal block: '${block.getId()}'`)
+                if (global.DEBUG_MODE) console.log(`Structure: '${e.getId()}' contains illegal block: '${block.getId()}'`)
             }
 
             // Copycat NBT: {Item:{Count:1b,id:"create:industrial_iron_block"},Material:{Name:"create:industrial_iron_block"},id:"create:copycat"}
