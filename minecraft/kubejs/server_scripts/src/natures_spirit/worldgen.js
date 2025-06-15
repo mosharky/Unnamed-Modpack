@@ -25,9 +25,7 @@ function naturesSpiritWorldgen(e) {
         ],
         surface_rule: {
             type: 'minecraft:condition',
-            if_true: {
-                type: 'minecraft:above_preliminary_surface'
-            },
+            if_true: { type: 'minecraft:above_preliminary_surface' },
             then_run: {
                 type: 'minecraft:sequence',
                 sequence: [
@@ -77,16 +75,12 @@ function naturesSpiritWorldgen(e) {
                                                             },
                                                             then_run: {
                                                                 type: 'minecraft:block',
-                                                                result_state: {
-                                                                    Name: 'atmospheric:red_arid_sandstone'
-                                                                }
+                                                                result_state: { Name: 'atmospheric:red_arid_sandstone' }
                                                             }
                                                         },
                                                         {
                                                             type: 'minecraft:block',
-                                                            result_state: {
-                                                                Name: 'atmospheric:red_arid_sand'
-                                                            }
+                                                            result_state: { Name: 'atmospheric:red_arid_sand' }
                                                         }
                                                     ]
                                                 }
@@ -121,16 +115,12 @@ function naturesSpiritWorldgen(e) {
                                                                 },
                                                                 then_run: {
                                                                     type: 'minecraft:block',
-                                                                    result_state: {
-                                                                        Name: 'atmospheric:red_arid_sandstone'
-                                                                    }
+                                                                    result_state: { Name: 'atmospheric:red_arid_sandstone' }
                                                                 }
                                                             },
                                                             {
                                                                 type: 'minecraft:block',
-                                                                result_state: {
-                                                                    Name: 'natures_spirit:sandy_soil'
-                                                                }
+                                                                result_state: { Name: 'natures_spirit:sandy_soil' }
                                                             }
                                                         ]
                                                     }
@@ -159,9 +149,7 @@ function naturesSpiritWorldgen(e) {
                                         },
                                         then_run: {
                                             type: 'minecraft:block',
-                                            result_state: {
-                                                Name: 'atmospheric:red_arid_sandstone'
-                                            }
+                                            result_state: { Name: 'atmospheric:red_arid_sandstone' }
                                         }
                                     }
                                 }
