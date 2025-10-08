@@ -19,6 +19,9 @@ StartupEvents.postInit(e => {
                 if (entry instanceof Array) {
                     // Filters out undefined elements
                     this.all = new Set(this.getAsArray().concat(entry.filter(e => e !== undefined)))
+                } else if (entry === Object(entry)) {
+                    // Add all strings in an object and any nested objects
+                    this.add(collectStrings(entry))
                 } else if (entry !== undefined) {
                     this.all.add(entry)
                 }
@@ -62,6 +65,20 @@ global.COLOURS = [
     'red',
     'black'
 ]
+
+// Collect all strings in a nested object with recursion
+function collectStrings(obj) {
+    let strings = []
+    for (const key in obj) {
+        const value = obj[key]
+        if (typeof value === "string") {
+            strings.push(value)
+        } else if (value === Object(value) && value !== null) {
+            strings = strings.concat(collectStrings(value))
+        }
+    }
+    return strings
+}
 
 
 // maybe in the future I could construct this from the everycomp config

@@ -61,15 +61,15 @@ function quarkRemovals() {
     global.SWAPPER.set('quark:ancient_leaves', 'vanillabackport:pale_oak_leaves')
 
     Object.values(global.WOOD_TYPES.minecraft).forEach(woodTypeObj => {
-        global.SWAPPER.set(woodTypeObj.quark_chest, woodTypeObj.chest)
-        global.SWAPPER.set(woodTypeObj.quark_trapped_chest, woodTypeObj.trapped_chest)
-        global.SWAPPER.set(woodTypeObj.quark_bookshelf, woodTypeObj.bookshelf)
-        global.SWAPPER.set(woodTypeObj.quark_ladder, woodTypeObj.ladder)
+        global.SWAPPER.set(woodTypeObj.quark.chest,         woodTypeObj.woodworks.chest)
+        global.SWAPPER.set(woodTypeObj.quark.trapped_chest, woodTypeObj.woodworks.trapped_chest)
+        global.SWAPPER.set(woodTypeObj.quark.bookshelf,     woodTypeObj.woodworks.bookshelf)
+        global.SWAPPER.set(woodTypeObj.quark.ladder,        woodTypeObj.woodworks.ladder)
     })
 
-    Object.keys(global.WOOD_TYPES.minecraft.oak).forEach(woodenBlock => {
+    Object.keys(Object.keys(global.WOOD_TYPES.minecraft.oak)).forEach(woodenBlock => {
         global.SWAPPER.set(global.DISABLED_WOOD_TYPES.quark.blossom[woodenBlock], global.WOOD_TYPES.environmental.plum[woodenBlock])
-        global.SWAPPER.set(global.DISABLED_WOOD_TYPES.quark.azalea[woodenBlock], global.WOOD_TYPES.caverns_and_chasms.azalea[woodenBlock])
+        global.SWAPPER.set(global.DISABLED_WOOD_TYPES.quark.azalea[woodenBlock],  global.WOOD_TYPES.caverns_and_chasms.azalea[woodenBlock])
         global.SWAPPER.set(global.DISABLED_WOOD_TYPES.quark.ancient[woodenBlock], global.WOOD_TYPES.vanillabackport.pale_oak[woodenBlock])
     })
 }
