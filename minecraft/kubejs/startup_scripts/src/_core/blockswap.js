@@ -22,5 +22,6 @@ function processSwapper() {
             Ingredient.of(key).itemIds.forEach(match => global.SWAPPER.set(match, value))
             global.SWAPPER.delete(key)
         }
+        if (key == undefined || value == undefined) return
     })
 }

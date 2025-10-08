@@ -231,7 +231,7 @@
 		# - supplementaries
 		#This is done to prevent content overlap.
 		#You can turn this on to force the feature to be loaded even if the above mods are also loaded.
-		"Ignore Anti Overlap" = false
+		"Ignore Anti Overlap" = true
 
 	[building.thatch]
 		#Allowed values: [0,1]

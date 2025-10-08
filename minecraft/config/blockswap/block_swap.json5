@@ -3,5 +3,9 @@
 	"generate_all_known_states": false,
 	"retro_gen": false,
 	"state_swapper": [],
-	"swapper": {}
+	"swapper": {
+		"environmental:cheerful_plum_leaf_pile": "immersive_weathering:environmental/cheerful_plum_leaf_pile",
+		"environmental:moody_plum_leaf_pile": "immersive_weathering:environmental/moody_plum_leaf_pile",
+		"environmental:plum_leaf_pile": "immersive_weathering:environmental/plum_leaf_pile"
+	}
 }

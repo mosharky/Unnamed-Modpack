@@ -8,38 +8,54 @@ function coreWorldgen(e) {
 let removedBlocks = global.REMOVALS.getBlocks()
 /** @param {$StructureLoadEventJS_} e  */
 function coreStructures(e) {
-    if (global.DEBUG_MODE) console.log(`Structure: ${e.getId()} has loaded!`)
+    // Have to use `${block.getId()}` because of a Rhino bug
+    if (global.DEBUG_MODE) console.log(`Structure: ${e.getId()} is loading..`)
+
     e.forEachPalettes(palette => {
         palette.forEach(block => {
-            // Have to use `${block.getId()}` because of a Rhino bug
-            if (removedBlocks.has(`${block.getId()}`) && global.SWAPPER.get(`${block.getId()}`) == undefined) {
-                if (global.DEBUG_MODE) console.log(`Structure: '${e.getId()}' contains illegal block: '${block.getId()}'`)
+            let blockToSwap, blockToSwapWith, plantsToSwap
+
+            // First pass: get the block that needs to get swapped
+            switch (block.getId()) {
+                case 'create:copycat_panel': case 'create:copycat_step': blockToSwap = block.getNbt().Item.id; break;
+                case 'minecraft:jigsaw': blockToSwap = block.getNbt().final_state; break;
+                case 'supplementaries:flower_box': {
+                    plantsToSwap = block.getId() // because it can't be undefined i think
+                    block.getNbt().Items.forEach(item => {
+                        if (global.SWAPPER.get(`${item}`) != undefined) {
+                            item.id = global.SWAPPER.get(`${item}`)
+                        }
+                    })
+                    break
+                }
+                default: blockToSwap = block.getId()
             }
 
-            // Copycat NBT: {Item:{Count:1b,id:"create:industrial_iron_block"},Material:{Name:"create:industrial_iron_block"},id:"create:copycat"}
-            // Replacing the block in copycat blocks
-            if (block.getId() == 'create:copycat_panel' || block.getId() == 'create:copycat_step') {
-                let blockToSwap = block.getNbt().getCompound('Item').getString('id')
-                if (global.SWAPPER.get(`${blockToSwap}`) != undefined) {
-                    block.setNbt(NBT.toTagCompound({
-                        Item: { Count: 1, id: global.BLOCKSWAP_CONFIG.swapper[blockToSwap] },
-                        Material: { Name: global.BLOCKSWAP_CONFIG.swapper[blockToSwap] },
-                        id: 'create:copycat'
-                    }))
+            // Get the mapped block to swap with
+            blockToSwapWith = global.SWAPPER.get(`${blockToSwap}`)
+            if (blockToSwapWith == undefined) blockToSwapWith = global.BLOCKSWAP_CONFIG.swapper[blockToSwap]
+
+            // Second pass: perform the swapping
+            if (blockToSwapWith != undefined || plantsToSwap != undefined) {
+                // Copycat NBT: {Item:{Count:1b,id:"create:industrial_iron_block"},Material:{Name:"create:industrial_iron_block"},id:"create:copycat"}
+                // Replacing the block in copycat blocks
+                switch (block.getId()) {
+                    case 'create:copycat_panel': case 'create:copycat_step': {
+                        let nbt = block.getNbt()
+                        nbt.Item.id = blockToSwapWith
+                        nbt.Material.Name = blockToSwapWith
+                        break
+                    }
+                    case 'minecraft:jigsaw': block.getNbt().final_state = blockToSwapWith; break
+                    case 'supplementaries:flower_box': break  // TODO
+                    default: block.setBlock(blockToSwapWith, block.properties)
                 }
+            } else if (global.DEBUG_MODE && removedBlocks.has(`${blockToSwap}`)) {
+                console.log(`Structure: '${e.getId()}' contains unswapped block: '${blockToSwap}'`)
             }
-            // Replacing the final block in Jigsaw blocks
-            else if (block.getId() == 'minecraft:jigsaw') {
-                let blockToSwap = block.getNbt().getString('final_state')
-                if (global.SWAPPER.get(`${blockToSwap}`) != undefined) {
-                    let newNbt = block.getNbt()
-                    newNbt.putString('final_state', global.SWAPPER.get(`${blockToSwap}`))
-                    block.setNbt(newNbt)
-                }
-            }
-            else if (global.SWAPPER.get(`${block.getId()}`) != undefined) {
-                block.setBlock(global.SWAPPER.get(`${block.getId()}`), block.properties)
-            }
+
         })
     })
+
+    if (global.DEBUG_MODE) console.log(`Structure: ${e.getId()} has loaded!`)
 }
