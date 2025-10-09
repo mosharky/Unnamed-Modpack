@@ -70,7 +70,7 @@ function coreStructures(e) {
                 }
             } else if (global.DEBUG_MODE && removedBlocks.has(`${blockToSwap}`)) {
                 console.log(`Structure: '${e.getId()}' contains unswapped block: '${blockToSwap}'`)
-            } else if (block.getNbt() != null && !block.getNbt().isEmpty()) {
+            } else if (global.DEBUG_MODE && block.getNbt() != null && !block.getNbt().isEmpty()) {
                 removedBlocks.forEach(removal => {
                     if (block.getNbt().toString().includes(removal)) {
                         console.log(`Structure: '${e.getId()}' contains unswapped removal '${removal}' in block: '${block.getId()}' with NBT: ${JSON.stringify(block.getNbt())}`)
