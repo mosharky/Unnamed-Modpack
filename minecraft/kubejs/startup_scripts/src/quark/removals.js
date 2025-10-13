@@ -8,7 +8,8 @@ function quarkRemovals() {
         /quark:.*permafrost.*/,
         'quark:gold_bars',
         'quark:crate',
-        'quark:chute'
+        'quark:chute',
+        /quark:(.*crab.*|.*foxhound.*|.*shiba.*|.*toretoise.*|.*wraith.*)/
     ])
 
     // IDAS structures need these swapped out
@@ -30,7 +31,7 @@ function quarkRemovals() {
     global.SWAPPER.set('quark:crate', 'minecraft:barrel')
     global.SWAPPER.set('quark:nether_brick_trapped_chest', 'woodworks:trapped_crimson_chest')
     global.SWAPPER.set('quark:nether_brick_chest', 'woodworks:crimson_chest')
-
+    global.SWAPPER.set('quark:chute', 'create:chute')
     // Carpets
     global.SWAPPER.set('quark:red_blossom_leaf_carpet', 'immersive_weathering:natures_spirit/red_maple_leaf_pile')
     global.SWAPPER.set('quark:orange_blossom_leaf_carpet', 'immersive_weathering:natures_spirit/orange_maple_leaf_pile')
@@ -52,6 +53,13 @@ function quarkRemovals() {
     global.SWAPPER.set('quark:blue_blossom_sapling', 'natures_spirit:blue_wisteria_sapling')
     global.SWAPPER.set('quark:lavender_blossom_sapling', 'natures_spirit:purple_wisteria_sapling')
     global.SWAPPER.set('quark:ancient_sapling', 'vanillabackport:pale_oak_sapling')
+    // Potted Saplings
+    global.SWAPPER.set('quark:potted_red_blossom_sapling', 'natures_spirit:potted_red_maple_sapling')
+    global.SWAPPER.set('quark:potted_orange_blossom_sapling', 'natures_spirit:potted_orange_maple_sapling')
+    global.SWAPPER.set('quark:potted_yellow_blossom_sapling', 'natures_spirit:potted_yellow_maple_sapling')
+    global.SWAPPER.set('quark:potted_blue_blossom_sapling', 'natures_spirit:potted_blue_wisteria_sapling')
+    global.SWAPPER.set('quark:potted_lavender_blossom_sapling', 'natures_spirit:potted_purple_wisteria_sapling')
+    global.SWAPPER.set('quark:potted_ancient_sapling', 'vanillabackport:potted_pale_oak_sapling')
     // Leaves
     global.SWAPPER.set('quark:red_blossom_leaves', 'natures_spirit:red_maple_leaves')
     global.SWAPPER.set('quark:orange_blossom_leaves', 'natures_spirit:orange_maple_leaves')
