@@ -3,7 +3,7 @@ function naturesSpiritWorldgen(e) {
     removeFeatures(e, 'natures_spirit:patch_beach_grass', 'natures_spirit:tropical_shores', 'vegetal_decoration')
 
     // Changing maple trees to use Autumnity's maple logs
-    https://github.com/Team-Hibiscus/NatureSpiritForge/blob/1.20.1/src/main/resources/data/natures_spirit/worldgen/configured_feature/orange_maple_tree.json
+    // https://github.com/Team-Hibiscus/NatureSpiritForge/blob/1.20.1/src/main/resources/data/natures_spirit/worldgen/configured_feature/orange_maple_tree.json
     const NSMapleTrees = [
         'natures_spirit:orange_maple_tree',
         'natures_spirit:yellow_maple_tree',
@@ -14,6 +14,28 @@ function naturesSpiritWorldgen(e) {
         registerFeature(e, CONFIGURED, treeId, treeFeature)
     })
 
+    // Adding NS maple trees to vanilla biomes, same as Autumnity did
+    addFeatures(e, spottedPlacedFeature(e, 'natures_spirit:orange_maple_tree'), '#kubejs:has_feature/spotted_maple_tree/orange', 'vegetal_decoration')
+    addFeatures(e, spottedPlacedFeature(e, 'natures_spirit:yellow_maple_tree'), '#kubejs:has_feature/spotted_maple_tree/yellow', 'vegetal_decoration')
+    addFeatures(e, spottedPlacedFeature(e, 'natures_spirit:red_maple_tree'), '#kubejs:has_feature/spotted_maple_tree/red', 'vegetal_decoration')
+
+    // Replacing Autumnity's green maple with a new one using NS maple tree type
+    // Configured feature:
+    const mapleConfigured = getFeatureJson('natures_spirit', CONFIGURED, 'natures_spirit:orange_maple_tree')
+    mapleConfigured.config.trunk_provider.state.Name = 'autumnity:maple_log'
+    mapleConfigured.config.foliage_provider.state.Name = 'autumnity:maple_leaves'
+    registerFeature(e, CONFIGURED, 'autumnity:maple_tree', mapleConfigured)
+    // Placed feature:
+    const maplePlaced = getFeatureJson('natures_spirit', PLACED, 'natures_spirit:orange_maple_checked')
+    maplePlaced.feature = 'autumnity:maple_tree'
+    maplePlaced.placement[0].predicate.state.Name = 'autumnity:maple_sapling'
+    registerFeature(e, PLACED, 'kubejs:maple_tree_checked', maplePlaced)
+    // Replacing minecraft:fancy_oak_checked with kubejs:maple_tree
+    const mapleSpawnConfigured = getFeatureJson('natures_spirit', CONFIGURED, 'natures_spirit:maple_spawn')
+    mapleSpawnConfigured.config.features[3] = 'kubejs:maple_tree_checked' 
+    registerFeature(e, CONFIGURED, 'natures_spirit:maple_spawn', mapleSpawnConfigured)
+    // Spotted tree placement
+    addFeatures(e, spottedPlacedFeature(e, 'autumnity:maple_tree'), '#kubejs:has_feature/maple_tree', 'vegetal_decoration')
 
     // https://github.com/Team-Hibiscus/NatureSpiritForge/blob/1.20.1/src/main/java/net/hibiscus/naturespirit/world/NSSurfaceRules.java
     // Replacing pink sand with 'atmospheric:red_arid_sand' as a surface rule
