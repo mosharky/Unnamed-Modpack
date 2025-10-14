@@ -27,7 +27,6 @@ ServerEvents.recipes(e => {
         e.remove({ input: removal})
         e.remove({ output: removal})
     })
-
 })
 
 
@@ -44,6 +43,9 @@ ServerEvents.highPriorityData(e => {
     naturesSpiritWorldgen(e)
 })
 
+LootJS.modifiers(e => {
+    coreLootTables(e)
+})
 
 MoreJSEvents.structureLoad(e => {
     coreStructures(e)
