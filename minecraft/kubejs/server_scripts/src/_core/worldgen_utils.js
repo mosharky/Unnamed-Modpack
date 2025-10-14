@@ -128,10 +128,12 @@ function copyPasteFeature(event, modId, featureType, featureId) {
  * @param {String} type - CONFIGURED or PLACED
  * @param {String} featureId - Feature ID (i.e. `minecraft:oak_tree`)
  * @param {Object} featureJson - Feature JSON object
+ * @returns {String} Returns featureId
  */
 function registerFeature(event, type, featureId, featureJson) {
     let replaceIdSplit = featureId.split(':')
     event.addJson(`${replaceIdSplit[0]}:worldgen/${type}_feature/${replaceIdSplit[1]}`, featureJson)
+    return featureId
 }
 
 /**
@@ -176,4 +178,25 @@ function getFeatureJson(modId, featureType, featureId) {
     let namespace = featureSplit[0]
     let featureName = featureSplit[1]
     return global.readJsonFileFromMod('data', modId, `${namespace}:worldgen/${featureType}_feature/${featureName}.json`)
+}
+
+
+/**
+ * @param {String} plant - The block ID of the plant
+ * @returns {Object} - A would_survive predicate object
+ */
+function wouldSurvive(plant) {
+    const Properties = {}
+    if (plant.includes('sapling')) Properties.stage = 0
+    else Properties.age = 0
+    return {
+        type: 'minecraft:block_predicate_filter',
+        predicate: {
+            type: 'minecraft:would_survive',
+            state: {
+                Name: plant,
+                Properties: Properties
+            }
+        }
+    }
 }

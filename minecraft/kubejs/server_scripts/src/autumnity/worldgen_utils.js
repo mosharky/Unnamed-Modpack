@@ -7,9 +7,8 @@
  * @param {String} featureId - ID of the configured feature to be placed
  * @returns {String} Placed feature ID
  */
-function spottedPlacedFeature(event, featureId) {
-    let placedFeatureId = `kubejs:spotted_${featureId.split(':')[1]}_placed`
-    registerFeature(event, PLACED, placedFeatureId, {
+function spottedPlacedFeature(event, featureId, sapling) {
+    return registerFeature(event, PLACED, `kubejs:spotted_${featureId.split(':')[1]}_placed`, {
         feature: featureId,
         placement: [
             {
@@ -31,9 +30,19 @@ function spottedPlacedFeature(event, featureId) {
             },
             {
                 type: 'minecraft:biome'
-            }
+            },
+            {
+                type: 'minecraft:block_predicate_filter',
+                predicate: {
+                    type: 'minecraft:would_survive',
+                    state: {
+                        Name: sapling,
+                        Properties: {
+                            stage: '0'
+                        }
+                    }
+                }
+            },
         ]
     })
-
-    return placedFeatureId
 }

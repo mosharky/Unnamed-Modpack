@@ -25,8 +25,19 @@ function coreEntityTags(e) {
 
 /** @param {$TagEventJS_} e */
 function coreBiomeTags(e) {
-    e.add('kubejs:has_feature/maple_tree', ['minecraft:forest', 'minecraft:windswept_forest', 'minecraft:flower_forest'])
-    e.add('kubejs:has_feature/spotted_maple_tree/orange', ['minecraft:dark_forest'])
-    e.add('kubejs:has_feature/spotted_maple_tree/red', ['minecraft:taiga', 'minecraft:windswept_forest'])
-    e.add('kubejs:has_feature/spotted_maple_tree/yellow', ['minecraft:forest'])
+    e.add('kubejs:has_feature/sparse_maple_tree', [
+        'minecraft:forest', 
+        'minecraft:windswept_forest', 
+        'minecraft:flower_forest'
+    ])
+    e.add('kubejs:has_feature/spotted_maple_tree/orange', [
+        'minecraft:dark_forest'
+    ])
+    e.add('kubejs:has_feature/spotted_maple_tree/red', [
+        'minecraft:taiga', 
+        'minecraft:windswept_forest'
+    ])
+    e.add('kubejs:has_feature/spotted_maple_tree/yellow', [
+        'minecraft:forest'
+    ])
 }
