@@ -68,12 +68,21 @@ function quarkRemovals() {
     global.SWAPPER.set('quark:lavender_blossom_leaves', 'natures_spirit:purple_wisteria_leaves')
     global.SWAPPER.set('quark:ancient_leaves', 'vanillabackport:pale_oak_leaves')
 
-    Object.values(global.WOOD_TYPES.minecraft).forEach(woodTypeObj => {
-        global.SWAPPER.set(woodTypeObj.quark.chest,         woodTypeObj.woodworks.chest)
-        global.SWAPPER.set(woodTypeObj.quark.trapped_chest, woodTypeObj.woodworks.trapped_chest)
-        global.SWAPPER.set(woodTypeObj.quark.bookshelf,     woodTypeObj.woodworks.bookshelf)
-        global.SWAPPER.set(woodTypeObj.quark.ladder,        woodTypeObj.woodworks.ladder)
-    })
+    // Swap Quark wooden blocks to woodworks variants
+    for (const [woodType, woodTypeObj] of Object.entries(global.WOOD_TYPES.minecraft)) {
+        global.SWAPPER.set('quark:' + woodType + '_chest',         woodTypeObj.woodworks.chest)
+        global.SWAPPER.set('quark:' + woodType + '_trapped_chest', woodTypeObj.woodworks.trapped_chest)
+        global.SWAPPER.set('quark:' + woodType + '_bookshelf',     woodTypeObj.woodworks.bookshelf)
+        global.SWAPPER.set('quark:' + woodType + '_ladder',        woodTypeObj.woodworks.ladder)
+    }
+
+    for (const woodType in woodTypesToConstruct.quark) {
+        if (woodTypesToConstruct.quark[woodType]) continue  // Skip enabled wood types
+        global.DISABLED_WOOD_TYPES.quark[woodType].woodworks.chest            = 'quark:' + woodType + '_chest'
+        global.DISABLED_WOOD_TYPES.quark[woodType].woodworks.trapped_chest    = 'quark:' + woodType + '_trapped_chest'
+        global.DISABLED_WOOD_TYPES.quark[woodType].woodworks.bookshelf        = 'quark:' + woodType + '_bookshelf'
+        global.DISABLED_WOOD_TYPES.quark[woodType].woodworks.ladder           = 'quark:' + woodType + '_ladder'
+    }
 
     swapWoodType(global.DISABLED_WOOD_TYPES.quark.blossom, global.WOOD_TYPES.environmental.plum)
     swapWoodType(global.DISABLED_WOOD_TYPES.quark.azalea,  global.WOOD_TYPES.caverns_and_chasms.azalea)

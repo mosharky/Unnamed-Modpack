@@ -1,7 +1,6 @@
 // priority: -1
 
-// postInit because Ingredient needs to wait for mods to load in order to hold anything other than vanilla items
-StartupEvents.postInit(e => {
+function postInit(e) {
     constructWoodTypes()
 
     // Adding items to global.REMOVALS and global.BLOCKSWAP_CONFIG
@@ -31,7 +30,17 @@ StartupEvents.postInit(e => {
     })
 
     if (global.DEBUG_MODE) {
-        console.log('Processed RegExp removals!\nFinal removals set:')
+        console.log('Processed RegExp removals!')
+        console.log('Final removals set:')
         console.log(global.REMOVALS.getAsArray())
     }
+}
+
+// For reloading
+if (global.INITIALIZED) postInit()
+
+// postInit because Ingredient needs to wait for mods to load in order to hold anything other than vanilla items
+StartupEvents.postInit(e => {
+    postInit(e)
+    global.INITIALIZED = true
 })
