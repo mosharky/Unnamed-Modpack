@@ -80,6 +80,19 @@ function collectStrings(obj) {
     return strings
 }
 
+/**
+ * Swap a constructed woodType with another
+ * @param {Object} woodTypeFrom - ex: `global.DISABLED_WOOD_TYPES.mod.woodType`
+ * @param {Object} woodTypeTo - ex: `global.WOOD_TYPES.mod.woodType`
+ */
+function swapWoodType(woodTypeFrom, woodTypeTo) {
+    Object.keys(woodTypeFrom).forEach(entry => {
+        Object.keys(woodTypeFrom[entry]).forEach(woodenBlock => {
+            global.SWAPPER.set(woodTypeFrom[entry][woodenBlock], woodTypeTo[entry][woodenBlock])
+        })
+    })
+}
+
 
 // maybe in the future I could construct this from the everycomp config
 const woodTypesToConstruct = {

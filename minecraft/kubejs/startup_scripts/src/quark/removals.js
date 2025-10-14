@@ -75,9 +75,7 @@ function quarkRemovals() {
         global.SWAPPER.set(woodTypeObj.quark.ladder,        woodTypeObj.woodworks.ladder)
     })
 
-    Object.keys(Object.keys(global.WOOD_TYPES.minecraft.oak)).forEach(woodenBlock => {
-        global.SWAPPER.set(global.DISABLED_WOOD_TYPES.quark.blossom[woodenBlock], global.WOOD_TYPES.environmental.plum[woodenBlock])
-        global.SWAPPER.set(global.DISABLED_WOOD_TYPES.quark.azalea[woodenBlock],  global.WOOD_TYPES.caverns_and_chasms.azalea[woodenBlock])
-        global.SWAPPER.set(global.DISABLED_WOOD_TYPES.quark.ancient[woodenBlock], global.WOOD_TYPES.vanillabackport.pale_oak[woodenBlock])
-    })
+    swapWoodType(global.DISABLED_WOOD_TYPES.quark.blossom, global.WOOD_TYPES.environmental.plum)
+    swapWoodType(global.DISABLED_WOOD_TYPES.quark.azalea,  global.WOOD_TYPES.caverns_and_chasms.azalea)
+    swapWoodType(global.DISABLED_WOOD_TYPES.quark.ancient, global.WOOD_TYPES.vanillabackport.pale_oak)
 }
