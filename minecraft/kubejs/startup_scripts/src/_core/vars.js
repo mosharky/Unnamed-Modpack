@@ -18,10 +18,10 @@ global.REMOVALS = {
             if (entry instanceof Array) {
                 // Filters out undefined elements
                 this.all = new Set(this.getAsArray().concat(entry.filter(e => e !== undefined)))
-            } else if (entry === Object(entry)) {
+            } else if (entry.constructor === Object) {
                 // Add all strings in an object and any nested objects
                 this.add(collectStrings(entry))
-            } else if (entry !== undefined) {
+            } else {
                 this.all.add(entry)
             }
         }
