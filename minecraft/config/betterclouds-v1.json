@@ -1,4 +1,5 @@
 {
+	"migrationVersion": 0,
 	"enabled": true,
 	"distance": 4.0,
 	"randomPlacement": 1.0,
@@ -19,6 +20,7 @@
 	"samplingScale": 1.0,
 	"scaleFalloffMin": 0.25,
 	"fogRangeFactor": 1.0,
+	"fogEndFactor": 1.0,
 	"usePersistentBuffers": true,
 	"useFrustumCulling": true,
 	"irisSupport": true,
@@ -28,6 +30,7 @@
 	"presets": [],
 	"lastTelemetryVersion": 0,
 	"gpuIncompatibleMessageEnabled": true,
+	"issueReportEnabled": true,
 	"enabledDimensions": [
 		"minecraft:overworld"
 	],

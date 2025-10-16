@@ -31,9 +31,6 @@
 		[types.stone_type.caverns_and_chasms]
 			sugilite = true
 
-		[types.stone_type.upgrade_aquatic]
-			coralstone = true
-
 		[types.stone_type.natures_spirit]
 			pink_sandstone = false
 			white_chalk = true
@@ -55,6 +52,22 @@
 			travertine = true
 			chert = true
 			kaolin = true
+			white_kaolin = true
+			light_gray_kaolin = true
+			gray_kaolin = true
+			black_kaolin = true
+			brown_kaolin = true
+			red_kaolin = true
+			orange_kaolin = true
+			yellow_kaolin = true
+			lime_kaolin = true
+			green_kaolin = true
+			cyan_kaolin = true
+			light_blue_kaolin = true
+			blue_kaolin = true
+			purple_kaolin = true
+			magenta_kaolin = true
+			pink_kaolin = true
 
 	[types.wood_type]
 
