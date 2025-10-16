@@ -39,6 +39,7 @@ ServerEvents.highPriorityData(e => {
     atmosphericWorldgen(e)
     autumnityWorldgen(e)
     environmentalWorldgen(e)
+    idasWorldgen(e)
     immersiveWeatheringWorldgen(e)
     naturesSpiritWorldgen(e)
 })
@@ -50,4 +51,12 @@ LootJS.modifiers(e => {
 MoreJSEvents.structureLoad(e => {
     coreStructures(e)
     naturesSpiritStructures(e)
+})
+
+
+// DEBUGGING
+ItemEvents.rightClicked(e => {
+    if (e.getItem().getId() == 'minecraft:stone_axe') {
+        
+    }
 })

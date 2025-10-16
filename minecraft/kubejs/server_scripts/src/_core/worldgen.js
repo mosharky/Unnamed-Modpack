@@ -1,6 +1,5 @@
 /** @param {$DataPackEventJS_} e  */
 function coreWorldgen(e) {
-
     removeFeatures(e, ['minecraft:spring_lava', 'minecraft:spring_lava_frozen'], '#kubejs:all_biomes', 'fluid_springs')
 }
 
@@ -26,11 +25,48 @@ function coreStructures(e) {
             {Slot: 2b, id: "minecraft:torchflower", Count: 1b}
         ], 
         id: "supplementaries:flower_box"
-    } */
+    } 
+        
+    Spawner NBT:
+    {
+        MaxNearbyEntities: 6s, 
+        RequiredPlayerRange: 16s, 
+        SpawnCount: 4s, 
+        SpawnData: {
+            custom_spawn_rules: { block_light_limit: [I; 0, 7] }, 
+            entity: {id: "quark:wraith"}
+        }, 
+        MaxSpawnDelay: 800s, 
+        Delay: 153s, 
+        x: -1818, 
+        ForgeCaps: {}, 
+        y: 31, 
+        z: -1151, 
+        id: "minecraft:mob_spawner", 
+        SpawnRange: 4s, 
+        MinSpawnDelay: 200s, 
+        SpawnPotentials: [
+            {
+                data: {
+                    custom_spawn_rules: { block_light_limit: [I; 0, 7] }, 
+                    entity: {id: "quark:wraith"}
+                }, 
+            weight: 1
+            }
+        ]
+    }
+    */
+
+    // Swap pre-spawned entities
+    e.getEntities().forEach(entity => {
+        if (global.SWAPPER.get(`${entity.nbt.id}`) != undefined) {
+            entity.nbt.id = global.SWAPPER.get(`${entity.nbt.id}`)
+        }
+    })
 
     e.forEachPalettes(palette => {
         palette.forEach(block => {
-            let blockToSwap, blockToSwapWith
+            let blockToSwap, blockToSwapWith, entityToSwap, entityToSwapWith
             let flowerBoxPlants = []
 
             // First pass: get the block that needs to get swapped
@@ -38,9 +74,12 @@ function coreStructures(e) {
                 case 'create:copycat_panel': case 'create:copycat_step': blockToSwap = block.getNbt().Item.id; break;
                 case 'minecraft:jigsaw': blockToSwap = block.getNbt().final_state; break;
                 case 'supplementaries:flower_box': flowerBoxPlants = block.getNbt().Items; break;
+                case 'minecraft:spawner': entityToSwap = block.getNbt().SpawnData.entity.id; break;
                 default: blockToSwap = block.getId()
             }
 
+            // Get the mapped entity to swap with
+            entityToSwapWith = global.ENTITY_SWAPPER.get(`${entityToSwap}`)
             // Get the mapped block to swap with
             blockToSwapWith = global.SWAPPER.get(`${blockToSwap}`)
             if (blockToSwapWith == undefined) blockToSwapWith = global.BLOCKSWAP_CONFIG.swapper[blockToSwap]
@@ -52,7 +91,7 @@ function coreStructures(e) {
             })
 
             // Second pass: perform the swapping
-            if (blockToSwapWith != undefined || flowerBoxPlants.length > 0) {
+            if (blockToSwapWith != undefined || entityToSwapWith != undefined || flowerBoxPlants.length > 0) {
                 switch (block.getId()) {
                     case 'create:copycat_panel': case 'create:copycat_step': {
                         let nbt = block.getNbt()
@@ -66,6 +105,14 @@ function coreStructures(e) {
                         block.getNbt().Items = flowerBoxPlants
                         break
                     }
+                    case 'minecraft:spawner': {  // TODO: not working
+                        let nbt = block.getNbt()
+                        nbt.SpawnData.entity.id = entityToSwapWith
+                        nbt.SpawnPotentials.forEach(potential => {
+                            potential.data.entity.id = entityToSwapWith
+                        })
+                        break
+                    }
                     default: block.setBlock(blockToSwapWith, block.properties)
                 }
             } else if (global.DEBUG_MODE && removedBlocks.has(`${blockToSwap}`)) {
@@ -77,7 +124,6 @@ function coreStructures(e) {
                     }
                 })
             }
-
         })
     })
 
