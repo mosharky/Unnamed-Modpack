@@ -31,7 +31,15 @@ function quarkRemovals() {
     global.SWAPPER.set('quark:crate', 'minecraft:barrel')
     global.SWAPPER.set('quark:nether_brick_trapped_chest', 'woodworks:trapped_crimson_chest')
     global.SWAPPER.set('quark:nether_brick_chest', 'woodworks:crimson_chest')
+    global.SWAPPER.set('quark:prismarine_trapped_chest', 'woodworks:trapped_warped_chest')
+    global.SWAPPER.set('quark:prismarine_chest', 'woodworks:warped_chest')
     global.SWAPPER.set('quark:chute', 'create:chute')
+    // Entities
+    global.ENTITY_SWAPPER.set('quark:wraith', 'caverns_and_chasms:mime')
+    global.ENTITY_SWAPPER.set('quark:foxhound', 'quark:forgotten')  // TODO: replace with alex's mobs nether bear?
+    global.ENTITY_SWAPPER.set('quark:toretoise', 'quark:forgotten')
+    global.ENTITY_SWAPPER.set('quark:shiba', 'minecraft:wolf')
+    global.ENTITY_SWAPPER.set('quark:crab', 'minecraft:frog')
     // Carpets
     global.SWAPPER.set('quark:red_blossom_leaf_carpet', 'immersive_weathering:natures_spirit/red_maple_leaf_pile')
     global.SWAPPER.set('quark:orange_blossom_leaf_carpet', 'immersive_weathering:natures_spirit/orange_maple_leaf_pile')
@@ -70,21 +78,21 @@ function quarkRemovals() {
 
     // Swap Quark wooden blocks to woodworks variants
     for (const [woodType, woodTypeObj] of Object.entries(global.WOOD_TYPES.minecraft)) {
-        global.SWAPPER.set('quark:' + woodType + '_chest',         woodTypeObj.woodworks.chest)
+        global.SWAPPER.set('quark:' + woodType + '_chest', woodTypeObj.woodworks.chest)
         global.SWAPPER.set('quark:' + woodType + '_trapped_chest', woodTypeObj.woodworks.trapped_chest)
-        global.SWAPPER.set('quark:' + woodType + '_bookshelf',     woodTypeObj.woodworks.bookshelf)
-        global.SWAPPER.set('quark:' + woodType + '_ladder',        woodTypeObj.woodworks.ladder)
+        global.SWAPPER.set('quark:' + woodType + '_bookshelf', woodTypeObj.woodworks.bookshelf)
+        global.SWAPPER.set('quark:' + woodType + '_ladder', woodTypeObj.woodworks.ladder)
     }
 
     for (const woodType in woodTypesToConstruct.quark) {
         if (woodTypesToConstruct.quark[woodType]) continue  // Skip enabled wood types
-        global.DISABLED_WOOD_TYPES.quark[woodType].woodworks.chest            = 'quark:' + woodType + '_chest'
-        global.DISABLED_WOOD_TYPES.quark[woodType].woodworks.trapped_chest    = 'quark:' + woodType + '_trapped_chest'
-        global.DISABLED_WOOD_TYPES.quark[woodType].woodworks.bookshelf        = 'quark:' + woodType + '_bookshelf'
-        global.DISABLED_WOOD_TYPES.quark[woodType].woodworks.ladder           = 'quark:' + woodType + '_ladder'
+        global.DISABLED_WOOD_TYPES.quark[woodType].woodworks.chest = 'quark:' + woodType + '_chest'
+        global.DISABLED_WOOD_TYPES.quark[woodType].woodworks.trapped_chest = 'quark:' + woodType + '_trapped_chest'
+        global.DISABLED_WOOD_TYPES.quark[woodType].woodworks.bookshelf = 'quark:' + woodType + '_bookshelf'
+        global.DISABLED_WOOD_TYPES.quark[woodType].woodworks.ladder = 'quark:' + woodType + '_ladder'
     }
 
     swapWoodType(global.DISABLED_WOOD_TYPES.quark.blossom, global.WOOD_TYPES.environmental.plum)
-    swapWoodType(global.DISABLED_WOOD_TYPES.quark.azalea,  global.WOOD_TYPES.caverns_and_chasms.azalea)
+    swapWoodType(global.DISABLED_WOOD_TYPES.quark.azalea, global.WOOD_TYPES.caverns_and_chasms.azalea)
     swapWoodType(global.DISABLED_WOOD_TYPES.quark.ancient, global.WOOD_TYPES.vanillabackport.pale_oak)
 }

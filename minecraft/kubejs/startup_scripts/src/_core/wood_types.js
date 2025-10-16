@@ -145,6 +145,17 @@ function constructWoodTypes() {
                 }
             }
 
+
+            switch (mod) {
+                case 'quark': {
+                    // WHY
+                    woodTypeObj.minecraft.slab          = mod + ':' + woodType + '_planks_slab'
+                    woodTypeObj.minecraft.stairs        = mod + ':' + woodType + '_planks_stairs'
+                    woodTypeObj.quark.vertical_slab     = mod + ':' + woodType + '_planks_vertical_slab'
+                    break
+                }
+            }
+
             const removals = [
                 'ladder',
                 'chest',
