@@ -55,51 +55,78 @@ function naturesSpiritWorldgen(e) {
         'vegetal_decoration'
     )
 
+    // Autumnity pumpkins in NS biomes
+    addFeatures(e,
+        copyPasteFeature(e, 'autumnity', PLACED, 'autumnity:patch_pumpkin_pumpkin_fields'),
+        ['natures_spirit:golden_wilds', 'natures_spirit:maple_woodlands', 'natures_spirit:marigold_meadows'],
+        'vegetal_decoration'
+    )
+
     // https://github.com/Team-Hibiscus/NatureSpiritForge/blob/1.20.1/src/main/java/net/hibiscus/naturespirit/world/NSSurfaceRules.java
     // Replacing pink sand with 'atmospheric:red_arid_sand' as a surface rule
     // Lithostitched surface rules apply before any other surface rule, so this is applied before NS gets to apply its own surface rules
+    /*
+    public static final SurfaceRules.ConditionSource ON_FLOOR = stoneDepthCheck(0, false, CaveSurface.FLOOR);
+    public static final SurfaceRules.ConditionSource UNDER_FLOOR = stoneDepthCheck(0, true, CaveSurface.FLOOR);
+    public static final SurfaceRules.ConditionSource DEEP_UNDER_FLOOR = stoneDepthCheck(0, true, 6, CaveSurface.FLOOR);
+    public static final SurfaceRules.ConditionSource VERY_DEEP_UNDER_FLOOR = stoneDepthCheck(0, true, 30, CaveSurface.FLOOR);
+    public static final SurfaceRules.ConditionSource ON_CEILING = stoneDepthCheck(0, false, CaveSurface.CEILING);
+    public static final SurfaceRules.ConditionSource UNDER_CEILING = stoneDepthCheck(0, true, CaveSurface.CEILING);
+    */
     e.addJson('kubejs:lithostitched/worldgen_modifier/add_surface_rule/replace_pink_sand', {
         type: 'lithostitched:add_surface_rule',
         levels: [
             'minecraft:overworld'
         ],
         surface_rule: {
-            type: 'minecraft:condition',
-            if_true: { type: 'minecraft:above_preliminary_surface' },
-            then_run: {
-                type: 'minecraft:sequence',
-                sequence: [
-                    {
-                        type: 'minecraft:condition',
-                        if_true: {
-                            type: 'minecraft:water',
-                            add_stone_depth: true,
-                            offset: -6,
-                            surface_depth_multiplier: -1
-                        },
-                        then_run: {
-                            type: 'minecraft:sequence',
-                            sequence: [
-                                {
+            type: 'minecraft:sequence',
+            sequence: [
+                {
+                    type: 'minecraft:condition',
+                    if_true: { type: 'minecraft:above_preliminary_surface' },
+                    then_run: {
+                        type: 'minecraft:sequence',
+                        sequence: [
+                            {
+                                type: 'minecraft:condition',
+                                if_true: {  // ON_FLOOR
+                                    type: 'minecraft:stone_depth',
+                                    add_surface_depth: false,
+                                    offset: 0,
+                                    secondary_depth_range: 0,
+                                    surface_type: 'floor'
+                                },
+                                then_run: {
                                     type: 'minecraft:condition',
                                     if_true: {
-                                        type: 'minecraft:stone_depth',
-                                        add_surface_depth: true,
-                                        offset: 0,
-                                        secondary_depth_range: 0,
-                                        surface_type: 'floor'
+                                        type: 'minecraft:biome',
+                                        biome_is: [
+                                            'natures_spirit:arid_highlands',
+                                        ]
                                     },
                                     then_run: {
                                         type: 'minecraft:sequence',
                                         sequence: [
+                                            {  // This rule is needed to prevent pink sand everywhere
+                                                type: 'minecraft:condition',
+                                                if_true: {
+                                                    type: 'minecraft:y_above',
+                                                    add_stone_depth: false,
+                                                    anchor: { absolute: 256 },
+                                                    surface_depth_multiplier: 0
+                                                },
+                                                then_run: {
+                                                    type: 'minecraft:block',
+                                                    result_state: { Name: 'natures_spirit:chert' }
+                                                }
+                                            },
                                             {
                                                 type: 'minecraft:condition',
                                                 if_true: {
-                                                    type: 'minecraft:biome',
-                                                    biome_is: [
-                                                        'natures_spirit:tropical_shores',
-                                                        'natures_spirit:drylands'
-                                                    ]
+                                                    type: 'minecraft:y_above',
+                                                    add_stone_depth: true,
+                                                    anchor: { absolute: 70 },
+                                                    surface_depth_multiplier: 1
                                                 },
                                                 then_run: {
                                                     type: 'minecraft:sequence',
@@ -107,6 +134,36 @@ function naturesSpiritWorldgen(e) {
                                                         {
                                                             type: 'minecraft:condition',
                                                             if_true: {
+                                                                type: 'minecraft:noise_threshold',
+                                                                min_threshold: 0.5454,
+                                                                max_threshold: 0.909,
+                                                                noise: 'minecraft:surface'
+                                                            },
+                                                            then_run: {
+                                                                type: 'minecraft:block',
+                                                                result_state: { Name: 'natures_spirit:sandy_soil' }
+                                                            }
+                                                        },
+                                                        {
+                                                            type: 'minecraft:bandlands'
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                type: 'minecraft:condition',
+                                                if_true: {  // materialCondition5
+                                                    type: 'minecraft:water',
+                                                    add_stone_depth: false,
+                                                    offset: -1,
+                                                    surface_depth_multiplier: 0
+                                                },
+                                                then_run: {
+                                                    type: 'minecraft:sequence',
+                                                    sequence: [
+                                                        {  // This rule is needed to prevent pink sand everywhere
+                                                            type: 'minecraft:condition',
+                                                            if_true: {  // ON_CEILING
                                                                 type: 'minecraft:stone_depth',
                                                                 add_surface_depth: false,
                                                                 offset: 0,
@@ -115,7 +172,7 @@ function naturesSpiritWorldgen(e) {
                                                             },
                                                             then_run: {
                                                                 type: 'minecraft:block',
-                                                                result_state: { Name: 'atmospheric:red_arid_sandstone' }
+                                                                result_state: { Name: 'natures_spirit:chert' }
                                                             }
                                                         },
                                                         {
@@ -124,80 +181,164 @@ function naturesSpiritWorldgen(e) {
                                                         }
                                                     ]
                                                 }
-                                            },
-                                            {
-                                                type: 'minecraft:condition',
-                                                if_true: {
-                                                    type: 'minecraft:biome',
-                                                    biome_is: [
-                                                        'natures_spirit:wooded_drylands'
-                                                    ]
-                                                },
-                                                then_run: {
-                                                    type: 'minecraft:condition',
-                                                    if_true: {
-                                                        type: 'minecraft:noise_threshold',
-                                                        min_threshold: -0.5454,
-                                                        max_threshold: 0.0454,
-                                                        noise: 'minecraft:surface'
-                                                    },
-                                                    then_run: {
-                                                        type: 'minecraft:sequence',
-                                                        sequence: [
-                                                            {
-                                                                type: 'minecraft:condition',
-                                                                if_true: {
-                                                                    type: 'minecraft:stone_depth',
-                                                                    add_surface_depth: false,
-                                                                    offset: 0,
-                                                                    secondary_depth_range: 0,
-                                                                    surface_type: 'ceiling'
-                                                                },
-                                                                then_run: {
-                                                                    type: 'minecraft:block',
-                                                                    result_state: { Name: 'atmospheric:red_arid_sandstone' }
-                                                                }
-                                                            },
-                                                            {
-                                                                type: 'minecraft:block',
-                                                                result_state: { Name: 'natures_spirit:sandy_soil' }
-                                                            }
-                                                        ]
-                                                    }
-                                                }
                                             }
                                         ]
                                     }
-                                },
-                                {
-                                    type: 'minecraft:condition',
-                                    if_true: {
-                                        type: 'minecraft:biome',
-                                        biome_is: [
-                                            'natures_spirit:tropical_shores',
-                                            'natures_spirit:drylands'
-                                        ]
-                                    },
-                                    then_run: {
-                                        type: 'minecraft:condition',
-                                        if_true: {
-                                            type: 'minecraft:stone_depth',
-                                            add_surface_depth: true,
-                                            offset: 0,
-                                            secondary_depth_range: 30,
-                                            surface_type: 'floor'
-                                        },
-                                        then_run: {
-                                            type: 'minecraft:block',
-                                            result_state: { Name: 'atmospheric:red_arid_sandstone' }
-                                        }
-                                    }
                                 }
-                            ]
-                        }
+                            },
+                            {
+                                type: 'minecraft:condition',
+                                if_true: {  // belowWater
+                                    type: 'minecraft:water',
+                                    add_stone_depth: true,
+                                    offset: -6,
+                                    surface_depth_multiplier: -1
+                                },
+                                then_run: {
+                                    type: 'minecraft:sequence',
+                                    sequence: [
+                                        {
+                                            type: 'minecraft:condition',
+                                            if_true: {  // UNDER_FLOOR
+                                                type: 'minecraft:stone_depth',
+                                                add_surface_depth: true,
+                                                offset: 0,
+                                                secondary_depth_range: 0,
+                                                surface_type: 'floor'
+                                            },
+                                            then_run: {
+                                                type: 'minecraft:sequence',
+                                                sequence: [
+                                                    {
+                                                        type: 'minecraft:condition',
+                                                        if_true: {
+                                                            type: 'minecraft:biome',
+                                                            biome_is: [
+                                                                'natures_spirit:tropical_shores',
+                                                                'natures_spirit:drylands'
+                                                            ]
+                                                        },
+                                                        then_run: {
+                                                            type: 'minecraft:sequence',
+                                                            sequence: [
+                                                                {
+                                                                    type: 'minecraft:condition',
+                                                                    if_true: {  // ON_CEILING
+                                                                        type: 'minecraft:stone_depth',
+                                                                        add_surface_depth: false,
+                                                                        offset: 0,
+                                                                        secondary_depth_range: 0,
+                                                                        surface_type: 'ceiling'
+                                                                    },
+                                                                    then_run: {
+                                                                        type: 'minecraft:block',
+                                                                        result_state: { Name: 'atmospheric:red_arid_sandstone' }
+                                                                    }
+                                                                },
+                                                                {
+                                                                    type: 'minecraft:block',
+                                                                    result_state: { Name: 'atmospheric:red_arid_sand' }
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        type: 'minecraft:condition',
+                                                        if_true: {
+                                                            type: 'minecraft:biome',
+                                                            biome_is: [
+                                                                'natures_spirit:wooded_drylands'
+                                                            ]
+                                                        },
+                                                        then_run: {
+                                                            type: 'minecraft:condition',
+                                                            if_true: {
+                                                                type: 'minecraft:noise_threshold',
+                                                                min_threshold: -0.5454,
+                                                                max_threshold: 0.0454,
+                                                                noise: 'minecraft:surface'
+                                                            },
+                                                            then_run: {
+                                                                type: 'minecraft:sequence',
+                                                                sequence: [
+                                                                    {
+                                                                        type: 'minecraft:condition',
+                                                                        if_true: {  // ON_CEILING
+                                                                            type: 'minecraft:stone_depth',
+                                                                            add_surface_depth: false,
+                                                                            offset: 0,
+                                                                            secondary_depth_range: 0,
+                                                                            surface_type: 'ceiling'
+                                                                        },
+                                                                        then_run: {
+                                                                            type: 'minecraft:block',
+                                                                            result_state: { Name: 'atmospheric:red_arid_sandstone' }
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        type: 'minecraft:block',
+                                                                        result_state: { Name: 'natures_spirit:sandy_soil' }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            type: 'minecraft:condition',
+                                            if_true: {
+                                                type: 'minecraft:biome',
+                                                biome_is: [
+                                                    'natures_spirit:tropical_shores',
+                                                ]
+                                            },
+                                            then_run: {
+                                                type: 'minecraft:condition',
+                                                if_true: {  // DEEP_UNDER_FLOOR
+                                                    type: 'minecraft:stone_depth',
+                                                    add_surface_depth: true,
+                                                    offset: 0,
+                                                    secondary_depth_range: 6,
+                                                    surface_type: 'floor'
+                                                },
+                                                then_run: {
+                                                    type: 'minecraft:block',
+                                                    result_state: { Name: 'atmospheric:red_arid_sandstone' }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            type: 'minecraft:condition',
+                                            if_true: {
+                                                type: 'minecraft:biome',
+                                                biome_is: [
+                                                    'natures_spirit:drylands'
+                                                ]
+                                            },
+                                            then_run: {
+                                                type: 'minecraft:condition',
+                                                if_true: {  // VERY_DEEP_UNDER_FLOOR
+                                                    type: 'minecraft:stone_depth',
+                                                    add_surface_depth: true,
+                                                    offset: 0,
+                                                    secondary_depth_range: 30,
+                                                    surface_type: 'floor'
+                                                },
+                                                then_run: {
+                                                    type: 'minecraft:block',
+                                                    result_state: { Name: 'atmospheric:red_arid_sandstone' }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
                     }
-                ]
-            }
+                }
+            ]
         }
     })
 }
