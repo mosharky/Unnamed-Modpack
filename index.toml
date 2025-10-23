@@ -591,12 +591,8 @@ hash = "dc1a35ad2c2f26bccba00e3bd119349d6ffd5ea08645a656fe31f52fe6943231"
 metafile = true
 
 [[files]]
-file = "minecraft/unsup-1.1.6.jar"
-hash = "a470a85e47047bddbc66109d3eaea0062e9a44e7c5b71c13e959821421b2b344"
-
-[[files]]
 file = "minecraft/unsup.ini"
-hash = "48c31dfafb8fb37f80166a5729fa1fd6881e6a9ac9cc1289065395ebda6f6fcd"
+hash = "aa9bece955bcd39525dbd4862610ed9477429163b07f14764849d3b1a3e2b913"
 
 [[files]]
 file = "patches/com.unascribed.unsup.json"
