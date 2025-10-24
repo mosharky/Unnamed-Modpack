@@ -67,7 +67,7 @@ metafile = true
 
 [[files]]
 file = "minecraft/mods/.index/block-swap.pw.toml"
-hash = "d0603473983b9d38f2d5ccbb7f78be93a9ceb988485b2de9bd60af4daf9c1563"
+hash = "0dae73b4e3f88a9d82fcdbd682891b2a8ee4f933b9b13aebc2260d335db56ec7"
 metafile = true
 
 [[files]]
@@ -592,8 +592,8 @@ metafile = true
 
 [[files]]
 file = "minecraft/unsup.ini"
-hash = "aa9bece955bcd39525dbd4862610ed9477429163b07f14764849d3b1a3e2b913"
+hash = "6155fc6f71354b4674d3d04aa659919a69a0c6a4a937ee704a945a8621dd2f7f"
 
 [[files]]
 file = "patches/com.unascribed.unsup.json"
-hash = "d3078cb8231214506abf0698b08eed2d99a8472d365ca24bd1814997426b6c51"
+hash = "6deaf035ddfa6e8028fdff8329857b5d271df04101b0c794d0dd5548732a4e5b"

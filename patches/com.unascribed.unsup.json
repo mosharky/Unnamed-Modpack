@@ -1,12 +1,12 @@
 {
-	"formatVersion": 1,
-	"name": "unsup",
-	"uid": "com.unascribed.unsup",
-	"version": "1.1.6",
-	"+agents": [
-		{
-			"name": "com.unascribed:unsup:1.1.6",
-			"url": "https://repo.sleeping.town"
-		}
-	]
+    "formatVersion": 1,
+    "name": "unsup",
+    "uid": "com.unascribed.unsup",
+    "version": "1.2-snap.165+92a388eea7",
+    "+agents": [
+        {
+            "name": "com.unascribed:unsup:1.2-snap.165+92a388eea7",
+            "url": "https://repo.sleeping.town"
+        }
+    ]
 }
