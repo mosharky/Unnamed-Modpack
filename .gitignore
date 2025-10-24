@@ -72,3 +72,5 @@ minecraft/server-resource-packs/
 minecraft/coremods/
 minecraft/texturepacks/
 minecraft/minecraftinstance.json
+minecraft/.unsup-state.json
+minecraft/.unsup-tmp/

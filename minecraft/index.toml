@@ -1,599 +1,591 @@
 hash-format = "sha256"
 
 [[files]]
-file = "minecraft/mods/.index/abnormals-delight.pw.toml"
+file = "mods/.index/abnormals-delight.pw.toml"
 hash = "1d5d90d91ef03c2de24dca17fa8daa567c58edc58872e70b27d7e0ffde64fb65"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/almost-unified.pw.toml"
+file = "mods/.index/almost-unified.pw.toml"
 hash = "df576d0af6e28c738c65618d095207f4a82a93222a2cbb98f35c70941758fdb2"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/amendments.pw.toml"
+file = "mods/.index/amendments.pw.toml"
 hash = "112f8bd66b49f9a03010d7034c6de4f7d7d98e9293466ab9854842dd5f3fc177"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/appleskin.pw.toml"
+file = "mods/.index/appleskin.pw.toml"
 hash = "4262a12ba5868e578708260bfe2960d5a387fade20aef2f26423b21767fdb4b9"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/architectury-api.pw.toml"
+file = "mods/.index/architectury-api.pw.toml"
 hash = "8fc2033ee6c4f2ca22b54c3c3e3e31e7fb16c67a24ea55740a1a4e4d9e9b856c"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/async-locator.pw.toml"
+file = "mods/.index/async-locator.pw.toml"
 hash = "48fb54b93f0872a467691bf8ee1d804d9f4e3d150258c57f3b29974bdbd011f5"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/asyncparticles.pw.toml"
+file = "mods/.index/asyncparticles.pw.toml"
 hash = "a9d1231b5fd6291150685d7ae604c9d7f79c58e4cd7ad346cb31ca529e519095"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/atmospheric.pw.toml"
+file = "mods/.index/atmospheric.pw.toml"
 hash = "9fde4acaed1993e45ec8845395233a05d6778aaa10b8fc49dfdbe9920aa58734"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/attributefix.pw.toml"
+file = "mods/.index/attributefix.pw.toml"
 hash = "5c960af91196af459479a573675eceb0bf21e26a6a678cca209bf50126dd56ee"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/autumnity.pw.toml"
+file = "mods/.index/autumnity.pw.toml"
 hash = "9db06c6a5ca6791c04e27f5107d4cdf3e717a568aebb41141893941cbb4e389a"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/balm.pw.toml"
+file = "mods/.index/balm.pw.toml"
 hash = "8049c0092ba1f6c8e2a84389aec05f81529ad4b91333e2cc256146a2c06509b3"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/berry-good.pw.toml"
+file = "mods/.index/berry-good.pw.toml"
 hash = "a53a4172b6f0408a5f2e011b42d104478184e979025059615f7b6202d45a7f37"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/better-clouds.pw.toml"
+file = "mods/.index/better-clouds.pw.toml"
 hash = "f729234273111fde4876580418fa611413d5d5f96727e82a484e0e43901da6a4"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/block-swap.pw.toml"
+file = "mods/.index/block-swap.pw.toml"
 hash = "0dae73b4e3f88a9d82fcdbd682891b2a8ee4f933b9b13aebc2260d335db56ec7"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/blueprint.pw.toml"
+file = "mods/.index/blueprint.pw.toml"
 hash = "4f37a68f20cc44f671e888c8db60201601662a1ec283f81f928cef1f0c3ffaa6"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/bookshelf-lib.pw.toml"
+file = "mods/.index/bookshelf-lib.pw.toml"
 hash = "2c7193a88ab0252c3f16c30933e579cd80b1c38e0d6089fc122ae07f41f878d7"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/buzzier-bees.pw.toml"
+file = "mods/.index/buzzier-bees.pw.toml"
 hash = "f2b717f4e77535fbec37bf90ed0a69bf599561a48f09359158cd15ac857a5318"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/carpeted-stairs.pw.toml"
+file = "mods/.index/carpeted-stairs.pw.toml"
 hash = "af0eb3dff0fadc6d16ed2877a36c8f1435b8a1381cad17229437c40197d84b07"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/catalogue.pw.toml"
+file = "mods/.index/catalogue.pw.toml"
 hash = "45a1a38301956d66750820f0f9fb6a808f4c556420044ca581218ef5e85efd2c"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/caverns-and-chasms.pw.toml"
+file = "mods/.index/caverns-and-chasms.pw.toml"
 hash = "ec96d28a16df0149a746ce08b9542fb88661c9704a7a6a971323baa18281dd27"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/cerulean-advancements.pw.toml"
+file = "mods/.index/cerulean-advancements.pw.toml"
 hash = "d36538afdc9526d3a1ff84d7bb9a99c55bf94d80a05383c1e111264261bccc12"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/chloride.pw.toml"
+file = "mods/.index/chloride.pw.toml"
 hash = "a6f2444a0f82ca88a5eeeca676a93ee872396ae56b0a179b68d0f0a3dc220e57"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/chunk-activity-tracker.pw.toml"
+file = "mods/.index/chunk-activity-tracker.pw.toml"
 hash = "5795a42253723bfb22774777a9af87babf01e24b94a154c3fa8f303d41528294"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/clayworks.pw.toml"
+file = "mods/.index/clayworks.pw.toml"
 hash = "9a1c73264893d4dce480d847acfc0bd5acb60b323a37a7b9f1803a9c220342ef"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/cofh-core.pw.toml"
+file = "mods/.index/cofh-core.pw.toml"
 hash = "a3e08fbfe8255149a1e9f079b34a16504cc7bbd45cb7adbe6aaeb0e648fc4df2"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/connector-extras.pw.toml"
+file = "mods/.index/connector-extras.pw.toml"
 hash = "a94f72f43138c445f653cda7e7b53d082d8fb8d66bdd0de8ba1a291838f43d90"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/connector.pw.toml"
+file = "mods/.index/connector.pw.toml"
 hash = "43a3d9a7554e0c1653fc446074c35871d237adb1327516a25f9b3dde962de72d"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/controlling.pw.toml"
+file = "mods/.index/controlling.pw.toml"
 hash = "96c84fb1d60d877ff659d0ed67b79ab3dbf5a2e7fc78daf2d654cfe36b845831"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/copycats.pw.toml"
+file = "mods/.index/copycats.pw.toml"
 hash = "284b3971d7e460ace982d533fc9cf75eeeedf522644318d5bb3a3b3ae6994c8d"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/create.pw.toml"
+file = "mods/.index/create.pw.toml"
 hash = "e7be0adef57de2b9582128572cc1a27cddaa2f3d933cae95bbdacb30775d2e5c"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/cull-less-leaves-reforged.pw.toml"
+file = "mods/.index/cull-less-leaves-reforged.pw.toml"
 hash = "bef53e3af05ac87c146f884ccb2a26944075bd837cdf5806600a76aeba7f3973"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/curios.pw.toml"
+file = "mods/.index/curios.pw.toml"
 hash = "1383490f768c8bcf9f396f6f1e4cfcf031415c032d4e637c08b9f15c34fb6415"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/despawn-tweaks.pw.toml"
+file = "mods/.index/despawn-tweaks.pw.toml"
 hash = "a126da8090f32b580fc14c82c23dd680fe3017eb3d3e1cdef09466d6493823e3"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/does-it-tick.pw.toml"
+file = "mods/.index/does-it-tick.pw.toml"
 hash = "6331b747afc52f342adee1eee33a0f64212d9facba0d299f7333c7e24ff32f2f"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/durability-tooltip.pw.toml"
+file = "mods/.index/durability-tooltip.pw.toml"
 hash = "917d5b3f3b4faa29f064ddeda44af4f355b1f5249b1d01443ecd8c3382492eca"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/dynamic-fps.pw.toml"
+file = "mods/.index/dynamic-fps.pw.toml"
 hash = "9d0ae906a415daafac578469bdcb6680a1336d0deaef7fb112a85c99c78a045a"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/dynamic_asset_generator.pw.toml"
+file = "mods/.index/dynamic_asset_generator.pw.toml"
 hash = "deaa276b28b01bcbc1ce104084d63150a9b62dc22946e69ebba300533c4eaa01"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/ebe-forge.pw.toml"
+file = "mods/.index/ebe-forge.pw.toml"
 hash = "a6e181bb63afda5590f470a099f5595243b41fddecc59fc858baee26253a221f"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/embeddium.pw.toml"
+file = "mods/.index/embeddium.pw.toml"
 hash = "fb9966ab0500f2692632a924db1e7c4500a740ecec3cd6d4957acc4b5d2bd15b"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/emi-loot.pw.toml"
+file = "mods/.index/emi-loot.pw.toml"
 hash = "5f2f7de5fcd6499ddaa602a5593654c6fe8bdca9c12321a469b3e06b95917fee"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/emi.pw.toml"
+file = "mods/.index/emi.pw.toml"
 hash = "78ade45cedb2e4fe35fe5129bdf645acdab96ac3baafcde29f5032ac824382c2"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/emitrades.pw.toml"
+file = "mods/.index/emitrades.pw.toml"
 hash = "209670a9d4c6e244fefab628ba508714a5399218b9faf53a1fcc921fa50c64a5"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/enchantment-descriptions.pw.toml"
+file = "mods/.index/enchantment-descriptions.pw.toml"
 hash = "8628656c830d42ad54b9fae90a75e3ac4a47c49785742ad47cf54a47821a49ba"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/enchantment-disable-tag.pw.toml"
+file = "mods/.index/enchantment-disable-tag.pw.toml"
 hash = "361731c2fd3f0c812391498191b6c0cef80cf0ab06d3dc709641ee0e163b9cfa"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/endergetic.pw.toml"
+file = "mods/.index/endergetic.pw.toml"
 hash = "2f73cddd4ed96a0f3ed55b4b0e0d2e81057baa6ad01e948b30ad99be4ee43e30"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/environmental.pw.toml"
+file = "mods/.index/environmental.pw.toml"
 hash = "61547099c1d1d68091bbfabcaab639095aa78dfb822919b85c142f188da3a0bc"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/every-compat.pw.toml"
+file = "mods/.index/every-compat.pw.toml"
 hash = "cabc9668856b8fdd8177a92f0bfc65bf25c3cbd1b85ef31c5940cb5c884066ca"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/excavated_variants.pw.toml"
+file = "mods/.index/excavated_variants.pw.toml"
 hash = "50ea8909628476a842d96734b9956263bbe28049a2bc5a186eff711982b08211"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/farmers-delight.pw.toml"
+file = "mods/.index/farmers-delight.pw.toml"
 hash = "4cc9553998df37ece6c707d960da5ee47dc76929050bb06b4d9f876d6fbf8a4c"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/fast-paintings.pw.toml"
+file = "mods/.index/fast-paintings.pw.toml"
 hash = "00ccf76953e885340877d5e58bf2fbfdd50cda255963ad2592b5ca904d2e3e09"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/ferrite-core.pw.toml"
+file = "mods/.index/ferrite-core.pw.toml"
 hash = "b2c9813c936a2ee8a4ef1d54e761889aa425befec99448df8fd91f5518e3d9ad"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/flerovium.pw.toml"
+file = "mods/.index/flerovium.pw.toml"
 hash = "e746c9217297c24edc2ee667f52482929fa80c085fe7e013a5134051d56ae38d"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/forgified-fabric-api.pw.toml"
+file = "mods/.index/forgified-fabric-api.pw.toml"
 hash = "fdf3773509e1be300d1e314b4c975ef7da81e7fb6f0bea7e8cbf1c147960f918"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/fzzy-config.pw.toml"
+file = "mods/.index/fzzy-config.pw.toml"
 hash = "39e8d2e5ee92f575ca7acb6d27af7c06ab90376f71dc707b8b230e5ec08cedff"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/gallery.pw.toml"
+file = "mods/.index/gallery.pw.toml"
 hash = "d7803db867bb0bb3322b09827ef01ebd19f908dba5339d9ec05d59aa570b1d5f"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/gputape.pw.toml"
+file = "mods/.index/gputape.pw.toml"
 hash = "cb42440daa8d55e4455af7a25e91daa14050c64f515161755e11cfdada6382c8"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/idas.pw.toml"
+file = "mods/.index/idas.pw.toml"
 hash = "bec6a2daaff9d83afa9b4fbdec4788f031985e301ccdb51203c6a08d872686bf"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/immediatelyfast.pw.toml"
+file = "mods/.index/immediatelyfast.pw.toml"
 hash = "47f285621eced9784a875f605cb74e9aa58c6c3924057bb593c1ec3ad745fdc7"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/immersive-armor-hud.pw.toml"
+file = "mods/.index/immersive-armor-hud.pw.toml"
 hash = "1628ab3c97daec305a3865a45ed4f928ccd6b5cdf85ed9ce547183dcac9e091b"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/immersive-lanterns.pw.toml"
+file = "mods/.index/immersive-lanterns.pw.toml"
 hash = "481fa9e5fcadfcce1c511118ca81d711f2569c456e5f54e3b794e239526584fa"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/immersive-weathering.pw.toml"
+file = "mods/.index/immersive-weathering.pw.toml"
 hash = "201b04f23c476ae862ab49113174d189275f7ad3f8b8b2bd3176b4edc34ffa0d"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/incubation.pw.toml"
+file = "mods/.index/incubation.pw.toml"
 hash = "59d44988c40c35f0fb85ccdbf941ac4634e240258be51b0abc3fb1efee658726"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/integrated-api.pw.toml"
+file = "mods/.index/integrated-api.pw.toml"
 hash = "832c061125e89f44ce3995ec3a707366407cab67eb30dc27ff9b8fbd113fa263"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/integrated-stronghold.pw.toml"
+file = "mods/.index/integrated-stronghold.pw.toml"
 hash = "c880995b6b0f25021888a20753260f1d8e762d9fa6c8b71dc86b292ef3664c9f"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/jade.pw.toml"
+file = "mods/.index/jade.pw.toml"
 hash = "b7502e527362d5d620ae4ce996fde9d0ccdd34e0547d9d0529c3b7a747846863"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/jei.pw.toml"
+file = "mods/.index/jei.pw.toml"
 hash = "cfc3d25a2ca81d886c19116cf280a765c8a14049aba1938e5f7efda5114a5e27"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/kotlin-for-forge.pw.toml"
+file = "mods/.index/kotlin-for-forge.pw.toml"
 hash = "e0c6ce8408964b6a0e95b5e4a59930fab5717e6afa011e74398fede0e0c2c3a3"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/kubejs-create.pw.toml"
+file = "mods/.index/kubejs-create.pw.toml"
 hash = "9f6ec51f8da2bc32a863c229f589c5003069f6468c77511ad09179ecee337a93"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/kubejs.pw.toml"
+file = "mods/.index/kubejs.pw.toml"
 hash = "2730154eaa58e4310ddafce5415e2e6c5852ac27b20e954d2680874b6dc5727d"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/labels.pw.toml"
+file = "mods/.index/labels.pw.toml"
 hash = "b738173fac36d0e1364f7c3b36602bf2fdd6a990c89ec0f83864cb63a4252cb3"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/lazyyyyy.pw.toml"
+file = "mods/.index/lazyyyyy.pw.toml"
 hash = "f0beaf8c3aa79aea348a5f87316b71338595bd2105799a0daa5e8d8ffa4aea0f"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/lithostitched.pw.toml"
+file = "mods/.index/lithostitched.pw.toml"
 hash = "322aa8a95b63c55d482d06ef455b679244e1228a9d7ab73e9870e78caf8c8262"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/locator.pw.toml"
+file = "mods/.index/locator.pw.toml"
 hash = "29beb0992a18cc70a27cca377f7c35a06f0d81ea17dbf99c87dcd186f23e4e4f"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/lootjs.pw.toml"
+file = "mods/.index/lootjs.pw.toml"
 hash = "83955fd076f71d3298c59e2c2673800d990c27a0c8d6bd1b9d3efa344e1fc48f"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/memoryleakfix.pw.toml"
+file = "mods/.index/memoryleakfix.pw.toml"
 hash = "cb101c29fc90fb63abf3c06cf8f49caed8dd358814a21cef9e35e99484856128"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/mining-speed-tooltips.pw.toml"
+file = "mods/.index/mining-speed-tooltips.pw.toml"
 hash = "35e5dc4ab2f395bef849ea9a65260c7b1f9e835220e685603f1c33cdf516c34a"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/mmmmmmmmmmmm.pw.toml"
+file = "mods/.index/mmmmmmmmmmmm.pw.toml"
 hash = "8d61a5df616d073fa4e5afd861608c0a986c33f13bd14c909014ffb1fc020eff"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/modernfix.pw.toml"
+file = "mods/.index/modernfix.pw.toml"
 hash = "43e36858edefa3dc9d656ffc23891adb3052a231570921f81797fd0da3ac7651"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/moonlight.pw.toml"
+file = "mods/.index/moonlight.pw.toml"
 hash = "0b86f0efe43854e7d6d815a4480af4fe2871d12808fac80020cce76ff0fe2792"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/morejs.pw.toml"
+file = "mods/.index/morejs.pw.toml"
 hash = "fe0ef3a3962dd21a270e2aa0a253d22186cc958bcee6d57a905faf574bc774e9"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/mouse-tweaks.pw.toml"
+file = "mods/.index/mouse-tweaks.pw.toml"
 hash = "1e119f12fe13cd55743c15b46527d51c8729efdb2ac121d2d2caeab4c41ee47b"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/moyai.pw.toml"
+file = "mods/.index/moyai.pw.toml"
 hash = "e5e9544628f35885a3db76d99a0bf696f3ea3a2944ef29dee0cd9673338ad96d"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/natures-spirit.pw.toml"
+file = "mods/.index/natures-spirit.pw.toml"
 hash = "eda96e05d03e783b839db00ae85e31c712393b9b455974ef6bcdd90a69c1c7b7"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/neapolitan.pw.toml"
+file = "mods/.index/neapolitan.pw.toml"
 hash = "673125fe779733f85fa300e14d04358bfce0e0cf4612efd0e9a80ca28c163641"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/netherportalfix.pw.toml"
+file = "mods/.index/netherportalfix.pw.toml"
 hash = "8c032068e3c2c73c1902b1f2ddc89bf06bca4b970fdbc85a1cc469aaf5434402"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/overflowing-bars.pw.toml"
+file = "mods/.index/overflowing-bars.pw.toml"
 hash = "5603f16a1ac881cb3a0fd3c24407cd24d234c438f05e07dff1e43be95e8141bf"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/packet-fixer.pw.toml"
+file = "mods/.index/packet-fixer.pw.toml"
 hash = "a3b1da0e4aef81987ff72b567013a76d6cf1a60f7c652484c54d96c537cab6a8"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/personality!.pw.toml"
+file = "mods/.index/personality!.pw.toml"
 hash = "d937e96b5eaa801ada87a03691dd68dee3200ab875c4a52d6f22e3ef3d9c23a0"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/pet-cemetery.pw.toml"
+file = "mods/.index/pet-cemetery.pw.toml"
 hash = "e48c78512c7b8a1e455d009ff5fb6425d25ae1a20d9e6981242f518a44a27622"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/platform.pw.toml"
+file = "mods/.index/platform.pw.toml"
 hash = "5eb09e0818981fe75ea77a22cb0b2228ac0ed6726fa0c05c934bf1e26f5c2ada"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/probejs.pw.toml"
+file = "mods/.index/probejs.pw.toml"
 hash = "7fc4c639236c78eb02387c7bffe6cd09ed26a41a43fa42e93c32b4fe27d699d0"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/puzzles-lib.pw.toml"
+file = "mods/.index/puzzles-lib.pw.toml"
 hash = "0724256dddc5ed2a09b7a48e97526e88288b7b79c0d3edd7504c84f896f4fe9e"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/quark-oddities.pw.toml"
+file = "mods/.index/quark-oddities.pw.toml"
 hash = "091cb095f74599b4ccb22aaca3a81a36dd49df0824076d6937a11b6d184e0af6"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/quark.pw.toml"
+file = "mods/.index/quark.pw.toml"
 hash = "c4905f8cdf932b5818f67da09a0315a5e000f6739958640d738ec29e7bc95be1"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/redirected.pw.toml"
+file = "mods/.index/redirected.pw.toml"
 hash = "2a1e898ad4cb7725394df139a105a6b5c77898af043a3664e9f42bfb1c922e0a"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/rhino.pw.toml"
+file = "mods/.index/rhino.pw.toml"
 hash = "9c90b7f996a16b8977bf14ccc532513f6a3194b0d99be5358eedfb63119544c2"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/satisfying-buttons.pw.toml"
+file = "mods/.index/satisfying-buttons.pw.toml"
 hash = "725c3fa5a9ad70940b157e49b4b66710e8d088d86782eb2baa37eb9e5c7a7483"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/savage-and-ravage.pw.toml"
+file = "mods/.index/savage-and-ravage.pw.toml"
 hash = "8e47609fa1cdee9cc06d398606bf1c234789b4b6603bd5798133e5292bc2def4"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/searchables.pw.toml"
+file = "mods/.index/searchables.pw.toml"
 hash = "115ab3c890dd7d9441a6290e56f658926681038cf4e7b863542c20213b23ee20"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/snowy-spirit.pw.toml"
+file = "mods/.index/snowy-spirit.pw.toml"
 hash = "3569e4967c8f9b071aabe43bc510c1b2bcd77c3681c995e0b92dfed1889d219a"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/sodium-dynamic-lights.pw.toml"
+file = "mods/.index/sodium-dynamic-lights.pw.toml"
 hash = "e708e3a460b32f2cb17d679ea371220d90ac0f8c96d6e0668464b9e05dd77689"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/spark.pw.toml"
+file = "mods/.index/spark.pw.toml"
 hash = "b54d1a123468b50bb2c66f9bb76b93097d737924e40a3353d7fd7231e647cce1"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/stone-zone.pw.toml"
+file = "mods/.index/stone-zone.pw.toml"
 hash = "b0c44184527f1dded9b8b770f536039fb7c8df2d2b86fe7dbeaae76be1722c8d"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/supermartijn642s-config-lib.pw.toml"
+file = "mods/.index/supermartijn642s-config-lib.pw.toml"
 hash = "02eda2d4fb3808903454c37c67bce81c1723d8fcf76fe0b303729a1b37a7cf65"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/supplementaries-squared.pw.toml"
+file = "mods/.index/supplementaries-squared.pw.toml"
 hash = "4eda559e98767b81d61e4ed5cdd4aa380bc5ab48621998a283f536e79b381c23"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/supplementaries.pw.toml"
+file = "mods/.index/supplementaries.pw.toml"
 hash = "69d43912cbe5b2d6c48c0f39bf53989bd49e16608e4eaa4866500f02230649b3"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/terrablender.pw.toml"
+file = "mods/.index/terrablender.pw.toml"
 hash = "3eb5ec297af04c30801b6ba49df336714e9ebcaa0de7e0d2a414d8d906fb9f42"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/terrablenderfix.pw.toml"
+file = "mods/.index/terrablenderfix.pw.toml"
 hash = "7e84aec5057a68c0f7b1b6c636b6a373f84ede0c065e0964dea64d4e69c335d0"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/toadlib.pw.toml"
+file = "mods/.index/toadlib.pw.toml"
 hash = "910e16edecfe98e3ff6859c4209a3c9202ac3ee7994941789f70886ccb076dbd"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/too-fast.pw.toml"
+file = "mods/.index/too-fast.pw.toml"
 hash = "32801008a6f1bed605bb5eae6ca9a84dc37fe9fe4348863ae1785a60ddcb75ef"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/txnilib.pw.toml"
+file = "mods/.index/txnilib.pw.toml"
 hash = "0d35a5ded1e5efef5b342c95d4a48dbbf0648c09bc0fb36bd7d822aeb230c686"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/universal-sawmill.pw.toml"
+file = "mods/.index/universal-sawmill.pw.toml"
 hash = "d2366842e109e66ebfa05cb092d43e09446c4d671bd44dc49ba0b0f609d878cc"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/upgrade-aquatic.pw.toml"
+file = "mods/.index/upgrade-aquatic.pw.toml"
 hash = "ec669be66f4e3f1c17a7c4b52ac565d8ea3508bfea174312eb4cd206e3358c56"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/vanillabackport.pw.toml"
+file = "mods/.index/vanillabackport.pw.toml"
 hash = "30b48c89336b837a2faa613712a99bab826f012017cd43c654080bdc3ce88e94"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/vertical-slabs-compat.pw.toml"
+file = "mods/.index/vertical-slabs-compat.pw.toml"
 hash = "021e8e9153dcb7e6a14f876a6e87082adbf60d13697a5917c98b49470efc0fb1"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/woodworks.pw.toml"
+file = "mods/.index/woodworks.pw.toml"
 hash = "0badbdcaae057dbf45c2ac2af6301b63360826b5ddba854ed8da0dbb6d749b37"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/yacl.pw.toml"
+file = "mods/.index/yacl.pw.toml"
 hash = "4699563d1239b4c12fdc42fb0670789c15b667a421b5f1dead656cf7fa284a3c"
 metafile = true
 
 [[files]]
-file = "minecraft/mods/.index/zeta.pw.toml"
+file = "mods/.index/zeta.pw.toml"
 hash = "dc1a35ad2c2f26bccba00e3bd119349d6ffd5ea08645a656fe31f52fe6943231"
 metafile = true
-
-[[files]]
-file = "minecraft/unsup.ini"
-hash = "6155fc6f71354b4674d3d04aa659919a69a0c6a4a937ee704a945a8621dd2f7f"
-
-[[files]]
-file = "patches/com.unascribed.unsup.json"
-hash = "6deaf035ddfa6e8028fdff8329857b5d271df04101b0c794d0dd5548732a4e5b"
