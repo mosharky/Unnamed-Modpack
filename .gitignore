@@ -18,8 +18,8 @@ minecraft/config/packetfixer.properties
 
 # mods
 minecraft/mods/.connector/
-minecraft/mods/*.jar
-minecraft/mods/*.disabled
+# minecraft/mods/*.jar
+# minecraft/mods/*.disabled
 
 # root folders
 minecraft/not-enough-crashes/
