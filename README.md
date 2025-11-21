@@ -1,7 +1,7 @@
-# An unnamed in-dev modpack
+# An Unnamed In-Dev Modpack
 
 ## How to contribute
-- Use PrismLauncher to install the modpack from this repo and VSCode to develop
+- Use PrismLauncher to install the modpack from this repo and use VSCode to develop
 - Generated `.probe` dumps should be put in the instance folder; please do not commit probe dumps ever
 - Do not commit any temporary, or generated, or cache files. Put them in the `.gitignore` if an added mod generates one that isn't caught by gitignore
 - Avoid commiting configs that have timestamps, or configs that change every launch
@@ -9,3 +9,6 @@
         - `instance.cfg`
         - `minecraft/kubejs/config/client.properties`
         - `minecraft/kubejs/config/common.properties`
+
+## Resources
+- [Ideas](https://hackmd.io/@AYc_eXKqT3ONStt-IXa8Fw/unnamed-modpack) (HackMD)
