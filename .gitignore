@@ -64,6 +64,10 @@ minecraft/.qmenu_opened.marker
 # dev environment stuff
 .probe/
 .vscode/probe.code-snippets
+mod_data/mod_data.log
+mod_data/raw_mod_data.json
+mod_data/cleaned_mod_data.json
+mod_data/compiled_mod_data.json
 
 # launcher-related
 minecraft/.curseclient
