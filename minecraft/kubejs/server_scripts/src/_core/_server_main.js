@@ -42,6 +42,7 @@ ServerEvents.highPriorityData(e => {
     idasWorldgen(e)
     immersiveWeatheringWorldgen(e)
     naturesSpiritWorldgen(e)
+    windsweptWorldgen(e)
 })
 
 LootJS.modifiers(e => {

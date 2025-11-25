@@ -31,11 +31,15 @@ function coreBiomeTags(e) {
         'minecraft:flower_forest'
     ])
     e.add('kubejs:has_feature/spotted_maple_tree/orange', [
-        'minecraft:dark_forest'
+        'minecraft:dark_forest',
+        'windswept:chestnut_forest',
+        'windswept:snowy_chestnut_forest'
     ])
     e.add('kubejs:has_feature/spotted_maple_tree/red', [
         'minecraft:taiga', 
-        'minecraft:windswept_forest'
+        'minecraft:windswept_forest',
+        'windswept:pine_barrens',
+        'windswept:snowy_pine_barrens'
     ])
     e.add('kubejs:has_feature/spotted_maple_tree/yellow', [
         'minecraft:forest'

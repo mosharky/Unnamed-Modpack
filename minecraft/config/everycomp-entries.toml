@@ -69,6 +69,9 @@
 			magenta_kaolin = true
 			pink_kaolin = true
 
+		[types.stone_type.windswept]
+			shale = true
+
 	[types.wood_type]
 
 		[types.wood_type.quark]
@@ -94,7 +97,7 @@
 
 		[types.wood_type.environmental]
 			willow = false
-			pine = true
+			pine = false
 			plum = true
 			wisteria = false
 
@@ -126,6 +129,11 @@
 			mahogany = true
 			saxaul = true
 
+		[types.wood_type.windswept]
+			holly = true
+			chestnut = true
+			pine = true
+
 	[types.leaves_type]
 
 		[types.leaves_type.vanillabackport]
@@ -148,7 +156,7 @@
 			moody_plum = true
 			hibiscus = true
 			willow = false
-			pine = true
+			pine = false
 			plum = true
 			wisteria = false
 
@@ -205,6 +213,12 @@
 			larch = true
 			mahogany = true
 			saxaul = true
+
+		[types.leaves_type.windswept]
+			holly = true
+			chestnut = true
+			pine = true
+			flowering_acacia = true
 
 	[types.cake]
 
@@ -642,6 +656,48 @@
 			ash_bricks = true
 			stone_tile = true
 			blackstone_tile = true
+
+		[types.cut_block_type.windswept]
+			holly = true
+			chestnut = true
+			pine = true
+			lavender_thatch = true
+			pinecone_shingle = true
+			white_pinecone_shingle = true
+			light_gray_pinecone_shingle = true
+			gray_pinecone_shingle = true
+			black_pinecone_shingle = true
+			brown_pinecone_shingle = true
+			red_pinecone_shingle = true
+			orange_pinecone_shingle = true
+			yellow_pinecone_shingle = true
+			lime_pinecone_shingle = true
+			green_pinecone_shingle = true
+			cyan_pinecone_shingle = true
+			light_blue_pinecone_shingle = true
+			blue_pinecone_shingle = true
+			purple_pinecone_shingle = true
+			magenta_pinecone_shingle = true
+			pink_pinecone_shingle = true
+			shale = true
+			polished_shale = true
+			polished_shale_brick = true
+			packed_ice = true
+			packed_ice_brick = true
+			blue_ice = true
+			blue_ice_brick = true
+			snow = true
+			snow_brick = true
+			gingerbread_brick = true
+			glazed_gingerbread_brick = true
+			lunalite = true
+			cut_lunalite = true
+			cut_lunalite_brick = true
+			smooth_lunalite = true
+			dry_mossy_cobblestone = true
+			dry_mossy_stone_brick = true
+			dry_mossy_cobblestone_brick = true
+			dry_mossy_cobblestone_tile = true
 
 #Disables specific entries
 [entries]

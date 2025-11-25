@@ -1,6 +1,7 @@
 function environmentalRemovals() {
     global.REMOVALS.add([
         // TODO: Remove woods from compat stuff (Supplementaries, everycomp, etc)
+        /environmental:.*pine.*/,
         /environmental:.*willow.*/,
         /environmental:.*wisteria.*/,
         'environmental:cattail',
