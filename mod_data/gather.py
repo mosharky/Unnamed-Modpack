@@ -184,12 +184,20 @@ def compileData():
                 elif operation == 'worldgen':
                     # e.g., 'biome', 'configured_feature', etc.
                     worldgenPath = '/'.join(filePathSplit[3:-1])
-                    compiledModData[contentType][namespace][operation][worldgenPath] = content
+                    if worldgenPath not in compiledModData[contentType][namespace][operation]:
+                        compiledModData[contentType][namespace][operation][worldgenPath] = {}
+                    
+                    compiledModData[contentType][namespace][operation][worldgenPath][filename] = content
 
                 elif operation == 'forge':
-                    # e.g., 'client', 'blockstates', etc.
+                    # e.g., worldgen modifiers
                     forgePath = '/'.join(filePathSplit[3:-1])
-                    compiledModData[contentType][namespace][operation][forgePath] = content
+                    if forgePath not in compiledModData[contentType][namespace][operation]:
+                        compiledModData[contentType][namespace][operation][forgePath] = {}
+
+                    compiledModData[contentType][namespace][operation][forgePath][filename] = content
+
+                # TODO: more things to deserialize (as needed)
 
             if contentType == 'assets':
                 # Compile language
@@ -206,9 +214,9 @@ def compileData():
 def dictAsJson(dct: dict, filename: str):
     """ Utility to write a dictionary to a JSON file for inspection. """
     try:
-        with open(f'mod_data/{filename}.json', 'w', encoding='utf-8') as f:
+        with open(f'mod_data/generated/{filename}.json', 'w', encoding='utf-8') as f:
             json.dump(dct, f, indent=4)
-        log.info(f'Mod data written to mod_data/{filename}.json')
+        log.info(f'Mod data written to mod_data/generated/{filename}.json')
     except Exception as e:
         log.error(f'Failed to write mod data to JSON: {e}')
 
@@ -216,7 +224,7 @@ def dictAsJson(dct: dict, filename: str):
 def jsonAsDict(filename: str) -> dict:
     """ Utility to read a JSON file into a dictionary for inspection. """
     try:
-        with open(f'mod_data/{filename}.json', 'r', encoding='utf-8') as f:
+        with open(f'mod_data/generated/{filename}.json', 'r', encoding='utf-8') as f:
             dct = json.load(f)
         return dct
     except Exception as e:
