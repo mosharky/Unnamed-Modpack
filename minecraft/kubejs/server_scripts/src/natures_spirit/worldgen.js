@@ -1,3 +1,19 @@
+STRUCTURE_BLOCK_SWAPPER.set(/natures_spirit:.*coconut.*/, new Map([
+    ['minecraft:chest', 'everycomp:abnww/natures_spirit/coconut_chest']
+]))
+
+STRUCTURE_BLOCK_SWAPPER.set(/natures_spirit:.*joshua.*/, new Map([
+    ['minecraft:chest', 'everycomp:abnww/natures_spirit/joshua_chest']
+]))
+
+STRUCTURE_BLOCK_SWAPPER.set(/natures_spirit:.*cypress.*/, new Map([
+    ['minecraft:chest', 'everycomp:abnww/natures_spirit/cypress_chest']
+]))
+
+STRUCTURE_BLOCK_SWAPPER.set(/natures_spirit:.*wisteria.*/, new Map([
+    ['minecraft:chest', 'everycomp:abnww/natures_spirit/wisteria_chest']
+]))
+
 /** @param {$DataPackEventJS_} e  */
 function naturesSpiritWorldgen(e) {
     removeFeatures(e, 'natures_spirit:patch_beach_grass', 'natures_spirit:tropical_shores', 'vegetal_decoration')
@@ -341,10 +357,4 @@ function naturesSpiritWorldgen(e) {
             ]
         }
     })
-}
-
-
-/** @param {$StructureLoadEventJS_} e  */
-function naturesSpiritStructures(e) {
-    // TODO: Replace vanilla chests with everycomp chests
 }

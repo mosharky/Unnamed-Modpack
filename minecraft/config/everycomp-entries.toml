@@ -765,6 +765,15 @@
 		[entries.wood_type.farmersdelight]
 			cabinet = true
 
+		[entries.wood_type.another_furniture]
+			flower_box = true
+			shelf = true
+			shutter = true
+			bench = true
+			table = true
+			drawer = true
+			chair = true
+
 	[entries.leaves_type]
 
 		[entries.leaves_type.quark]

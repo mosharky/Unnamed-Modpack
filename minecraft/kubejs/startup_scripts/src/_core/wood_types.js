@@ -28,6 +28,7 @@ function constructWoodTypes() {
             let suppSquaredCompatId             = `suppsquared:${mod}/`
             let supplementariesCompatId         = `supplementaries:${mod}/`
             let immersiveWeatheringCompatId     = `immersive_weathering:${mod}/`
+            let snowySpiritCompatId             = `snowyspirit:${mod}/`
 
             switch (mod) {
                 case 'minecraft': {
@@ -39,6 +40,7 @@ function constructWoodTypes() {
                     suppSquaredCompatId           = 'suppsquared:'
                     supplementariesCompatId       = 'supplementaries:'
                     immersiveWeatheringCompatId   = 'immersive_weathering:'
+                    snowySpiritCompatId           = 'snowyspirit:'
                     break
                 }
                 case 'quark': {
@@ -49,6 +51,11 @@ function constructWoodTypes() {
                 case 'autumnity': case 'atmospheric': case 'upgrade_aquatic': case 'environmental': case 'endergetic': case 'caverns_and_chasms': {
                     woodworksCompatId = mod + ':'
                     farmersDelightCompatId = 'abnormals_delight:'
+                    break
+                }
+                case 'windswept': {
+                    woodworksCompatId = mod + ':'
+                    farmersDelightCompatId = mod + ':'
                     break
                 }
             }
@@ -107,6 +114,9 @@ function constructWoodTypes() {
                 immersive_weathering: {
                     bark:                   immersiveWeatheringCompatId + woodType + barkSuffix
                 },
+                snowy_spirit: {
+                    sled:                   snowySpiritCompatId + woodType + '_sled'
+                }
             }
 
 

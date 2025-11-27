@@ -16,11 +16,11 @@ function processBlockswapConfig() {
 }
 
 
-function processSwapper() {
-    global.SWAPPER.forEach((value, key, map) => {
+function processSwappers() {
+    global.BLOCK_SWAPPER.forEach((value, key, map) => {
         if (key instanceof RegExp) {
-            Ingredient.of(key).itemIds.forEach(match => global.SWAPPER.set(match, value))
-            global.SWAPPER.delete(key)
+            Ingredient.of(key).itemIds.forEach(match => global.BLOCK_SWAPPER.set(match, value))
+            global.BLOCK_SWAPPER.delete(key)
         }
         if (key == undefined || value == undefined) return
     })

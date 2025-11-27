@@ -3,21 +3,123 @@ function coreWorldgen(e) {
     removeFeatures(e, ['minecraft:spring_lava', 'minecraft:spring_lava_frozen'], '#kubejs:all_biomes', 'fluid_springs')
 }
 
-
 let removedBlocks = global.REMOVALS.getBlocks()
 /** @param {$StructureLoadEventJS_} e  */
 function coreStructures(e) {
     // Have to use `${block.getId()}` because of a Rhino bug
     if (global.DEBUG_MODE) console.log(`Structure: ${e.getId()} is loading..`)
 
-    /* Copycat NBT:
+    // Swap pre-spawned entities
+    e.getEntities().forEach(entity => {
+        if (global.ENTITY_SWAPPER.get(`${entity.nbt.id}`) != undefined) {
+            entity.nbt.id = global.ENTITY_SWAPPER.get(`${entity.nbt.id}`)
+        }
+    })
+
+    e.forEachPalettes(palette => {
+        palette.forEach(block => {
+            switch (block.getId()) {
+                case 'create:copycat_panel': case 'create:copycat_step': {
+                    swapCopycatNbt(e, block); break
+                } case 'minecraft:jigsaw': {
+                    swapJigsawNbt(e, block); break
+                } case 'supplementaries:flower_box': {
+                    swapFlowerBoxNbt(e, block); break
+                } case 'minecraft:spawner': {
+                    swapSpawnerNbt(e, block); break
+                } default: swapDefault(e, block)
+            }
+
+            if (global.DEBUG_MODE && block.getNbt() != null && !block.getNbt().isEmpty()) {
+                removedBlocks.forEach(removal => {
+                    if (block.getNbt().toString().includes(removal)) {
+                        console.log(`Structure: '${e.getId()}' contains unswapped removal '${removal}' in block: '${block.getId()}' with NBT: ${JSON.stringify(block.getNbt())}`)
+                    }
+                })
+            }
+        })
+    })
+
+    if (global.DEBUG_MODE) console.log(`Structure: ${e.getId()} has loaded!`)
+}
+
+
+/** 
+ * @param {$StructureLoadEventJS_} e  
+ * @param {string} blockToSwap
+ * @returns { {toSwap: string, swapWith: string} | undefined }
+*/
+function findBlockSwap(e, blockToSwap) {
+    let structureSwap, blockToSwapWith
+    structureSwap = STRUCTURE_BLOCK_SWAPPER.get(`${e.getId()}`)
+    if (structureSwap == undefined) {
+        for (const [structure, swapMap] of STRUCTURE_BLOCK_SWAPPER) {
+            if (structure instanceof RegExp) {
+                if (e.getId().match(structure)) {
+                    structureSwap = swapMap
+                    break
+                }
+            }
+        }
+    }
+    if (structureSwap != undefined) blockToSwapWith = structureSwap.get(`${blockToSwap}`)
+    if (blockToSwapWith == undefined) blockToSwapWith = global.BLOCK_SWAPPER.get(`${blockToSwap}`)
+    if (blockToSwapWith == undefined) blockToSwapWith = global.BLOCKSWAP_CONFIG.swapper[blockToSwap]
+
+    return { toSwap: blockToSwap, swapWith: blockToSwapWith }
+}
+
+/** 
+ * @param {$StructureLoadEventJS_} e  
+ * @param {$StructureTemplate$StructureBlockInfo_} block
+*/
+function swapDefault(e, block) {
+    let swap = findBlockSwap(e, block.getId())
+    if (swap.swapWith != undefined) {
+        block.setBlock(swap.swapWith, block.properties)
+    } else if (global.DEBUG_MODE && removedBlocks.has(`${swap.toSwap}`)) {
+        console.log(`Structure: '${e.getId()}' contains unswapped block: '${swap.toSwap}'`)
+    }
+}
+
+/** 
+ * @param {$StructureLoadEventJS_} e  
+ * @param {$StructureTemplate$StructureBlockInfo_} block
+ * Copycat NBT:
     {
         Item: {Count: 1b, id: "create:industrial_iron_block"},
         Material: {Name: "create:industrial_iron_block"},
         id: "create:copycat"
     }
+*/
+function swapCopycatNbt(e, block) {
+    let swap = findBlockSwap(e, block.getNbt().Item.id)
+    if (swap.swapWith != undefined) {
+        let nbt = block.getNbt()
+        nbt.Item.id = swap.swapWith
+        nbt.Material.Name = swap.swapWith
+    } else if (global.DEBUG_MODE && removedBlocks.has(`${swap.toSwap}`)) {
+        console.log(`Structure: '${e.getId()}' contains unswapped block: '${swap.toSwap}' in '${block.getId()}' NBT`)
+    }
+}
 
-    Flower Box NBT:
+/** 
+ * @param {$StructureLoadEventJS_} e  
+ * @param {$StructureTemplate$StructureBlockInfo_} block
+*/
+function swapJigsawNbt(e, block) {
+    let swap = findBlockSwap(e, block.getNbt().final_state)
+    if (swap.swapWith != undefined) {
+        block.getNbt().final_state = swap.swapWith
+    } else if (global.DEBUG_MODE && removedBlocks.has(`${swap.toSwap}`)) {
+        console.log(`Structure: '${e.getId()}' contains unswapped block: '${swap.toSwap}' in '${block.getId()}' NBT`)
+    }
+}
+
+/** 
+ * @param {$StructureLoadEventJS_} e  
+ * @param {$StructureTemplate$StructureBlockInfo_} block
+ * Flower Box NBT:
     {
         Items: [
             {Slot: 0b, id: "quark:lavender_blossom_sapling", Count: 1b}, 
@@ -26,8 +128,23 @@ function coreStructures(e) {
         ], 
         id: "supplementaries:flower_box"
     } 
-        
-    Spawner NBT:
+*/
+function swapFlowerBoxNbt(e, block) {
+    let flowerBoxPlants = block.getNbt().Items
+    flowerBoxPlants.forEach(plant => {
+        let swap = findBlockSwap(e, plant.id)
+        if (swap.swapWith != undefined) {
+            plant.id = swap.swapWith
+        } else if (global.DEBUG_MODE && removedBlocks.has(`${swap.toSwap}`)) {
+            console.log(`Structure: '${e.getId()}' contains unswapped block: '${swap.toSwap}' in '${block.getId()}' NBT`)
+        }
+    })
+}
+
+/** 
+ * @param {$StructureLoadEventJS_} e  
+ * @param {$StructureTemplate$StructureBlockInfo_} block
+ * Spawner NBT:
     {
         MaxNearbyEntities: 6s, 
         RequiredPlayerRange: 16s, 
@@ -55,77 +172,15 @@ function coreStructures(e) {
             }
         ]
     }
-    */
-
-    // Swap pre-spawned entities
-    e.getEntities().forEach(entity => {
-        if (global.SWAPPER.get(`${entity.nbt.id}`) != undefined) {
-            entity.nbt.id = global.SWAPPER.get(`${entity.nbt.id}`)
-        }
-    })
-
-    e.forEachPalettes(palette => {
-        palette.forEach(block => {
-            let blockToSwap, blockToSwapWith, entityToSwap, entityToSwapWith
-            let flowerBoxPlants = []
-
-            // First pass: get the block that needs to get swapped
-            switch (block.getId()) {
-                case 'create:copycat_panel': case 'create:copycat_step': blockToSwap = block.getNbt().Item.id; break;
-                case 'minecraft:jigsaw': blockToSwap = block.getNbt().final_state; break;
-                case 'supplementaries:flower_box': flowerBoxPlants = block.getNbt().Items; break;
-                case 'minecraft:spawner': entityToSwap = block.getNbt().SpawnData.entity.id; break;
-                default: blockToSwap = block.getId()
-            }
-
-            // Get the mapped entity to swap with
-            entityToSwapWith = global.ENTITY_SWAPPER.get(`${entityToSwap}`)
-            // Get the mapped block to swap with
-            blockToSwapWith = global.SWAPPER.get(`${blockToSwap}`)
-            if (blockToSwapWith == undefined) blockToSwapWith = global.BLOCKSWAP_CONFIG.swapper[blockToSwap]
-
-            flowerBoxPlants.forEach(plant => {
-                if (global.SWAPPER.get(`${plant.id}`) != undefined) {
-                    plant.id = global.SWAPPER.get(`${plant.id}`)
-                }
-            })
-
-            // Second pass: perform the swapping
-            if (blockToSwapWith != undefined || entityToSwapWith != undefined || flowerBoxPlants.length > 0) {
-                switch (block.getId()) {
-                    case 'create:copycat_panel': case 'create:copycat_step': {
-                        let nbt = block.getNbt()
-                        nbt.Item.id = blockToSwapWith
-                        nbt.Material.Name = blockToSwapWith
-                        break
-                    }
-                    case 'minecraft:jigsaw': block.getNbt().final_state = blockToSwapWith; break
-                    case 'supplementaries:flower_box': {
-                        // Test with /locate structure idas:tinkers_citadel
-                        block.getNbt().Items = flowerBoxPlants
-                        break
-                    }
-                    case 'minecraft:spawner': {  // TODO: not working
-                        let nbt = block.getNbt()
-                        nbt.SpawnData.entity.id = entityToSwapWith
-                        nbt.SpawnPotentials.forEach(potential => {
-                            potential.data.entity.id = entityToSwapWith
-                        })
-                        break
-                    }
-                    default: block.setBlock(blockToSwapWith, block.properties)
-                }
-            } else if (global.DEBUG_MODE && removedBlocks.has(`${blockToSwap}`)) {
-                console.log(`Structure: '${e.getId()}' contains unswapped block: '${blockToSwap}'`)
-            } else if (global.DEBUG_MODE && block.getNbt() != null && !block.getNbt().isEmpty()) {
-                removedBlocks.forEach(removal => {
-                    if (block.getNbt().toString().includes(removal)) {
-                        console.log(`Structure: '${e.getId()}' contains unswapped removal '${removal}' in block: '${block.getId()}' with NBT: ${JSON.stringify(block.getNbt())}`)
-                    }
-                })
-            }
+*/
+function swapSpawnerNbt(e, block) {
+    let entityToSwap = block.getNbt().SpawnData.entity.id
+    let entitySwap = global.ENTITY_SWAPPER.get(`${entityToSwap}`)
+    if (entitySwap != undefined) {
+        let nbt = block.getNbt()
+        nbt.SpawnData.entity.id = entitySwap
+        nbt.SpawnPotentials.forEach(potential => {
+            potential.data.entity.id = entitySwap
         })
-    })
-
-    if (global.DEBUG_MODE) console.log(`Structure: ${e.getId()} has loaded!`)
+    }
 }

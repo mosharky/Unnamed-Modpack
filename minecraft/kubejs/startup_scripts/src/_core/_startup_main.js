@@ -1,6 +1,6 @@
 // priority: -1
 
-function postInit(e) {
+function postInit() {
     constructWoodTypes()
 
     // Adding items to global.REMOVALS and global.BLOCKSWAP_CONFIG
@@ -10,12 +10,14 @@ function postInit(e) {
     immersiveWeatheringRemovals()
     naturesSpiritRemovals()
     quarkRemovals()
+    snowySpiritRemovals()
+    windsweptRemovals()
     woodworksRemovals()
 
     // Changing blockswap config with KubeJS!
     processBlockswapConfig()
     // Virtual blockwsap (without using the blockswap mod)
-    processSwapper()
+    processSwappers()
 
     // Because not all KubeJS methods support regex
     if (global.DEBUG_MODE) console.log('Processing RegExp removals..')
@@ -41,6 +43,6 @@ if (global.INITIALIZED) postInit()
 
 // postInit because Ingredient needs to wait for mods to load in order to hold anything other than vanilla items
 StartupEvents.postInit(e => {
-    postInit(e)
+    postInit()
     global.INITIALIZED = true
 })

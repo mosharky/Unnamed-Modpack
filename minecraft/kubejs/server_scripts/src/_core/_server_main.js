@@ -2,6 +2,7 @@
 
 ServerEvents.tags('item', e => {
     e.removeAllTagsFrom(global.REMOVALS.getAsArray())
+    coreItemTags(e)
 })
 
 ServerEvents.tags('block', e => {
@@ -14,7 +15,9 @@ ServerEvents.tags('entity_type', e => {
 
 ServerEvents.tags('worldgen/biome', e => {
     coreBiomeTags(e)
+    naturesSpiritBiomeTags(e)
     upgradeAquaticBiomeTags(e)
+    windsweptBiomeTags(e)
 })
 
 
@@ -46,12 +49,15 @@ ServerEvents.highPriorityData(e => {
 })
 
 LootJS.modifiers(e => {
+    // Replacements
+    const all = e.addLootTableModifier(/.*/)
+    coreLootReplacements(all)
+    
     coreLootTables(e)
 })
 
 MoreJSEvents.structureLoad(e => {
     coreStructures(e)
-    naturesSpiritStructures(e)
 })
 
 
