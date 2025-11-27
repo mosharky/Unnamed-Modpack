@@ -2,29 +2,29 @@
 
 ServerEvents.tags('item', e => {
     e.removeAllTagsFrom(global.REMOVALS.getAsArray())
-    coreItemTags(e)
+    itemTags_Core(e)
 })
 
 ServerEvents.tags('block', e => {
-    coreBlockTags(e)
+    blockTags_Core(e)
 })
 
 ServerEvents.tags('entity_type', e => {
-    coreEntityTags(e)
+    entityTags_Core(e)
 })
 
 ServerEvents.tags('worldgen/biome', e => {
-    coreBiomeTags(e)
-    naturesSpiritBiomeTags(e)
-    upgradeAquaticBiomeTags(e)
-    windsweptBiomeTags(e)
+    biomeTags_Core(e)
+    biomeTags_NaturesSpirit(e)
+    biomeTags_UpgradeAquatic(e)
+    biomeTags_Windswept(e)
 })
 
 
 ServerEvents.recipes(e => {
-    coreRecipes(e)
-    everycompRecipes(e)
-    windsweptRecipes(e)
+    recipes_Core(e)
+    recipes_Everycomp(e)
+    recipes_Windswept(e)
 
     // Fully removing any recipe tied to items in REMOVALS
     global.REMOVALS.all.forEach(removal => {
@@ -39,26 +39,26 @@ ServerEvents.loaded(e => {
 })
 
 ServerEvents.highPriorityData(e => {
-    coreWorldgen(e)
-    atmosphericWorldgen(e)
-    autumnityWorldgen(e)
-    environmentalWorldgen(e)
-    idasWorldgen(e)
-    immersiveWeatheringWorldgen(e)
-    naturesSpiritWorldgen(e)
-    windsweptWorldgen(e)
+    worldgen_Core(e)
+    worldgen_Atmospheric(e)
+    worldgen_Autumnity(e)
+    worldgen_Environmental(e)
+    worldgen_Idas(e)
+    worldgen_ImmersiveWeathering(e)
+    worldgen_NaturesSpirit(e)
+    worldgen_Windswept(e)
 })
 
 LootJS.modifiers(e => {
     // Replacements
     const all = e.addLootTableModifier(/.*/)
-    coreLootReplacements(all)
+    lootReplacements_Core(all)
     
-    coreLootTables(e)
+    lootTables_Core(e)
 })
 
 MoreJSEvents.structureLoad(e => {
-    coreStructures(e)
+    structures_Core(e)
 })
 
 

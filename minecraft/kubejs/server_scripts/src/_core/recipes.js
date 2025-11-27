@@ -1,4 +1,4 @@
 /** @param {$RecipesEventJS_} e */
-function coreRecipes(e) {
+function recipes_Core(e) {
     
 }

@@ -1,11 +1,11 @@
 /** @param {$DataPackEventJS_} e  */
-function coreWorldgen(e) {
+function worldgen_Core(e) {
     removeFeatures(e, ['minecraft:spring_lava', 'minecraft:spring_lava_frozen'], '#kubejs:all_biomes', 'fluid_springs')
 }
 
 let removedBlocks = global.REMOVALS.getBlocks()
 /** @param {$StructureLoadEventJS_} e  */
-function coreStructures(e) {
+function structures_Core(e) {
     // Have to use `${block.getId()}` because of a Rhino bug
     if (global.DEBUG_MODE) console.log(`Structure: ${e.getId()} is loading..`)
 

@@ -1,5 +1,5 @@
 /** @param {$LootActionsBuilderJS_} all */
-function coreLootReplacements(all) {
+function lootReplacements_Core(all) {
     global.BLOCK_SWAPPER.forEach((value, key) => {
         if (Item.exists(key) && Item.exists(value)) {
             all.replaceLoot(key, value, true)
@@ -12,6 +12,6 @@ function coreLootReplacements(all) {
 }
 
 /** @param {$LootModificationEventJS_} e */
-function coreLootTables(e) {
+function lootTables_Core(e) {
 
 }

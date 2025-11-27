@@ -1,10 +1,10 @@
 /** @param {$TagEventJS_} e */
-function coreItemTags(e) {
+function itemTags_Core(e) {
 
 }
 
 /** @param {$TagEventJS_} e */
-function coreBlockTags(e) {
+function blockTags_Core(e) {
     e.add('snowrealmagic:containables', [
         // /geocluster:.*sample/
     ])
@@ -18,13 +18,13 @@ function coreBlockTags(e) {
 }
 
 /** @param {$TagEventJS_} e */
-function coreEntityTags(e) {
+function entityTags_Core(e) {
     // e.add('kubejs:surface_mod_entities', /.*surface:.*/)
 }
 
 
 /** @param {$TagEventJS_} e */
-function coreBiomeTags(e) {
+function biomeTags_Core(e) {
     e.add('kubejs:has_feature/sparse_maple_tree', [
         'minecraft:forest', 
         'minecraft:windswept_forest', 

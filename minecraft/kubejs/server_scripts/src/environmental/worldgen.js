@@ -3,7 +3,7 @@ STRUCTURE_BLOCK_SWAPPER.set('environmental:log_cabin', new Map([
 ]))
 
 /** @param {$DataPackEventJS_} e  */
-function environmentalWorldgen(e) {
+function worldgen_Environmental(e) {
     // Disable Marsh and Pine biome
     e.addJson('environmental:blueprint/modded_biome_slices/marsh', disableBiomeSliceJson)
     e.addJson('environmental:blueprint/modded_biome_slices/pine_barrens', disableBiomeSliceJson)

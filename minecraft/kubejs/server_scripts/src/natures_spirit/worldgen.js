@@ -15,7 +15,7 @@ STRUCTURE_BLOCK_SWAPPER.set(/natures_spirit:.*wisteria.*/, new Map([
 ]))
 
 /** @param {$DataPackEventJS_} e  */
-function naturesSpiritWorldgen(e) {
+function worldgen_NaturesSpirit(e) {
     removeFeatures(e, 'natures_spirit:patch_beach_grass', 'natures_spirit:tropical_shores', 'vegetal_decoration')
 
     // Changing maple trees to use Autumnity's maple logs

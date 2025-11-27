@@ -8,7 +8,7 @@ STRUCTURE_BLOCK_SWAPPER.set('atmospheric:kousa_sanctum', new Map([
 ]))
 
 /** @param {$DataPackEventJS_} e  */
-function atmosphericWorldgen(e) {
+function worldgen_Atmospheric(e) {
     
     // Disable Aspen Parkland biome
     e.addJson('atmospheric:blueprint/modded_biome_slices/aspen', disableBiomeSliceJson)
