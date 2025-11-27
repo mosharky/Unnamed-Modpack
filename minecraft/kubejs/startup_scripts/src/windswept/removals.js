@@ -1,5 +1,5 @@
 function windsweptRemovals() {
-    global.BLOCKSWAP_CONFIG.state_swapper.push([
+    global.BLOCKSWAP_CONFIG.state_swapper.push(
         {
             new: {
                 Name: 'immersive_weathering:icicle',
@@ -68,9 +68,11 @@ function windsweptRemovals() {
                 }
             }
         }
-    ])
+    )
 
     global.REMOVALS.add([
         'windswept:icicles'
     ])
+
+    global.ITEM_SWAPPER.set('windswept:icicles', 'immersive_weathering:icicle')
 }

@@ -24,6 +24,7 @@ ServerEvents.tags('worldgen/biome', e => {
 ServerEvents.recipes(e => {
     coreRecipes(e)
     everycompRecipes(e)
+    windsweptRecipes(e)
 
     // Fully removing any recipe tied to items in REMOVALS
     global.REMOVALS.all.forEach(removal => {
