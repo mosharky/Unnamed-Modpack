@@ -1,15 +1,12 @@
 function quarkRemovals() {
     global.REMOVALS.add([
-        /quark:(.*chest.*|.*ladder.*|.*bookshelf.*|.*leaf_carpet.*)/,
-        /quark:.*thatch.*/,
-        /quark:.*blossom.*/,
+        /quark:.*(dirt_bricks|chest|ladder|bookshelf|leaf_carpet|thatch|blossom|permafrost).*/,
+        /quark:.*(crab|foxhound|shiba|toretoise|wraith).*/,
         /quark:.*ancient(?!_tome|_fruit).*/,
         /quark:.*azalea(?!_hedge).*/,
-        /quark:.*permafrost.*/,
         'quark:gold_bars',
         'quark:crate',
         'quark:chute',
-        /quark:(.*crab.*|.*foxhound.*|.*shiba.*|.*toretoise.*|.*wraith.*)/
     ])
 
     global.ITEM_SWAPPER.set('quark:crab_leg', 'minecraft:cod')
@@ -37,6 +34,11 @@ function quarkRemovals() {
     global.BLOCK_SWAPPER.set('quark:prismarine_trapped_chest', 'woodworks:trapped_warped_chest')
     global.BLOCK_SWAPPER.set('quark:prismarine_chest', 'woodworks:warped_chest')
     global.BLOCK_SWAPPER.set('quark:chute', 'create:chute')
+    global.BLOCK_SWAPPER.set('quark:dirt_bricks', 'environmental:dirt_bricks')
+    global.BLOCK_SWAPPER.set('quark:dirt_bricks_stairs', 'environmental:dirt_brick_stairs')
+    global.BLOCK_SWAPPER.set('quark:dirt_bricks_slab', 'environmental:dirt_brick_slab')
+    global.BLOCK_SWAPPER.set('quark:dirt_bricks_wall', 'environmental:dirt_brick_wall')
+    global.BLOCK_SWAPPER.set('quark:dirt_bricks_vertical_slab', 'v_slab_compat:environmental/dirt_brick_vertical_slab')
     // Entities
     global.ENTITY_SWAPPER.set('quark:wraith', 'caverns_and_chasms:mime')
     global.ENTITY_SWAPPER.set('quark:foxhound', 'quark:forgotten')  // TODO: replace with alex's mobs nether bear?
