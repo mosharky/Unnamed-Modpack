@@ -5,14 +5,20 @@ from gather import log, jsonAsDict, dictAsJson
 
 
 compiledModData = jsonAsDict('compiled_mod_data')
+PLACED = 'placed_feature'
+CONFIGURED = 'configured_feature'
 
-
-def getFeature(feature: str) -> dict:
+def getFeature(featureType: str, feature: str) -> dict:
     featureSplit = feature.split(':')
     namespace = featureSplit[0]
     featurePathSplit = featureSplit[1].split('/')
     featurePath = '/'.join(featurePathSplit[:-1])
     featureId = featurePathSplit[-1] + '.json'
+
+    if featurePath != '':
+        featurePath = featureType + '/' + featurePath
+    else:
+        featurePath = featureType
 
     try:
         featureData = compiledModData['data'][namespace]['worldgen'][featurePath][featureId]
@@ -62,8 +68,7 @@ def getLang(objType: str, obj: str) -> str:
 
     langId = f'{objType}.{namespace}.{objId}'
     try:
-        lang = compiledModData['assets'][namespace]['lang']['en_us.json'][langId]
-        return lang
+        return compiledModData['assets'][namespace]['lang']['en_us.json'][langId]
     except KeyError:
         log.error(f'Language string not found for {objType}: {obj}')
         return ''
@@ -94,6 +99,26 @@ def flattenTag(tag: str) -> list:
     retList.sort()
     return retList
 
+def getBlocksFromPlacedFeature(placedFeature: str) -> list:
+    placedFeatureData = getFeature(PLACED, placedFeature)
+    configuredFeatureData = getFeature(CONFIGURED, placedFeatureData['feature'])
+    blocks = []
+    featureType = ''
+
+    if configuredFeatureData['type'] == 'minecraft:random_patch':
+        # Parse simple_block
+        if configuredFeatureData['config']['feature']['feature']['type'] == 'minecraft:simple_block':
+            # Parse simple_state_provider
+            if configuredFeatureData['config']['feature']['feature']['type']['config']['to_place']['type'] == 'minecraft:simple_state_provider':
+                blocks.append(configuredFeatureData['config']['feature']['feature']['config']['to_place']['state']['Name'])
+            # Parse weighted_state_provider
+            elif configuredFeatureData['config']['feature']['feature']['type']['config']['to_place']['type'] == 'minecraft:weighted_state_provider':
+                entries = configuredFeatureData['config']['feature']['feature']['config']['to_place']['entries']
+                for entry in entries:
+                    blocks.append(entry['data']['Name'])
+
+    return blocks
+
 def analyzeBiomeFoliage():
     flowers = set(flattenTag('minecraft:items/flowers'))
     overworldBiomesList = flattenTag('minecraft:worldgen/biome/is_overworld')
@@ -102,8 +127,13 @@ def analyzeBiomeFoliage():
         biomeName = getLang('biome', biome)
         print(f'Biome: {biome} - {biomeName}')
 
-        vegetationFeatures = []
+        undergroundOres = biomeData['features'][6]
+        vegetalDecoration = biomeData['features'][9]
+
         # get placed feature json
+        for placedFeature in vegetalDecoration:
+            featureJson = getFeature(PLACED, placedFeature)
+            configuredFeature = featureJson['feature']
         # get configured feature from placed feature
         # get blocks being placed in configured feature
         # if block is in flowers tag, print flower name
