@@ -10,6 +10,7 @@ function postInit() {
     removals_Environmental()
     removals_ImmersiveWeathering()
     removals_NaturesSpirit()
+    removals_Oreganized()
     removals_Quark()
     removals_SnowySpirit()
     removals_Windswept()

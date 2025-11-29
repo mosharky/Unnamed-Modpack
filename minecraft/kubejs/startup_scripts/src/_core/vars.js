@@ -100,11 +100,11 @@ function swapWoodType(woodTypeFrom, woodTypeTo) {
  * @param {Array<Object>} ores 
  */
 function constructExcavatedVariant(modId, stones, ores) {
-    JsonIO.write(`excavated_variants/excavated_variants/variants/${modId}.json5`, {
-        mod_id: modId,
-        provided_stones: stones,
-        provided_ores: ores
-    })
+    // JsonIO.write(`globalresources/excavated_variants/excavated_variants/variants/${modId}.json5`, {
+    //     mod_id: modId,
+    //     provided_stones: stones,
+    //     provided_ores: ores
+    // })
 }
 
 /**

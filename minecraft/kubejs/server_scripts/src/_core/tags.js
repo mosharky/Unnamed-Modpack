@@ -1,6 +1,6 @@
 /** @param {$TagEventJS_} e */
 function itemTags_Core(e) {
-
+    e.removeAllTagsFrom(global.REMOVALS.getAsArray())
 }
 
 /** @param {$TagEventJS_} e */

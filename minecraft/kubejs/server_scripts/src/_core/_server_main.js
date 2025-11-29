@@ -1,7 +1,6 @@
 // priority: -1
 
 ServerEvents.tags('item', e => {
-    e.removeAllTagsFrom(global.REMOVALS.getAsArray())
     itemTags_Core(e)
 })
 
@@ -25,12 +24,6 @@ ServerEvents.recipes(e => {
     recipes_Core(e)
     recipes_Everycomp(e)
     recipes_Windswept(e)
-
-    // Fully removing any recipe tied to items in REMOVALS
-    global.REMOVALS.all.forEach(removal => {
-        e.remove({ input: removal})
-        e.remove({ output: removal})
-    })
 })
 
 
@@ -42,10 +35,12 @@ ServerEvents.highPriorityData(e => {
     worldgen_Core(e)
     worldgen_Atmospheric(e)
     worldgen_Autumnity(e)
+    worldgen_CavernsAndChasms(e)
     worldgen_Environmental(e)
     worldgen_Idas(e)
     worldgen_ImmersiveWeathering(e)
     worldgen_NaturesSpirit(e)
+    worldgen_Oreganized(e)
     worldgen_Windswept(e)
 })
 
