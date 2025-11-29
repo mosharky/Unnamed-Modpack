@@ -30,6 +30,12 @@ ServerEvents.recipes(e => {
     recipes_Quark(e)
     recipes_Supplementaries(e)
     recipes_Windswept(e)
+
+    // Fully removing any recipe tied to items in REMOVALS
+    global.REMOVALS.all.forEach(removal => {
+        e.remove({ input: removal})
+        e.remove({ output: removal})
+    })
 })
 
 

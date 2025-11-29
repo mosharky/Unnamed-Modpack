@@ -131,6 +131,8 @@ function constructWoodTypes() {
                     break
                 }
                 case 'bamboo': {
+                    woodTypeObj.woodworks.chest         = 'woodworks:bamboo_closet'
+                    woodTypeObj.woodworks.trapped_chest = 'woodworks:trapped_bamboo_closet'
                     woodTypeObj.minecraft.boat          = 'minecraft:bamboo_raft'
                     woodTypeObj.minecraft.chest_boat    = 'minecraft:bamboo_chest_raft'
                     break

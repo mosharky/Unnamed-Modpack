@@ -16,7 +16,6 @@ function worldgen_Autumnity(e) {
         'vegetal_decoration',
     )
 
-    // Autumnity pumpkins in NS biomes
     addFeatures(e,
         copyPasteFeature(e, 'autumnity', PLACED, 'autumnity:patch_pumpkin_pumpkin_fields'),
         '#kubejs:has_feature/autumnity_pumpkins',

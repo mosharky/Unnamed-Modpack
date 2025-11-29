@@ -1,3 +1,18 @@
+STRUCTURE_BLOCK_SWAPPER.set(/(minecraft|savage_and_ravage):(pillager_outpost|woodland_mansion).*/, new Map([
+    ['minecraft:chest', 'woodworks:dark_oak_chest'],
+    ['minecraft:trapped_chest', 'woodworks:dark_oak_trapped_chest'],
+]))
+
+STRUCTURE_BLOCK_SWAPPER.set(/minecraft:shipwreck.*/, new Map([
+    ['minecraft:chest', 'woodworks:oak_chest'],
+    ['minecraft:trapped_chest', 'woodworks:oak_chest'],
+]))
+
+STRUCTURE_BLOCK_SWAPPER.set(/minecraft:bastion.*/, new Map([
+    ['minecraft:chest', 'woodworks:crimson_chest'],
+    ['minecraft:trapped_chest', 'woodworks:crimson_chest'],
+]))
+
 /** @param {$DataPackEventJS_} e  */
 function worldgen_Core(e) {
     removeFeatures(e, ['minecraft:spring_lava', 'minecraft:spring_lava_frozen'], '#kubejs:all_biomes', 'fluid_springs')
@@ -30,6 +45,7 @@ function structures_Core(e) {
                 } default: swapDefault(e, block)
             }
 
+            // I don't think this works at all
             if (global.DEBUG_MODE && block.getNbt() != null && !block.getNbt().isEmpty()) {
                 removedBlocks.forEach(removal => {
                     if (block.getNbt().toString().includes(removal)) {
@@ -79,6 +95,7 @@ function swapDefault(e, block) {
         block.setBlock(swap.swapWith, block.properties)
     } else if (global.DEBUG_MODE && removedBlocks.has(`${swap.toSwap}`)) {
         console.log(`Structure: '${e.getId()}' contains unswapped block: '${swap.toSwap}'`)
+        // TODO: check if its already swapped in BLOCKSWAP_CONFIG.state_swapper
     }
 }
 
