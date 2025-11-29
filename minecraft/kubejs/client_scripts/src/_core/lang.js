@@ -4,5 +4,10 @@ ClientEvents.lang('en_us', e => {
         else e.renameItem(id, name)
     }
 
-    // rename('miners_delight:copper_pot', 'Ceramic Pot')
+    // Rope unification
+    rename('farmersdelight:rope', 'Fisherman\'s Rope')
+    rename('quark:rope', 'Rigid Rope')
+    
+    // Nature's Spirit
+    rename('natures_spirit:bluebell', 'Bluebell Bush')
 })

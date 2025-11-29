@@ -21,6 +21,8 @@ function worldgen_Environmental(e) {
         'natures_spirit:marsh'
     ], 'vegetal_decoration', 'swamp_vegetation')
 
+    removeBiomeModifier(e, 'environmental:add_feature/bluebell')
+
     // Replace pine tree with windswept pine tree
     registerFeature(e, CONFIGURED, 'environmental:pine_bees_0002', getFeatureJson('windswept', CONFIGURED, 'windswept:pine_bees'))
 
@@ -30,13 +32,5 @@ function worldgen_Environmental(e) {
     ], '#kubejs:has_feature/environmental_dwarf_spruce',
         'vegetal_decoration',
         'add_feature/environmental_dwarf_spruce'
-    )
-
-    addFeatures(e, [
-        copyPasteFeature(e, 'environmental', PLACED, 'environmental:patch_cup_lichen'),
-        copyPasteFeature(e, 'environmental', PLACED, 'environmental:patch_cup_lichen_small')
-    ], '#kubejs:has_feature/environmental_cup_lichen',
-        'vegetal_decoration',
-        'add_feature/environmental_cup_lichen'
     )
 }

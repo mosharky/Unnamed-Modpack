@@ -200,3 +200,70 @@ function wouldSurvive(plant) {
         }
     }
 }
+
+
+/**
+ * Create a configured and placed feature
+ * @param {$DataPackEventJS_} event - highPriorityData event
+ * @param {String} blockId - The block ID to generate patches of
+ * @param {Number} tries - Number of attempts to place the patch
+ * @param {Number} xzSpread 
+ * @param {Number} ySpread 
+ * @param {Number} rarity - A 1 / 'rarity' chance to generate
+ * @param {Optional | Object} state - Block state object if needed
+ * @returns {String} - The placed feature ID
+ */
+function configuredFoliagePatch(e, blockId, tries, xzSpread, ySpread, rarity, state) {
+    let featureId = `kubejs:patch_${blockId.replace(':', '_')}`
+    let stateExists = state != undefined
+    registerFeature(e, CONFIGURED, featureId, {
+        type: 'minecraft:random_patch',
+        config: {
+            feature: {
+                feature: {
+                    type: 'minecraft:simple_block',
+                    config: {
+                        to_place: {
+                            type: 'minecraft:simple_state_provider',
+                            state: stateExists ? { Name: blockId, Properties: state } : { Name: blockId }
+                        }
+                    }
+                },
+                placement: [
+                    {
+                        type: 'minecraft:block_predicate_filter',
+                        predicate: {
+                            type: 'minecraft:matching_blocks',
+                            blocks: 'minecraft:air'
+                        }
+                    }
+                ]
+            },
+            tries: tries,
+            xz_spread: xzSpread,
+            y_spread: ySpread
+        }
+    })
+
+    registerFeature(e, PLACED, featureId, {
+        feature: featureId,
+        placement: [
+            {
+                type: 'minecraft:rarity_filter',
+                chance: rarity
+            },
+            {
+                type: 'minecraft:in_square'
+            },
+            {
+                type: 'minecraft:heightmap',
+                heightmap: 'WORLD_SURFACE_WG'
+            },
+            {
+                type: 'minecraft:biome'
+            }
+        ]
+    })
+
+    return featureId
+}

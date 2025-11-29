@@ -71,13 +71,6 @@ function worldgen_NaturesSpirit(e) {
         'vegetal_decoration'
     )
 
-    // Autumnity pumpkins in NS biomes
-    addFeatures(e,
-        copyPasteFeature(e, 'autumnity', PLACED, 'autumnity:patch_pumpkin_pumpkin_fields'),
-        ['natures_spirit:golden_wilds', 'natures_spirit:maple_woodlands', 'natures_spirit:marigold_meadows'],
-        'vegetal_decoration'
-    )
-
     // https://github.com/Team-Hibiscus/NatureSpiritForge/blob/1.20.1/src/main/java/net/hibiscus/naturespirit/world/NSSurfaceRules.java
     // Replacing pink sand with 'atmospheric:red_arid_sand' as a surface rule
     // Lithostitched surface rules apply before any other surface rule, so this is applied before NS gets to apply its own surface rules

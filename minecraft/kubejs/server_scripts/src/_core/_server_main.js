@@ -14,6 +14,9 @@ ServerEvents.tags('entity_type', e => {
 
 ServerEvents.tags('worldgen/biome', e => {
     biomeTags_Core(e)
+    biomeTags_Atmospheric(e)
+    biomeTags_Autumnity(e)
+    biomeTags_Environmental(e)
     biomeTags_NaturesSpirit(e)
     biomeTags_UpgradeAquatic(e)
     biomeTags_Windswept(e)
@@ -23,6 +26,9 @@ ServerEvents.tags('worldgen/biome', e => {
 ServerEvents.recipes(e => {
     recipes_Core(e)
     recipes_Everycomp(e)
+    recipes_FarmersDelight(e)
+    recipes_Quark(e)
+    recipes_Supplementaries(e)
     recipes_Windswept(e)
 })
 

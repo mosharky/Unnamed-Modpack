@@ -7,6 +7,7 @@ function removals_Environmental() {
         'environmental:cattail_fluff',
         'environmental:cattail_fluff_block',
         /environmental:.*leaf_pile.*/,
+        'environmental:bluebell',
     ])
 
     global.BLOCKSWAP_CONFIG.swapper.set('environmental:cheerful_plum_leaf_pile', 'immersive_weathering:environmental/cheerful_plum_leaf_pile')
