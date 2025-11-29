@@ -1,4 +1,4 @@
-function quarkRemovals() {
+function removals_Quark() {
     global.REMOVALS.add([
         /quark:.*(dirt_bricks|chest|ladder|bookshelf|leaf_carpet|thatch|blossom|permafrost).*/,
         /quark:.*(crab|foxhound|shiba|toretoise|wraith).*/,

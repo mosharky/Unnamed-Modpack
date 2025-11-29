@@ -93,6 +93,54 @@ function swapWoodType(woodTypeFrom, woodTypeTo) {
 }
 
 
+/**
+ * Constructs config for given mod and its variants
+ * @param {string} modId 
+ * @param {Array<Object>} stones 
+ * @param {Array<Object>} ores 
+ */
+function constructExcavatedVariant(modId, stones, ores) {
+    JsonIO.write(`excavated_variants/excavated_variants/variants/${modId}.json5`, {
+        mod_id: modId,
+        provided_stones: stones,
+        provided_ores: ores
+    })
+}
+
+/**
+ * An entry for a type of stone
+ * @param {string} blockId 
+ * @param {string} lang 
+ * @param {string} type 
+ */
+function stoneDefinition(blockId, lang, type) {
+    return {
+        id: blockId.replace(':', '_'),
+        lang: { en_us: lang },
+        block_id: blockId,
+        types: [type]
+    }
+}
+
+/**
+ * An entry for a type of ore
+ * @param {string} ore - ex: 'gold_ore'
+ * @param {string} lang - ex: 'Gold Ore
+ * @param {Array<string>} blockIds - ex: ['minecraft:gold_ore', 'minecraft:deepslate_gold_ore']
+ * @param {Array<string>} stones - ex: ['stone', 'deepslate']
+ * @param {string} type - ex: 'stone'
+ */
+function oreDefinition(ore, lang, blockIds, stones, type) {
+    return {
+        id: ore,
+        lang: { en_us: lang },
+        block_id: blockIds,
+        stone: stones,
+        types: [type]
+    }
+}
+
+
 // maybe in the future I could construct this from the everycomp config
 const woodTypesToConstruct = {
     minecraft: {

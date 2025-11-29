@@ -4,15 +4,16 @@ function postInit() {
     constructWoodTypes()
 
     // Adding items to global.REMOVALS and global.BLOCKSWAP_CONFIG
-    atmosphericRemovals()
-    autumnityRemovals()
-    environmentalRemovals()
-    immersiveWeatheringRemovals()
-    naturesSpiritRemovals()
-    quarkRemovals()
-    snowySpiritRemovals()
-    windsweptRemovals()
-    woodworksRemovals()
+    removals_Atmospheric()
+    removals_Autumnity()
+    removals_CavernsAndChasms()
+    removals_Environmental()
+    removals_ImmersiveWeathering()
+    removals_NaturesSpirit()
+    removals_Quark()
+    removals_SnowySpirit()
+    removals_Windswept()
+    removals_Woodworks()
 
     // Changing blockswap config with KubeJS!
     processBlockswapConfig()

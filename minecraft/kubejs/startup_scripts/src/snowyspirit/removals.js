@@ -1,4 +1,4 @@
-function snowySpiritRemovals() {
+function removals_SnowySpirit() {
     global.REMOVALS.add([
         /snowyspirit:.*ginger(?!bread_golem_spawn_egg).*/,
         /snowyspirit:glow_lights.*/,

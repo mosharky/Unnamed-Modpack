@@ -1,4 +1,4 @@
-function naturesSpiritRemovals() {
+function removals_NaturesSpirit() {
     global.REMOVALS.add([
         'natures_spirit:beach_grass',
         'natures_spirit:tall_beach_grass',

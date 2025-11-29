@@ -1,4 +1,4 @@
-function windsweptRemovals() {
+function removals_Windswept() {
     global.BLOCKSWAP_CONFIG.state_swapper.push(
         {
             new: {

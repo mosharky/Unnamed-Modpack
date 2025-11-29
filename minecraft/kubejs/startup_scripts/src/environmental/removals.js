@@ -1,4 +1,4 @@
-function environmentalRemovals() {
+function removals_Environmental() {
     global.REMOVALS.add([
         /environmental:.*pine.*/,
         /environmental:.*willow.*/,

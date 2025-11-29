@@ -1,4 +1,4 @@
-function woodworksRemovals() {
+function removals_Woodworks() {
     global.REMOVALS.add([
         /woodworks:.*leaf_pile.*/,
     ])

@@ -1,4 +1,4 @@
-function immersiveWeatheringRemovals() {
+function removals_ImmersiveWeathering() {
     global.REMOVALS.add([
         'immersive_weathering:loam',
         'immersive_weathering:loamy_farmland',
