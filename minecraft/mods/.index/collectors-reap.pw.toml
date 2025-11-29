@@ -1,0 +1,16 @@
+filename = 'collectorsreap-1.20.1-1.5.1.jar'
+name = "Collector's Reap"
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '02c8518fc0a540c34a2a89120fff8e1c111c1071512bab9f251d637ced2935286c0239efcb730390344dca01a53dac574b780d6e6ecae9286eecece82a59351c'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/AXXLr36C/versions/mwpRJkpA/collectorsreap-1.20.1-1.5.1.jar'
+
+[update.modrinth]
+mod-id = 'AXXLr36C'
+version = 'mwpRJkpA'
