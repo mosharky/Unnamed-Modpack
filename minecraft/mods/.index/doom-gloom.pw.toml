@@ -1,0 +1,16 @@
+filename = 'doom_and_gloom-forge-2.0.0.jar'
+name = 'Doom & Gloom'
+side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'beta'
+
+[download]
+hash = '1eab186c41eb64247281463343e3f0098758c797a4de95a9fd7e660cb8aeb05d3f4a619548de87f74a54f55b37748fdec2375a668fd8fa0449746a977411b129'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/NdwUq6vV/versions/HVbzn6sO/doom_and_gloom-forge-2.0.0.jar'
+
+[update.modrinth]
+mod-id = 'NdwUq6vV'
+version = 'HVbzn6sO'

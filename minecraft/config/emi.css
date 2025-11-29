@@ -131,7 +131,7 @@
 	/**
 	 * Where to show workstations in the recipe screen
 	 */
-	workstation-location: bottom;
+	workstation-location: left;
 
 	/**
 	 * Display cost per batch when hovering a recipe output

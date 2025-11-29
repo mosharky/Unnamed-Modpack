@@ -72,6 +72,20 @@
 		[types.stone_type.windswept]
 			shale = true
 
+		[types.stone_type.galosphere]
+			pink_salt = true
+			rose_pink_salt = true
+			pastel_pink_salt = true
+
+		[types.stone_type.oreganized]
+			glance = true
+
+		[types.stone_type.darkerdepths]
+			aridrock = true
+			duskrock = true
+			darkslate = true
+			grimestone = true
+
 	[types.wood_type]
 
 		[types.wood_type.quark]
@@ -133,6 +147,9 @@
 			holly = true
 			chestnut = true
 			pine = true
+
+		[types.wood_type.darkerdepths]
+			petrified = true
 
 	[types.leaves_type]
 
@@ -232,6 +249,9 @@
 			banana_cake = true
 			mint_cake = true
 			adzuki_cake = true
+
+		[types.cake.galospheric_delight]
+			salted_caramel_cake = true
 
 	[types.cut_block_type]
 
@@ -698,6 +718,48 @@
 			ash_bricks = true
 			stone_tile = true
 			blackstone_tile = true
+
+		[types.cut_block_type.galospheric_delight]
+			salted_caramel_bricks = true
+
+		[types.cut_block_type.galosphere]
+			silver_tiles = true
+			silver_panel = true
+			smooth_amethyst = true
+			smooth_allurite = true
+			smooth_lumiere = true
+			amethyst_brick = true
+			allurite_brick = true
+			lumiere_brick = true
+			pink_salt = true
+			rose_pink_salt = true
+			pastel_pink_salt = true
+			polished_pink_salt = true
+			polished_rose_pink_salt = true
+			polished_pastel_pink_salt = true
+			pink_salt_brick = true
+			rose_pink_salt_brick = true
+			pastel_pink_salt_brick = true
+
+		[types.cut_block_type.oreganized]
+			glance = true
+			polished_glance = true
+			glance_brick = true
+
+		[types.cut_block_type.darkerdepths]
+			petrified = true
+			aridrock = true
+			polished_aridrock = true
+			aridrock_bricks = true
+			duskrock = true
+			polished_duskrock = true
+			duskrock_bricks = true
+			darkslate = true
+			polished_darkslate = true
+			darkslate_bricks = true
+			grimestone = true
+			polished_grimestone = true
+			grimestone_bricks = true
 
 #Disables specific entries
 [entries]

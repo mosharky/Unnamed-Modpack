@@ -1,0 +1,16 @@
+filename = 'galospheric_delight-1.20.1-6.42.jar'
+name = 'Galospheric Delight'
+side = 'server'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'd0a52678c5de8aa022b2fe105b04cedaddddda913a1cee18b12d01a309c061c9c639d791eb3e224fb00f06d6ba645da21ea554f23bda9a56a3c59e77ddb0dbb4'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/cOxyGM7N/versions/hZLPmKRA/galospheric_delight-1.20.1-6.42.jar'
+
+[update.modrinth]
+mod-id = 'cOxyGM7N'
+version = 'hZLPmKRA'
