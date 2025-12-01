@@ -1,0 +1,157 @@
+{
+    mod_id: 'natures_spirit',
+    provided_stones: [
+        {
+            id: 'natures_spirit_kaolin',
+            lang: {
+                en_us: 'Kaolin'
+            },
+            block_id: 'natures_spirit:kaolin',
+            types: [
+                'stone'
+            ]
+        },
+        {
+            id: 'natures_spirit_travertine',
+            lang: {
+                en_us: 'Travertine'
+            },
+            block_id: 'natures_spirit:travertine',
+            types: [
+                'stone'
+            ]
+        },
+        {
+            id: 'natures_spirit_chert',
+            lang: {
+                en_us: 'Chert'
+            },
+            block_id: 'natures_spirit:chert',
+            types: [
+                'stone'
+            ]
+        }
+    ],
+    provided_ores: [
+        {
+            id: 'coal_ore',
+            lang: {
+                en_us: 'Coal Ore'
+            },
+            block_id: [
+                'natures_spirit:chert_coal_ore'
+            ],
+            stone: [
+                'natures_spirit_chert'
+            ],
+            types: [
+                'stone'
+            ]
+        },
+        {
+            id: 'iron_ore',
+            lang: {
+                en_us: 'Iron Ore'
+            },
+            block_id: [
+                'natures_spirit:chert_iron_ore'
+            ],
+            stone: [
+                'natures_spirit_chert'
+            ],
+            types: [
+                'stone'
+            ]
+        },
+        {
+            id: 'copper_ore',
+            lang: {
+                en_us: 'Copper Ore'
+            },
+            block_id: [
+                'natures_spirit:chert_copper_ore'
+            ],
+            stone: [
+                'natures_spirit_chert'
+            ],
+            types: [
+                'stone'
+            ]
+        },
+        {
+            id: 'gold_ore',
+            lang: {
+                en_us: 'Gold Ore'
+            },
+            block_id: [
+                'natures_spirit:chert_gold_ore'
+            ],
+            stone: [
+                'natures_spirit_chert'
+            ],
+            types: [
+                'stone'
+            ]
+        },
+        {
+            id: 'redstone_ore',
+            lang: {
+                en_us: 'Redstone Ore'
+            },
+            block_id: [
+                'natures_spirit:chert_redstone_ore'
+            ],
+            stone: [
+                'natures_spirit_chert'
+            ],
+            types: [
+                'stone'
+            ]
+        },
+        {
+            id: 'emerald_ore',
+            lang: {
+                en_us: 'Emerald Ore'
+            },
+            block_id: [
+                'natures_spirit:chert_emerald_ore'
+            ],
+            stone: [
+                'natures_spirit_chert'
+            ],
+            types: [
+                'stone'
+            ]
+        },
+        {
+            id: 'lapis_ore',
+            lang: {
+                en_us: 'Lapis Ore'
+            },
+            block_id: [
+                'natures_spirit:chert_lapis_ore'
+            ],
+            stone: [
+                'natures_spirit_chert'
+            ],
+            types: [
+                'stone'
+            ]
+        },
+        {
+            id: 'diamond_ore',
+            lang: {
+                en_us: 'Diamond Ore'
+            },
+            block_id: [
+                'natures_spirit:chert_diamond_ore'
+            ],
+            stone: [
+                'natures_spirit_chert'
+            ],
+            types: [
+                'stone'
+            ]
+        }
+    ]
+}

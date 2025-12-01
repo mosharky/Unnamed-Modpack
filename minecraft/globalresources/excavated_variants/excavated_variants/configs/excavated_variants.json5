@@ -1,0 +1,16 @@
+{
+  priority: [
+    'excavated_variants:minecraft.json5',
+    'excavated_variants:natures_spirit.json5',
+    'excavated_variants:create.json5',
+    'excavated_variants:galosphere.json5',
+    'excavated_variants:oreganized.json5',
+    'excavated_variants:caverns_and_chasms.json5',
+    'excavated_variants:darkerdepths.json5',
+    'excavated_variants:quark.json5',
+    'excavated_variants:immersive_weathering.json5',
+  ],
+  blacklist: {
+    type: 'empty'
+  },
+}

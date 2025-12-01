@@ -1,0 +1,23 @@
+{
+    mod_id: 'caverns_and_chasms',
+    provided_stones: [],
+    provided_ores: [
+        {
+            id: 'spinel_ore',
+            lang: {
+                en_us: 'Spinel Ore'
+            },
+            block_id: [
+                'caverns_and_chasms:spinel_ore',
+                'caverns_and_chasms:deepslate_spinel_ore'
+            ],
+            stone: [
+                'stone',
+                'deepslate'
+            ],
+            types: [
+                'stone'
+            ]
+        }
+    ]
+}

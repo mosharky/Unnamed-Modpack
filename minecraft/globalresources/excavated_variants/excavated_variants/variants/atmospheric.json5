@@ -1,0 +1,26 @@
+{
+    mod_id: 'atmospheric',
+    provided_stones: [
+        {
+            id: 'atmospheric_arid_sandstone',
+            lang: {
+                en_us: 'Arid Sandstone'
+            },
+            block_id: 'atmospheric:arid_sandstone',
+            types: [
+                'stone'
+            ]
+        },
+        {
+            id: 'atmospheric_red_arid_sandstone',
+            lang: {
+                en_us: 'Red Arid Sandstone'
+            },
+            block_id: 'atmospheric:red_arid_sandstone',
+            types: [
+                'stone'
+            ]
+        }
+    ],
+    provided_ores: []
+}

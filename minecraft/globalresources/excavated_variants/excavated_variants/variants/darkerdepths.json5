@@ -1,0 +1,46 @@
+{
+    mod_id: 'darkerdepths',
+    provided_stones: [
+        {
+            id: 'darkerdepths_aridrock',
+            lang: {
+                en_us: 'Aridrock'
+            },
+            block_id: 'darkerdepths:aridrock',
+            types: [
+                'stone'
+            ]
+        },
+        {
+            id: 'darkerdepths_duskrock',
+            lang: {
+                en_us: 'Duskrock'
+            },
+            block_id: 'darkerdepths:duskrock',
+            types: [
+                'stone'
+            ]
+        },
+        {
+            id: 'darkerdepths_darkslate',
+            lang: {
+                en_us: 'Darkslate'
+            },
+            block_id: 'darkerdepths:darkslate',
+            types: [
+                'stone'
+            ]
+        },
+        {
+            id: 'darkerdepths_grimestone',
+            lang: {
+                en_us: 'Grimestone'
+            },
+            block_id: 'darkerdepths:grimestone',
+            types: [
+                'stone'
+            ]
+        }
+    ],
+    provided_ores: []
+}

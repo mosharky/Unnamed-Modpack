@@ -1,0 +1,16 @@
+{
+    mod_id: 'immersive_weathering',
+    provided_stones: [
+        {
+            id: 'immersive_weathering_permafrost',
+            lang: {
+                en_us: 'Permafrost'
+            },
+            block_id: 'immersive_weathering:permafrost',
+            types: [
+                'stone'
+            ]
+        }
+    ],
+    provided_ores: []
+}

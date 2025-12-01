@@ -1,0 +1,57 @@
+{
+    mod_id: 'galosphere',
+    provided_stones: [
+        {
+            id: 'galosphere_pink_salt',
+            lang: {
+                en_us: 'Pink Salt'
+            },
+            block_id: 'galosphere:pink_salt',
+            types: [
+                'stone'
+            ]
+        },
+        {
+            id: 'galosphere_pastel_pink_salt',
+            lang: {
+                en_us: 'Pastel Pink Salt'
+            },
+            block_id: 'galosphere:pastel_pink_salt',
+            types: [
+                'stone'
+            ]
+        },
+        {
+            id: 'galosphere_rose_pink_salt',
+            lang: {
+                en_us: 'Rose Pink Salt'
+            },
+            block_id: 'galosphere:rose_pink_salt',
+            types: [
+                'stone'
+            ]
+        },
+    ],
+    provided_ores: [
+        {
+            id: 'silver_ore',
+            lang: {
+                en_us: 'Silver Ore',
+            },
+            block_id: [
+                'galosphere:silver_ore',
+                'galosphere:deepslate_silver_ore',
+            ],
+            orename: [
+                'silver_ore',
+            ],
+            types: [
+                'stone',
+            ],
+            stone: [
+                'stone',
+                'deepslate',
+            ],
+        },
+    ],
+}
