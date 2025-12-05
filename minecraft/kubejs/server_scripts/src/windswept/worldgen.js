@@ -10,7 +10,7 @@ function worldgen_Windswept(e) {
         copyPasteFeature(e, 'windswept', PLACED, 'windswept:dry_moss_rock'),
         copyPasteFeature(e, 'windswept', PLACED, 'windswept:holly_bush'),
     ], '#kubejs:has_feature/windswept_tundra',
-        'vegetal_decoration',
+        VEGETAL_DECORATION,
         'add_feature/windswept_tundra'
     )
 
@@ -18,7 +18,7 @@ function worldgen_Windswept(e) {
         copyPasteFeature(e, 'windswept', PLACED, 'windswept:large_white_rose'),
         copyPasteFeature(e, 'windswept', PLACED, 'windswept:lavender')
     ], '#kubejs:has_feature/windswept_lavender',
-        'vegetal_decoration',
+        VEGETAL_DECORATION,
         'add_feature/windswept_lavender'
     )
 }

@@ -6,7 +6,10 @@
     "create",
     "thermal",
     "immersiveengineering",
-    "mekanism"
+    "mekanism",
+    "galosphere",
+    "caverns_and_chasms",
+    "oreganized"
   ],
   "stoneStrata": [
     "stone",

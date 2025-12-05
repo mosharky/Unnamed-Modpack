@@ -13,13 +13,10 @@ function worldgen_Environmental(e) {
     removeBiomeModifier(e, 'environmental:remove_feature/swamp_oak')  // not sure if this is even needed
 
     removeBiomeModifier(e, 'environmental:add_feature/flower_forest_vegetation')
-    addFeatures(e, 'environmental:patch_delphiniums', 'minecraft:flower_forest', 'vegetal_decoration')
+    addFeatures(e, 'environmental:patch_delphiniums', '#kubejs:has_feature/environmental_delphiniums', VEGETAL_DECORATION)
 
     removeBiomeModifier(e, 'environmental:add_feature/swamp_vegetation')
-    addFeatures(e, 'environmental:patch_duckweed_swamp', [
-        'minecraft:swamp',
-        'natures_spirit:marsh'
-    ], 'vegetal_decoration', 'swamp_vegetation')
+    addFeatures(e, 'environmental:patch_duckweed_swamp', '#kubejs:has_feature/environmental_duckweed_swamp', VEGETAL_DECORATION)
 
     removeBiomeModifier(e, 'environmental:add_feature/bluebell')
 
@@ -30,7 +27,22 @@ function worldgen_Environmental(e) {
         copyPasteFeature(e, 'environmental', PLACED, 'environmental:dwarf_spruce'),
         copyPasteFeature(e, 'environmental', PLACED, 'environmental:dwarf_spruce_thicket'),
     ], '#kubejs:has_feature/environmental_dwarf_spruce',
-        'vegetal_decoration',
-        'add_feature/environmental_dwarf_spruce'
+        VEGETAL_DECORATION
+    )
+
+    addFeatures(e,
+        copyPasteFeature(e, 'environmental', PLACED, 'environmental:flower_red_lotus'),
+        '#kubejs:has_feature/environmental_flower_red_lotus',
+        VEGETAL_DECORATION
+    )
+    addFeatures(e,
+        copyPasteFeature(e, 'environmental', PLACED, 'environmental:flower_white_lotus'),
+        '#kubejs:has_feature/environmental_flower_white_lotus',
+        VEGETAL_DECORATION
+    )
+    addFeatures(e,
+        copyPasteFeature(e, 'environmental', PLACED, 'environmental:patch_giant_tall_grass_marsh'),
+        '#kubejs:has_feature/environmental_giant_tall_grass_marsh',
+        VEGETAL_DECORATION
     )
 }

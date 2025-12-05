@@ -29,6 +29,18 @@ Steps (in order):
 
 const PLACED = 'placed'
 const CONFIGURED = 'configured'
+const RAW_GENERATION = 'raw_generation'
+const LAKES = 'lakes'
+const LOCAL_MODIFICATIONS = 'local_modifications'
+const UNDERGROUND_STRUCTURES = 'underground_structures'
+const SURFACE_STRUCTURES = 'surface_structures'
+const STRONGHOLDS = 'strongholds'
+const UNDERGROUND_ORES = 'underground_ores'
+const UNDERGROUND_DECORATION = 'underground_decoration'
+const FLUID_SPRINGS = 'fluid_springs'
+const VEGETAL_DECORATION = 'vegetal_decoration'
+const TOP_LAYER_MODIFICATION = 'top_layer_modification'
+
 const disableBiomeSliceJson = {
     levels: ['minecraft:overworld'],
     weight: 0,
@@ -266,4 +278,111 @@ function configuredFoliagePatch(e, blockId, tries, xzSpread, ySpread, rarity, st
     })
 
     return featureId
+}
+
+
+/**
+ * @param {$DataPackEventJS_} event - highPriorityData event
+ * @param {string} block - The block ID to register a cliff for
+ * @returns {string} - The placed feature ID
+ */
+function registerCliff(event, block) {
+    const idString = block.replace(':', '_')
+    const blocksToReplace = [
+        'minecraft:grass_block',
+        'natures_spirit:red_moss_block',
+        'minecraft:dirt',
+        'minecraft:snow_block',
+        'minecraft:stone',
+        'minecraft:coarse_dirt',
+        'minecraft:andesite'
+    ]
+
+    registerFeature(event, CONFIGURED, `kubejs:${idString}_cliff`, {
+        type: 'minecraft:random_selector',
+        config: {
+            features: [],
+            default: {
+                feature: {
+                    type: 'minecraft:simple_block',
+                    config: {
+                        to_place: {
+                            type: 'minecraft:simple_state_provider',
+                            state: { Name: block }
+                        }
+                    }
+                },
+                placement: [
+                    { type: 'count', count: 256 },
+                    {
+                        type: 'minecraft:random_offset',
+                        xz_spread: {
+                            type: 'minecraft:uniform',
+                            value: { min_inclusive: -2, max_inclusive: 2 }
+                        },
+                        y_spread: {
+                            type: 'minecraft:uniform',
+                            value: { min_inclusive: -8, max_inclusive: 0 }
+                        }
+                    },
+                    {
+                        type: 'minecraft:block_predicate_filter',
+                        predicate: {
+                            type: 'minecraft:all_of',
+                            predicates: [
+                                {
+                                    type: 'minecraft:matching_blocks',
+                                    offset: [0, 0, 0],
+                                    blocks: blocksToReplace
+                                },
+                                {
+                                    type: 'minecraft:all_of',
+                                    predicates: [
+                                        {
+                                            type: 'minecraft:any_of',
+                                            predicates: [
+                                                { type: 'minecraft:matching_blocks', offset: [-1, 1, 0], blocks: blocksToReplace },
+                                                { type: 'minecraft:matching_blocks', offset: [-1, 1, 1], blocks: blocksToReplace },
+                                                { type: 'minecraft:matching_blocks', offset: [-1, 1, -1], blocks: blocksToReplace },
+                                                { type: 'minecraft:matching_blocks', offset: [0, 1, 1], blocks: blocksToReplace },
+                                                { type: 'minecraft:matching_blocks', offset: [0, 1, -1], blocks: blocksToReplace },
+                                                { type: 'minecraft:matching_blocks', offset: [1, 1, -1], blocks: blocksToReplace },
+                                                { type: 'minecraft:matching_blocks', offset: [1, 1, 0], blocks: blocksToReplace },
+                                                { type: 'minecraft:matching_blocks', offset: [1, 1, 1], blocks: blocksToReplace }
+                                            ]
+                                        },
+                                        {
+                                            type: 'minecraft:any_of',
+                                            predicates: [
+                                                { type: 'minecraft:matching_blocks', offset: [-1, 2, 0], blocks: blocksToReplace },
+                                                { type: 'minecraft:matching_blocks', offset: [-1, 2, 1], blocks: blocksToReplace },
+                                                { type: 'minecraft:matching_blocks', offset: [-1, 2, -1], blocks: blocksToReplace },
+                                                { type: 'minecraft:matching_blocks', offset: [0, 2, 1], blocks: blocksToReplace },
+                                                { type: 'minecraft:matching_blocks', offset: [0, 2, -1], blocks: blocksToReplace },
+                                                { type: 'minecraft:matching_blocks', offset: [1, 2, -1], blocks: blocksToReplace },
+                                                { type: 'minecraft:matching_blocks', offset: [1, 2, 0], blocks: blocksToReplace },
+                                                { type: 'minecraft:matching_blocks', offset: [1, 2, 1], blocks: blocksToReplace }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    })
+
+    registerFeature(event, PLACED, `kubejs:${idString}_cliff`, {
+        feature: `kubejs:${idString}_cliff`,
+        placement: [
+            { type: 'minecraft:count', count: 256 },
+            { type: 'minecraft:in_square' },
+            { type: 'heightmap', heightmap: 'WORLD_SURFACE_WG' },
+            { type: 'minecraft:biome' }
+        ]
+    })
+
+    return `kubejs:${idString}_cliff`
 }

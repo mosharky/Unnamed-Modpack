@@ -151,6 +151,19 @@
 		[types.wood_type.darkerdepths]
 			petrified = true
 
+		[types.wood_type.mynethersdelight]
+			powdery = true
+
+		[types.wood_type.gardens_of_the_dead]
+			whistlecane = true
+			soulblight = true
+
+		[types.wood_type.evenbetternether]
+			mushroom = true
+
+		[types.wood_type.collectorsreap]
+			lucuma = true
+
 	[types.leaves_type]
 
 		[types.leaves_type.vanillabackport]
@@ -237,6 +250,9 @@
 			pine = true
 			flowering_acacia = true
 
+		[types.leaves_type.collectorsreap]
+			lucuma = true
+
 	[types.cake]
 
 		[types.cake.natures_spirit]
@@ -252,6 +268,23 @@
 
 		[types.cake.galospheric_delight]
 			salted_caramel_cake = true
+
+		[types.cake.mynethersdelight]
+			magma_cake = true
+
+		[types.cake.farmersrespite]
+			coffee_cake = true
+
+		[types.cake.respiteful]
+			green_tea_cake = true
+			yellow_tea_cake = true
+			black_tea_cake = true
+
+		[types.cake.collectorsreap]
+			lime_cake = true
+			pomegranate_cake = true
+			pink_dragon_fruit_cake = true
+			lucuma_cake = true
 
 	[types.cut_block_type]
 
@@ -645,9 +678,9 @@
 			carmine_pavement = true
 
 		[types.cut_block_type.quark]
-			ancient_planks = true
-			azalea_planks = true
-			blossom_planks = true
+			ancient_planks = false
+			azalea_planks = false
+			blossom_planks = false
 			duskbound_block = true
 			iron_plate = true
 			rusty_iron_plate = true
@@ -659,18 +692,18 @@
 			cobblestone_bricks = true
 			mossy_cobblestone_bricks = true
 			blackstone_bricks = true
-			dirt_bricks = true
+			dirt_bricks = false
 			netherrack_bricks = true
-			limestone = true
-			polished_limestone = true
+			limestone = false
+			polished_limestone = false
 			jasper = true
 			polished_jasper = true
 			shale = true
 			polished_shale = true
 			myalite = true
 			polished_myalite = true
-			permafrost = true
-			permafrost_bricks = true
+			permafrost = false
+			permafrost_bricks = false
 			raw_iron_bricks = true
 			raw_gold_bricks = true
 			raw_copper_bricks = true
@@ -761,6 +794,30 @@
 			polished_grimestone = true
 			grimestone_bricks = true
 
+		[types.cut_block_type.mynethersdelight]
+			powdery = true
+			powdery_mosaic = true
+
+		[types.cut_block_type.evenbetternether]
+			mushroom = true
+			pyrite_tile = true
+			pyrite_roofing = true
+			carved_pyrite = true
+			pyrite_brick = true
+			nether_reed = true
+			polished_nether_brick = true
+			smooth_netherrack = true
+
+		[types.cut_block_type.gardens_of_the_dead]
+			soulblight = true
+			whistlecane = true
+			whistlecane_mosaic = true
+
+		[types.cut_block_type.collectorsreap]
+			lucuma = true
+			urchin_test_brick = true
+			urchin_test_tile = true
+
 #Disables specific entries
 [entries]
 
@@ -835,6 +892,9 @@
 			table = true
 			drawer = true
 			chair = true
+
+		[entries.wood_type.backpacked]
+			backpack_shelf = true
 
 	[entries.leaves_type]
 

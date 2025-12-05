@@ -2,7 +2,7 @@ STRUCTURE_BLOCK_SWAPPER.set(/natures_spirit:.*coconut.*/, new Map([
     ['minecraft:chest', 'everycomp:abnww/natures_spirit/coconut_chest']
 ]))
 
-STRUCTURE_BLOCK_SWAPPER.set(/natures_spirit:.*joshua.*/, new Map([
+STRUCTURE_BLOCK_SWAPPER.set(/natures_spirit:.*adobe.*/, new Map([
     ['minecraft:chest', 'everycomp:abnww/natures_spirit/joshua_chest']
 ]))
 
@@ -16,7 +16,7 @@ STRUCTURE_BLOCK_SWAPPER.set(/natures_spirit:.*wisteria.*/, new Map([
 
 /** @param {$DataPackEventJS_} e  */
 function worldgen_NaturesSpirit(e) {
-    removeFeatures(e, 'natures_spirit:patch_beach_grass', 'natures_spirit:tropical_shores', 'vegetal_decoration')
+    removeFeatures(e, 'natures_spirit:patch_beach_grass', 'natures_spirit:tropical_shores', VEGETAL_DECORATION)
 
     // Changing maple trees to use Autumnity's maple logs
     // https://github.com/Team-Hibiscus/NatureSpiritForge/blob/1.20.1/src/main/resources/data/natures_spirit/worldgen/configured_feature/orange_maple_tree.json
@@ -26,7 +26,7 @@ function worldgen_NaturesSpirit(e) {
         // treeFeature.config.decorators = []
         registerFeature(e, CONFIGURED, `natures_spirit:${color}_maple_tree`, treeFeatureJson)
         // Adding NS maple trees to vanilla biomes, same as Autumnity did
-        addFeatures(e, spottedPlacedFeature(e, `natures_spirit:${color}_maple_tree`, `natures_spirit:${color}_maple_sapling`), `#kubejs:has_feature/spotted_maple_tree/${color}`, 'vegetal_decoration')
+        addFeatures(e, spottedPlacedFeature(e, `natures_spirit:${color}_maple_tree`, `natures_spirit:${color}_maple_sapling`), `#kubejs:has_feature/spotted_maple_tree/${color}`, VEGETAL_DECORATION)
     })
 
     // Replacing Autumnity's green maple with a new one using NS maple tree type
@@ -68,8 +68,17 @@ function worldgen_NaturesSpirit(e) {
             ]
         }),
         '#kubejs:has_feature/sparse_maple_tree',
-        'vegetal_decoration'
+        VEGETAL_DECORATION
     )
+
+    removeFeatures(e, [
+        'natures_spirit:andesite_cliff',
+        'natures_spirit:granite_cliff'
+    ], '#minecraft:is_overworld', RAW_GENERATION)
+
+    // TODO: Remove acacia from tropical NS biomes
+    // TODO: Remove bushes from tropical NS biomes
+    // TODO: Remove/replace NS Hibiscus references with Atmospheric's hibiscus
 
     // https://github.com/Team-Hibiscus/NatureSpiritForge/blob/1.20.1/src/main/java/net/hibiscus/naturespirit/world/NSSurfaceRules.java
     // Replacing pink sand with 'atmospheric:red_arid_sand' as a surface rule

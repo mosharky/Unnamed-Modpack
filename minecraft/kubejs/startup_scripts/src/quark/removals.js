@@ -5,7 +5,6 @@ function removals_Quark() {
         /quark:.*ancient(?!_tome|_fruit).*/,
         /quark:.*azalea(?!_hedge).*/,
         'quark:gold_bars',
-        'quark:crate',
         'quark:chute',
     ])
 
@@ -14,7 +13,6 @@ function removals_Quark() {
 
     // IDAS structures need these swapped out
     global.BLOCK_SWAPPER.set('quark:gold_bars', 'caverns_and_chasms:golden_bars')
-    global.BLOCK_SWAPPER.set('quark:crate', 'minecraft:barrel')
     global.BLOCK_SWAPPER.set('quark:iron_ladder', 'create:andesite_ladder')
     global.BLOCK_SWAPPER.set('quark:permafrost', 'immersive_weathering:permafrost')
     global.BLOCK_SWAPPER.set('quark:permafrost_wall', 'stonezone:c/quark/cut_permafrost_wall')
@@ -28,7 +26,6 @@ function removals_Quark() {
     global.BLOCK_SWAPPER.set('quark:flowering_azalea_leaf_carpet', 'immersive_weathering:flowering_azalea_leaf_pile')
     global.BLOCK_SWAPPER.set('quark:dark_oak_leaf_carpet', 'immersive_weathering:dark_oak_leaf_pile')
     global.BLOCK_SWAPPER.set('quark:acacia_leaf_carpet', 'immersive_weathering:acacia_leaf_pile')
-    global.BLOCK_SWAPPER.set('quark:crate', 'minecraft:barrel')
     global.BLOCK_SWAPPER.set('quark:nether_brick_trapped_chest', 'woodworks:trapped_crimson_chest')
     global.BLOCK_SWAPPER.set('quark:nether_brick_chest', 'woodworks:crimson_chest')
     global.BLOCK_SWAPPER.set('quark:prismarine_trapped_chest', 'woodworks:trapped_warped_chest')
@@ -39,6 +36,15 @@ function removals_Quark() {
     global.BLOCK_SWAPPER.set('quark:dirt_bricks_slab', 'environmental:dirt_brick_slab')
     global.BLOCK_SWAPPER.set('quark:dirt_bricks_wall', 'environmental:dirt_brick_wall')
     global.BLOCK_SWAPPER.set('quark:dirt_bricks_vertical_slab', 'v_slab_compat:environmental/dirt_brick_vertical_slab')
+    global.BLOCK_SWAPPER.set('quark:limestone', 'create:limestone')
+    global.BLOCK_SWAPPER.set('quark:limestone_wall', 'create:cut_limestone_wall')
+    global.BLOCK_SWAPPER.set('quark:limestone_slab', 'create:cut_limestone_slab')
+    global.BLOCK_SWAPPER.set('quark:limestone_vertical_slab', 'v_slab_compat:create/cut_limestone_vertical_slab')//todo
+    global.BLOCK_SWAPPER.set('quark:limestone_stairs', 'create:cut_limestone_stairs')
+    global.BLOCK_SWAPPER.set('quark:polished_limestone', 'create:polished_cut__limestone')
+    global.BLOCK_SWAPPER.set('quark:polished_limestone_slab', 'create:polished_cut_limestone_slab')
+    global.BLOCK_SWAPPER.set('quark:polished_limestone_vertical_slab', 'v_slab_compat:create/polished_cut_limestone_vertical_slab')
+    global.BLOCK_SWAPPER.set('quark:polished_limestone_stairs', 'create:polished_cut_limestone_stairs')
     // Entities
     global.ENTITY_SWAPPER.set('quark:wraith', 'caverns_and_chasms:mime')
     global.ENTITY_SWAPPER.set('quark:foxhound', 'quark:forgotten')  // TODO: replace with alex's mobs nether bear?

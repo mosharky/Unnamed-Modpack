@@ -1,4 +1,41 @@
 /** @param {$TagEventJS_} e */
+function entityTags_Environmental(e) {
+    e.add('environmental:scares_deer', [
+        // TODO: Add mobs from Alex's Mobs when it's added
+    ])
+
+    e.add('environmental:scares_trusting_deer', [
+        // TODO: Add mobs from Alex's Mobs when it's added
+    ])
+
+    e.add('environmental:zebroids_dont_kick', [
+        // TODO: add other horse-like mobs
+    ])
+
+    e.add('environmental:deer_food', [])
+
+    e.add('environmental:duck_food', [
+        'natures_spirit:azolla'
+    ])
+
+    e.removeAll('environmental:spawns_on_muddy_pig')
+    e.add('environmental:spawns_on_muddy_pig', [
+        'minecraft:blue_orchid',
+        'environmental:dianthus',
+        'minecraft:poppy',
+        'minecraft:dandelion',
+        'minecraft:red_mushroom',
+        'minecraft:brown_mushroom',
+        'minecraft:lily_pad',
+        'natures_spirit:cattail'
+    ])
+
+    e.add('environmental:yak_food', [
+        'supplementaries:flax'
+    ])
+}
+
+/** @param {$TagEventJS_} e */
 function biomeTags_Environmental(e) {
     e.add('environmental:has_structure/log_cabin', '#windswept:is_pine_barrens')
 
@@ -34,7 +71,6 @@ function biomeTags_Environmental(e) {
         'minecraft:birch_forest',
         'minecraft:meadow',
         'minecraft:cherry_grove',
-        '#natures_spirit:is_autumn',
         '#natures_spirit:is_alpine',
         'natures_spirit:wisteria_forest',
         'natures_spirit:floral_ridges',
@@ -128,5 +164,34 @@ function biomeTags_Environmental(e) {
 
     e.add('environmental:spawns_muddy_rabbits', [
         '#forge:is_swamp'
+    ])
+
+    e.add('kubejs:has_feature/environmental_delphiniums', [
+        'minecraft:flower_forest',
+        'natures_spirit:floral_ridges',
+        'natures_spirit:wisteria_forest',
+    ])
+
+    e.add('kubejs:has_feature/environmental_duckweed_swamp', [
+        'minecraft:swamp',
+        'natures_spirit:marsh'
+    ])
+
+    e.add('kubejs:has_feature/environmental_flower_white_lotus', [
+        'natures_spirit:floral_ridges',
+        'natures_spirit:wisteria_forest',
+        'minecraft:flower_forest'
+    ])
+
+    e.add('kubejs:has_feature/environmental_flower_red_lotus', [
+        '#atmospheric:is_rainforest',
+        '#natures_spirit:is_tropical_woods',
+        'natures_spirit:blooming_sugi_forest',
+        'natures_spirit:floral_ridges',
+        'natures_spirit:wisteria_forest',
+    ])
+
+    e.add('kubejs:has_feature/environmental_giant_tall_grass_marsh', [
+        'natures_spirit:marsh'
     ])
 }

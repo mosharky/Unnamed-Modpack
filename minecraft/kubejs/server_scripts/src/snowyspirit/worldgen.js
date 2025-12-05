@@ -11,7 +11,7 @@ STRUCTURE_BLOCK_SWAPPER.set('snowyspirit:gingerbread_house', new Map([
 ]))
 
 /** @param {$DataPackEventJS_} e  */
-function snowySpiritWorldgen(e) {
+function worldgen_SnowySpirit(e) {
     removeBiomeModifier(e, 'snowyspirit:ginger')
     removeBiomeModifier(e, 'snowyspirit:ginger_dense')
 }

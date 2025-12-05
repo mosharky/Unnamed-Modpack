@@ -3,11 +3,14 @@
 function postInit() {
     constructWoodTypes()
 
-    // Adding items to global.REMOVALS and global.BLOCKSWAP_CONFIG
+    // Adding items to global.REMOVALS and global swaps
     removals_Atmospheric()
     removals_Autumnity()
     removals_CavernsAndChasms()
+    removals_Darkerdepths()
     removals_Environmental()
+    removals_EvenBetterNether()
+    removals_Galosphere()
     removals_ImmersiveWeathering()
     removals_NaturesSpirit()
     removals_Oreganized()
