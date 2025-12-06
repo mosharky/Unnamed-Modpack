@@ -15,14 +15,14 @@
 
 		[types.stone_type.quark]
 			soul_sandstone = true
-			limestone = true
+			limestone = false
 			jasper = true
 			shale = true
 			myalite = true
 			permafrost = true
 
 		[types.stone_type.atmospheric]
-			dolerite = true
+			dolerite = false
 			ivory_travertine = false
 			peach_travertine = false
 			persimmon_travertine = false
@@ -689,8 +689,8 @@
 			sandstone_bricks = true
 			red_sandstone_bricks = true
 			soul_sandstone_bricks = true
-			cobblestone_bricks = true
-			mossy_cobblestone_bricks = true
+			cobblestone_bricks = false
+			mossy_cobblestone_bricks = false
 			blackstone_bricks = true
 			dirt_bricks = false
 			netherrack_bricks = true
@@ -727,20 +727,20 @@
 			soul_sandstone = true
 			cut_soul_sandstone = true
 			smooth_soul_sandstone = true
-			thatch = true
-			calcite = true
-			polished_calcite = true
+			thatch = false
+			calcite = false
+			polished_calcite = false
 			dripstone_block = true
-			polished_dripstone = true
-			tuff = true
-			polished_tuff = true
-			granite_bricks = true
-			diorite_bricks = true
-			andesite_bricks = true
-			calcite_bricks = true
-			dripstone_bricks = true
-			tuff_bricks = true
-			limestone_bricks = true
+			polished_dripstone = false
+			tuff = false
+			polished_tuff = false
+			granite_bricks = false
+			diorite_bricks = false
+			andesite_bricks = false
+			calcite_bricks = false
+			dripstone_bricks = false
+			tuff_bricks = false
+			limestone_bricks = false
 			jasper_bricks = true
 			shale_bricks = true
 			myalite_bricks = true

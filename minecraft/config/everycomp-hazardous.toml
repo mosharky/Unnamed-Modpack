@@ -23,41 +23,12 @@
 	#        "biomesoplenty:redwood"		COMMENT: exclude redwood from Wood Mod for any module
 	#    ]
 	#
-	blacklist = [
-        "atmospheric:aspen",
-        "quark:blossom",
-        "quark:ancient",
-        "quark:azalea",
-        "environmental:pine",
-        "environmental:wisteria",
-        "environmental:willow",
-        "natures_spirit:maple"
-    ]
+	blacklist = ["atmospheric:aspen", "quark:blossom", "quark:ancient", "quark:azalea", "environmental:pine", "environmental:wisteria", "environmental:willow", "natures_spirit:maple"]
 
 [leavestype]
 	#Exclude LeavesType from all of Modules
 	#	The example is same as WoodType's
-	blacklist = [
-        "atmospheric:aspen",
-        "atmospheric:green_aspen",
-        "quark:ancient",
-        "quark:blue_blossom",
-        "quark:lavender_blossom",
-        "quark:orange_blossom",
-        "quark:yellow_blossom",
-        "quark:red_blossom",
-        "environmental:pine",
-        "environmental:willow",
-        "environmental:wisteria",
-        "environmental:pink_wisteria",
-        "environmental:blue_wisteria",
-        "environmental:purple_wisteria",
-        "environmental:white_wisteria",
-        "natures_spirit:maple",
-        "autumnity:yellow_maple",
-        "autumnity:orange_maple",
-        "autumnity:red_maple",
-    ]
+	blacklist = ["atmospheric:aspen", "atmospheric:green_aspen", "quark:ancient", "quark:blue_blossom", "quark:lavender_blossom", "quark:orange_blossom", "quark:yellow_blossom", "quark:red_blossom", "environmental:pine", "environmental:willow", "environmental:wisteria", "environmental:pink_wisteria", "environmental:blue_wisteria", "environmental:purple_wisteria", "environmental:white_wisteria", "natures_spirit:maple", "autumnity:yellow_maple", "autumnity:orange_maple", "autumnity:red_maple"]
 
 [entryset]
 	#Exclude EntrySet from the module for All of WoodType or LeavesType

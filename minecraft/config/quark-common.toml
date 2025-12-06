@@ -209,7 +209,7 @@
 		#This also includes Red Sandstone Bricks and Soul Sandstone Bricks
 		"Enable Sandstone Bricks" = true
 		#This also includes Mossy Cobblestone Bricks
-		"Enable Cobblestone Bricks" = true
+		"Enable Cobblestone Bricks" = false
 		#Requires Cobblestone Bricks to be enabled
 		"Enable Blackstone Bricks" = true
 		#Requires Cobblestone Bricks to be enabled
@@ -277,9 +277,9 @@
 		"Allow Side Connections" = true
 
 	[building.more_stone_variants]
-		"Enable Bricks" = true
-		"Enable Chiseled Bricks" = true
-		"Enable Pillar" = true
+		"Enable Bricks" = false
+		"Enable Chiseled Bricks" = false
+		"Enable Pillar" = false
 
 [management]
 	"Automatic Tool Restock" = true
