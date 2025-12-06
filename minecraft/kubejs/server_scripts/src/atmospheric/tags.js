@@ -135,7 +135,4 @@ function biomeTags_Atmospheric(e) {
     e.add('kubejs:has_feature/atmospheric_trees_rainforest', [
         'natures_spirit:tropical_woods',
     ])
-
-    // TODO: remove acacia trees from NS tropical biomes
-
 }

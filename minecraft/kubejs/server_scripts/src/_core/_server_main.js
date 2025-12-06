@@ -25,6 +25,7 @@ ServerEvents.tags('worldgen/biome', e => {
     biomeTags_ImmersiveWeathering(e)
     biomeTags_MyNethersDelight(e)
     biomeTags_NaturesSpirit(e)
+    biomeTags_Neapolitan(e)
     biomeTags_UpgradeAquatic(e)
     biomeTags_Windswept(e)
 })

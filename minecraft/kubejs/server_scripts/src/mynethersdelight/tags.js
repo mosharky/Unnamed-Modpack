@@ -1,3 +1,4 @@
+/** @param {$TagEventJS_} e */
 function biomeTags_MyNethersDelight(e) {
     e.add('kubejs:has_feature/patch_powdery_cane', [
         'minecraft:crimson_forest',
