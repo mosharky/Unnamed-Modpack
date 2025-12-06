@@ -23,10 +23,6 @@ function worldgen_ImmersiveWeathering(e) {
                 {
                     target: { predicate_type: 'minecraft:block_match', block: 'minecraft:grass_block' },
                     state: { Name: 'immersive_weathering:grassy_permafrost' }
-                },
-                {
-                    target: { predicate_type: 'minecraft:block_match', block: 'minecraft:snow_block' },
-                    state: { Name: 'immersive_weathering:permafrost' }
                 }
             ]
         }

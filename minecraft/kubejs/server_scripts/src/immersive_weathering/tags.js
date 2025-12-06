@@ -1,5 +1,6 @@
 /** @param {$TagEventJS_} e */
 function biomeTags_ImmersiveWeathering(e) {
+    e.removeAll('immersive_weathering:has_permafrost')
     e.add('immersive_weathering:has_permafrost', [
         'minecraft:frozen_river',
         'minecraft:snowy_plains',
@@ -18,7 +19,6 @@ function biomeTags_ImmersiveWeathering(e) {
         'natures_spirit:snowy_fir_forest',
         'environmental:snowy_pine_barrens',
         'environmental:snowy_old_growth_pine_barrens',
-        'atmospheric:snowy_scrubland'
     ])
     e.add('kubejs:has_feature/permafrost_cliff', '#immersive_weathering:has_permafrost')
 }
