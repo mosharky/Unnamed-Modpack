@@ -12,6 +12,9 @@ ClientEvents.lang('en_us', e => {
     rename('natures_spirit:lavender', 'Lavender Bush')
     rename('natures_spirit:bluebell', 'Bluebell Bush')
     rename('natures_spirit:foxglove', 'Purple Foxglove')
+    rename('natures_spirit:hibiscus', 'Lonely Hibiscus')
+    rename('natures_spirit:lotus_flower', 'Aquatic Lotus Flower')
+    rename('natures_spirit:lotus_stem', 'Aquatic Lotus Stem')
 
     // Even Better Nether
     rename('evenbetternether:barrel_cactus', 'Warped Barrel Cactus')

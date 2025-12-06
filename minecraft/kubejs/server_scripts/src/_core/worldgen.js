@@ -19,6 +19,8 @@ function worldgen_Core(e) {
 
     addFeatures(e, registerCliff(e, 'minecraft:andesite'), '#kubejs:has_feature/andesite_cliff', RAW_GENERATION)
     addFeatures(e, registerCliff(e, 'minecraft:granite'), '#kubejs:has_feature/granite_cliff', RAW_GENERATION)
+    addFeatures(e, registerCliff(e, 'minecraft:stone'), '#kubejs:has_feature/stone_cliff', RAW_GENERATION)
+    addFeatures(e, registerCliff(e, 'minecraft:terracotta'), '#kubejs:has_feature/terracotta_cliff', RAW_GENERATION)
     removeFeatures(e, [
         'minecraft:ore_granite_lower',
         'minecraft:ore_granite_upper',

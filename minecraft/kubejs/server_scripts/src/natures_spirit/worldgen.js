@@ -23,7 +23,7 @@ function worldgen_NaturesSpirit(e) {
     const mapleColors = ['orange', 'yellow', 'red'].forEach(color => {
         let treeFeatureJson = getFeatureJson('natures_spirit', CONFIGURED, `natures_spirit:${color}_maple_tree`)
         treeFeatureJson.config.trunk_provider.state.Name = 'autumnity:maple_log'
-        // treeFeature.config.decorators = []
+        treeFeatureJson.config.decorators = []
         registerFeature(e, CONFIGURED, `natures_spirit:${color}_maple_tree`, treeFeatureJson)
         // Adding NS maple trees to vanilla biomes, same as Autumnity did
         addFeatures(e, spottedPlacedFeature(e, `natures_spirit:${color}_maple_tree`, `natures_spirit:${color}_maple_sapling`), `#kubejs:has_feature/spotted_maple_tree/${color}`, VEGETAL_DECORATION)
@@ -71,25 +71,69 @@ function worldgen_NaturesSpirit(e) {
         VEGETAL_DECORATION
     )
 
+    // Remove vines from NS Birch trees
+    const oldBirchBees0002 = getFeatureJson('natures_spirit', CONFIGURED, 'natures_spirit:old_birch_bees_0002')
+    oldBirchBees0002.config.decorators.pop()
+    registerFeature(e, CONFIGURED, 'natures_spirit:old_birch_bees_0002', oldBirchBees0002)
+    const superOldBirchBees0002 = getFeatureJson('natures_spirit', CONFIGURED, 'natures_spirit:super_old_birch_bees_0002')
+    superOldBirchBees0002.config.decorators.pop()
+    registerFeature(e, CONFIGURED, 'natures_spirit:super_old_birch_bees_0002', superOldBirchBees0002)
+
+    // Removing/replacing cliff features
     removeFeatures(e, [
+        'natures_spirit:stone_cliff',
         'natures_spirit:andesite_cliff',
-        'natures_spirit:granite_cliff'
+        'natures_spirit:granite_cliff',
+        'natures_spirit:terracotta_cliff',
+        'natures_spirit:travertine_cliff',
+        'natures_spirit:kaolin_cliff',
+        'natures_spirit:chert_cliff',
+        'natures_spirit:pink_sandstone_cliff'
     ], '#minecraft:is_overworld', RAW_GENERATION)
+    addFeatures(e, registerCliff(e, 'natures_spirit:travertine'), '#kubejs:has_feature/travertine_cliff', RAW_GENERATION)
+    addFeatures(e, registerCliff(e, 'natures_spirit:kaolin'), '#kubejs:has_feature/kaolin_cliff', RAW_GENERATION)
+    addFeatures(e, registerCliff(e, 'natures_spirit:chert'), '#kubejs:has_feature/chert_cliff', RAW_GENERATION)
 
-    // TODO: Remove acacia from tropical NS biomes
-    // TODO: Remove bushes from tropical NS biomes
-    // TODO: Remove/replace NS Hibiscus references with Atmospheric's hibiscus
+    // Distributing/integrating NS features
+    addFeatures(e, copyPasteFeature(e, 'natures_spirit', PLACED, 'natures_spirit:small_larch_placed'), '#kubejs:has_feature/natures_spirit_small_larch', VEGETAL_DECORATION)
+    addFeatures(e, copyPasteFeature(e, 'natures_spirit', PLACED, 'natures_spirit:rooted_desert_turnip_placed'), '#kubejs:has_feature/natures_spirit_rooted_desert_turnip', VEGETAL_DECORATION)
+    addFeatures(e, copyPasteFeature(e, 'natures_spirit', PLACED, 'natures_spirit:noise_fir_placed'), '#kubejs:has_feature/natures_spirit_noise_fir', VEGETAL_DECORATION)
+    addFeatures(e, copyPasteFeature(e, 'natures_spirit', PLACED, 'natures_spirit:patch_drylands_grass'), '#kubejs:has_feature/natures_spirit_scorched_grass', VEGETAL_DECORATION)
+    addFeatures(e, copyPasteFeature(e, 'natures_spirit', PLACED, 'natures_spirit:flower_helvola'), '#kubejs:has_feature/natures_spirit_flower_helvola', VEGETAL_DECORATION)
+    addFeatures(e, copyPasteFeature(e, 'natures_spirit', PLACED, 'natures_spirit:lotus_plant_placed'), '#kubejs:has_feature/natures_spirit_lotus_plant', VEGETAL_DECORATION)
+    addFeatures(e, copyPasteFeature(e, 'natures_spirit', PLACED, 'natures_spirit:patch_lush_fern'), '#kubejs:has_feature/natures_spirit_lush_fern', VEGETAL_DECORATION)
+    addFeatures(e, registerFeature(e, PLACED, 'kubejs:sparse_frosty_fir', {
+        feature: 'natures_spirit:frosty_fir_tree_spawn',
+        placement: [
+            { type: 'minecraft:rarity_filter', chance: 24 },
+            { type: 'minecraft:in_square' },
+            { type: 'minecraft:surface_water_depth_filter', max_water_depth: 0 },
+            { type: 'minecraft:heightmap', heightmap: 'OCEAN_FLOOR' },
+            { type: 'minecraft:biome' }
+        ]
+    }), '#kubejs:has_feature/natures_spirit_sparse_frosty_fir', VEGETAL_DECORATION)
 
-    // https://github.com/Team-Hibiscus/NatureSpiritForge/blob/1.20.1/src/main/java/net/hibiscus/naturespirit/world/NSSurfaceRules.java
-    // Replacing pink sand with 'atmospheric:red_arid_sand' as a surface rule
-    // Lithostitched surface rules apply before any other surface rule, so this is applied before NS gets to apply its own surface rules
-    /*
-    public static final SurfaceRules.ConditionSource ON_FLOOR = stoneDepthCheck(0, false, CaveSurface.FLOOR);
-    public static final SurfaceRules.ConditionSource UNDER_FLOOR = stoneDepthCheck(0, true, CaveSurface.FLOOR);
-    public static final SurfaceRules.ConditionSource DEEP_UNDER_FLOOR = stoneDepthCheck(0, true, 6, CaveSurface.FLOOR);
-    public static final SurfaceRules.ConditionSource VERY_DEEP_UNDER_FLOOR = stoneDepthCheck(0, true, 30, CaveSurface.FLOOR);
-    public static final SurfaceRules.ConditionSource ON_CEILING = stoneDepthCheck(0, false, CaveSurface.CEILING);
-    public static final SurfaceRules.ConditionSource UNDER_CEILING = stoneDepthCheck(0, true, CaveSurface.CEILING);
+
+    // Remove bushes and acacia trees (Overlap with Atmospheric)
+    removeFeatures(e, [
+        'natures_spirit:trees_acacia_dense',
+        'natures_spirit:oak_bush_placed_dense',
+        'natures_spirit:trees_acacia_sparse'
+    ], [
+        'natures_spirit:tropical_woods',
+        'natures_spirit:tropical_basin',
+        'natures_spirit:sparse_tropical_woods'
+    ], VEGETAL_DECORATION)
+
+    /* https://github.com/Team-Hibiscus/NatureSpiritForge/blob/1.20.1/src/main/java/net/hibiscus/naturespirit/world/NSSurfaceRules.java
+    Replacing pink sand with 'atmospheric:red_arid_sand' as a surface rule
+    Lithostitched surface rules apply before any other surface rule, so this is applied before NS gets to apply its own surface rules
+        public static final SurfaceRules.ConditionSource ON_FLOOR = stoneDepthCheck(0, false, CaveSurface.FLOOR);
+        public static final SurfaceRules.ConditionSource UNDER_FLOOR = stoneDepthCheck(0, true, CaveSurface.FLOOR);
+        public static final SurfaceRules.ConditionSource DEEP_UNDER_FLOOR = stoneDepthCheck(0, true, 6, CaveSurface.FLOOR);
+        public static final SurfaceRules.ConditionSource VERY_DEEP_UNDER_FLOOR = stoneDepthCheck(0, true, 30, CaveSurface.FLOOR);
+        public static final SurfaceRules.ConditionSource ON_CEILING = stoneDepthCheck(0, false, CaveSurface.CEILING);
+        public static final SurfaceRules.ConditionSource UNDER_CEILING = stoneDepthCheck(0, true, CaveSurface.CEILING);
     */
     e.addJson('kubejs:lithostitched/worldgen_modifier/add_surface_rule/replace_pink_sand', {
         type: 'lithostitched:add_surface_rule',
