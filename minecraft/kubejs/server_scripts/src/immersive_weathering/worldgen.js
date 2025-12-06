@@ -13,40 +13,20 @@ function worldgen_ImmersiveWeathering(e) {
             discard_chance_on_air_exposure: 0,
             targets: [
                 {
-                    target: {
-                        predicate_type: 'minecraft:block_match',
-                        block: 'minecraft:stone'
-                    },
-                    state: {
-                        Name: 'immersive_weathering:permafrost'
-                    }
+                    target: { predicate_type: 'minecraft:block_match', block: 'minecraft:stone' },
+                    state: { Name: 'immersive_weathering:permafrost' }
                 },
                 {
-                    target: {
-                        predicate_type: 'minecraft:block_match',
-                        block: 'minecraft:dirt'
-                    },
-                    state: {
-                        Name: 'immersive_weathering:permafrost'
-                    }
+                    target: { predicate_type: 'minecraft:block_match', block: 'minecraft:dirt' },
+                    state: { Name: 'immersive_weathering:permafrost' }
                 },
                 {
-                    target: {
-                        predicate_type: 'minecraft:block_match',
-                        block: 'minecraft:grass_block'
-                    },
-                    state: {
-                        Name: 'immersive_weathering:grassy_permafrost'
-                    }
+                    target: { predicate_type: 'minecraft:block_match', block: 'minecraft:grass_block' },
+                    state: { Name: 'immersive_weathering:grassy_permafrost' }
                 },
                 {
-                    target: {
-                        predicate_type: 'minecraft:block_match',
-                        block: 'minecraft:snow_block'
-                    },
-                    state: {
-                        Name: 'immersive_weathering:permafrost'
-                    }
+                    target: { predicate_type: 'minecraft:block_match', block: 'minecraft:snow_block' },
+                    state: { Name: 'immersive_weathering:permafrost' }
                 }
             ]
         }
@@ -55,20 +35,10 @@ function worldgen_ImmersiveWeathering(e) {
     registerFeature(e, PLACED, 'immersive_weathering:permafrost', {
         feature: 'immersive_weathering:permafrost',
         placement: [
-            {
-                type: 'minecraft:count',
-                count: 256
-            },
-            {
-                type: 'minecraft:in_square'
-            },
-            {
-                type: 'minecraft:heightmap',
-                heightmap: 'MOTION_BLOCKING'
-            },
-            {
-                type: 'minecraft:biome'
-            }
+            { type: 'minecraft:count', count: 256 },
+            { type: 'minecraft:in_square' },
+            { type: 'minecraft:heightmap', heightmap: 'MOTION_BLOCKING' },
+            { type: 'minecraft:biome' }
         ]
     })
 }
