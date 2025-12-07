@@ -67,7 +67,9 @@ function biomeTags_Windswept(e) {
         'natures_spirit:snowy_fir_forest'
     ])
     e.add('windswept:has_feature/wild_berries', [
-
+        'atmospheric:kousa_jungle',
+        'natures_spirit:snowy_fir_forest',
+        'natures_spirit:snowy_redwood_forest',
     ])
     e.add('windswept:has_feature/red_rose', [
         'natures_spirit:carnation_fields',
