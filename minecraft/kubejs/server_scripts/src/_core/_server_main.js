@@ -10,8 +10,8 @@ ServerEvents.tags('block', e => {
 
 ServerEvents.tags('entity_type', e => {
     entityTags_Core(e)
-    entityTags_Environmental(e)
     entityTags_Atmospheric(e)
+    entityTags_Environmental(e)
 })
 
 ServerEvents.tags('worldgen/biome', e => {
@@ -33,12 +33,13 @@ ServerEvents.tags('worldgen/biome', e => {
 
 ServerEvents.recipes(e => {
     recipes_Core(e)
+    recipes_Atmospheric(e)
     recipes_Everycomp(e)
     recipes_FarmersDelight(e)
+    recipes_ImmersiveWeathering(e)
     recipes_Quark(e)
     recipes_Supplementaries(e)
     recipes_Windswept(e)
-    recipes_ImmersiveWeathering(e)
 
     // Fully removing any recipe tied to items in REMOVALS
     global.REMOVALS.all.forEach(removal => {

@@ -49,7 +49,6 @@ function biomeTags_Core(e) {
         'natures_spirit:boreal_taiga',
         'natures_spirit:fir_forest',
         'natures_spirit:oak_savanna',
-        'natures_spirit:prairie',
         'natures_spirit:snowy_fir_forest',
         'natures_spirit:sugi_forest',
         'natures_spirit:tundra',
@@ -69,10 +68,9 @@ function biomeTags_Core(e) {
         'minecraft:sparse_jungle',
     ])
     e.add('kubejs:has_feature/andesite_cliff', [
-        'natures_spirit:alpine_clearings',
-        'natures_spirit:alpine_highlands',
-        'natures_spirit:coniferous_covert',
+        '#natures_spirit:is_alpine',
         'natures_spirit:heather_fields',
+        'natures_spirit:prairie',
         '#windswept:is_pine_barrens',
     ])
     e.add('kubejs:has_feature/granite_cliff', [

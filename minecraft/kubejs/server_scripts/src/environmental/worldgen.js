@@ -30,19 +30,7 @@ function worldgen_Environmental(e) {
         VEGETAL_DECORATION
     )
 
-    addFeatures(e,
-        copyPasteFeature(e, 'environmental', PLACED, 'environmental:flower_red_lotus'),
-        '#kubejs:has_feature/environmental_flower_red_lotus',
-        VEGETAL_DECORATION
-    )
-    addFeatures(e,
-        copyPasteFeature(e, 'environmental', PLACED, 'environmental:flower_white_lotus'),
-        '#kubejs:has_feature/environmental_flower_white_lotus',
-        VEGETAL_DECORATION
-    )
-    addFeatures(e,
-        copyPasteFeature(e, 'environmental', PLACED, 'environmental:patch_giant_tall_grass_marsh'),
-        '#kubejs:has_feature/environmental_giant_tall_grass_marsh',
-        VEGETAL_DECORATION
-    )
+    addFeatures(e, copyPasteFeature(e, 'environmental', PLACED, 'environmental:flower_red_lotus'), '#kubejs:has_feature/environmental_flower_red_lotus', VEGETAL_DECORATION)
+    addFeatures(e, copyPasteFeature(e, 'environmental', PLACED, 'environmental:flower_white_lotus'), '#kubejs:has_feature/environmental_flower_white_lotus', VEGETAL_DECORATION)
+    addFeatures(e, copyPasteFeature(e, 'environmental', PLACED, 'environmental:patch_giant_tall_grass_marsh'), '#kubejs:has_feature/environmental_giant_tall_grass_marsh', VEGETAL_DECORATION)
 }

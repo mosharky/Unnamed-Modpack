@@ -71,14 +71,6 @@ function worldgen_NaturesSpirit(e) {
         VEGETAL_DECORATION
     )
 
-    // Remove vines from NS Birch trees
-    const oldBirchBees0002 = getFeatureJson('natures_spirit', CONFIGURED, 'natures_spirit:old_birch_bees_0002')
-    oldBirchBees0002.config.decorators.pop()
-    registerFeature(e, CONFIGURED, 'natures_spirit:old_birch_bees_0002', oldBirchBees0002)
-    const superOldBirchBees0002 = getFeatureJson('natures_spirit', CONFIGURED, 'natures_spirit:super_old_birch_bees_0002')
-    superOldBirchBees0002.config.decorators.pop()
-    registerFeature(e, CONFIGURED, 'natures_spirit:super_old_birch_bees_0002', superOldBirchBees0002)
-
     // Removing/replacing cliff features
     removeFeatures(e, [
         'natures_spirit:stone_cliff',
@@ -113,6 +105,20 @@ function worldgen_NaturesSpirit(e) {
         ]
     }), '#kubejs:has_feature/natures_spirit_sparse_frosty_fir', VEGETAL_DECORATION)
 
+    // Some other mod (prob Environmental) was overwriting the NS change
+    registerFeature(e, CONFIGURED, 'minecraft:trees_flower_forest', {
+        type: 'minecraft:random_selector',
+        config: {
+            'default': 'minecraft:fancy_oak_bees_002',
+            features: [
+                { chance: 0.2, feature: 'minecraft:birch_bees_002' },
+                { chance: 0.015, feature: 'natures_spirit:blue_wisteria_checked' },
+                { chance: 0.015, feature: 'natures_spirit:pink_wisteria_checked' },
+                { chance: 0.015, feature: 'natures_spirit:white_wisteria_checked' },
+                { chance: 0.005, feature: 'natures_spirit:purple_wisteria_checked' }
+            ]
+        }
+    })
 
     // Remove bushes and acacia trees (Overlap with Atmospheric)
     removeFeatures(e, [

@@ -13,47 +13,34 @@ function worldgen_Atmospheric(e) {
     // Disable Aspen Parkland biome
     e.addJson('atmospheric:blueprint/modded_biome_slices/aspen', disableBiomeSliceJson)
 
-    addFeatures(e,
-        [
-            copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:crustose'),
-            copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:fallen_crustose_log'),
-            copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:single_agave'),
-            copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:patch_golden_growths'),
-        ], '#kubejs:has_feature/atmospheric_aspen_parkland_foliage',
-        VEGETAL_DECORATION
-    )
-    addFeatures(e,
-        copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:patch_arid_sprouts'),
-        '#kubejs:has_feature/atmospheric_patch_arid_sprouts',
-        VEGETAL_DECORATION
-    )
-    addFeatures(e,
-        copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:patch_yucca_flower'),
-        '#kubejs:has_feature/atmospheric_patch_yucca_flower',
-        VEGETAL_DECORATION
-    )
-    addFeatures(e,
-        copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:patch_aloe_vera'),
-        '#kubejs:has_feature/atmospheric_patch_aloe_vera',
-        VEGETAL_DECORATION
-    )
-    addFeatures(e,
-        copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:patch_barrel_cactus_dunes'),
-        '#kubejs:has_feature/atmospheric_patch_barrel_cactus_dunes',
-        VEGETAL_DECORATION
-    )
-    addFeatures(e,
-        copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:patch_agave_large'),
-        '#kubejs:has_feature/atmospheric_patch_agave_large',
-        VEGETAL_DECORATION
-    )
-    addFeatures(e,
-        copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:desert_yucca_trees'),
-        '#kubejs:has_feature/atmospheric_desert_yucca_trees',
-        VEGETAL_DECORATION
-    )
+    removeFeatures(e, [
+        'atmospheric:patch_waterlily_rainforest_basin',
+        'atmospheric:patch_waterlily_rainforest'
+    ], '#kubejs:has_feature/natures_spirit_flower_helvola',
+        VEGETAL_DECORATION)
 
-    registerFeature(e, PLACED, 'kubejs:atmospheric_sparse_kousa', {
+    addFeatures(e, [
+        copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:crustose'),
+        copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:fallen_crustose_log'),
+        copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:single_agave'),
+        copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:patch_golden_growths'),
+    ], '#kubejs:has_feature/atmospheric_aspen_parkland_foliage',
+        VEGETAL_DECORATION
+    )
+    addFeatures(e, copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:patch_arid_sprouts'), '#kubejs:has_feature/atmospheric_patch_arid_sprouts', VEGETAL_DECORATION)
+    addFeatures(e, copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:patch_yucca_flower'), '#kubejs:has_feature/atmospheric_patch_yucca_flower', VEGETAL_DECORATION)
+    addFeatures(e, copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:patch_aloe_vera'), '#kubejs:has_feature/atmospheric_patch_aloe_vera', VEGETAL_DECORATION)
+    addFeatures(e, copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:patch_barrel_cactus_dunes'), '#kubejs:has_feature/atmospheric_patch_barrel_cactus_dunes', VEGETAL_DECORATION)
+    addFeatures(e, copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:patch_agave_large'), '#kubejs:has_feature/atmospheric_patch_agave_large', VEGETAL_DECORATION)
+    addFeatures(e, copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:desert_yucca_trees'), '#kubejs:has_feature/atmospheric_desert_yucca_trees', VEGETAL_DECORATION)
+    addFeatures(e, copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:passion_vines'), '#kubejs:has_feature/atmospheric_passion_vines', VEGETAL_DECORATION)
+    addFeatures(e, copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:bushes_sparse_rainforest'), '#kubejs:has_feature/atmospheric_bushes_sparse_rainforest', VEGETAL_DECORATION)
+    addFeatures(e, copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:patch_water_hyacinth'), '#kubejs:has_feature/atmospheric_patch_water_hyacinth', VEGETAL_DECORATION)
+    addFeatures(e, copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:trees_sparse_rainforest'), '#kubejs:has_feature/atmospheric_trees_sparse_rainforest', VEGETAL_DECORATION)
+    addFeatures(e, copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:trees_rainforest'), '#kubejs:has_feature/atmospheric_trees_rainforest', VEGETAL_DECORATION)
+
+
+    addFeatures(e, registerFeature(e, PLACED, 'kubejs:atmospheric_sparse_kousa', {
         feature: 'atmospheric:kousa',
         placement: [
             {
@@ -75,41 +62,6 @@ function worldgen_Atmospheric(e) {
                 type: 'minecraft:biome'
             }
         ]
-    })
-    addFeatures(e,
-        'kubejs:atmospheric_sparse_kousa',
-        '#kubejs:has_feature/atmospheric_sparse_kousa',
-        VEGETAL_DECORATION
-    )
-
-    addFeatures(e,
-        copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:passion_vines'),
-        '#kubejs:has_feature/atmospheric_passion_vines',
-        VEGETAL_DECORATION
-    )
-
-    addFeatures(e,
-        copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:bushes_sparse_rainforest'),
-        '#kubejs:has_feature/atmospheric_bushes_sparse_rainforest',
-        VEGETAL_DECORATION
-    )
-
-    addFeatures(e,
-        copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:patch_water_hyacinth'),
-        '#kubejs:has_feature/atmospheric_patch_water_hyacinth',
-        VEGETAL_DECORATION
-    )
-
-
-    addFeatures(e,
-        copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:trees_sparse_rainforest'),
-        '#kubejs:has_feature/atmospheric_trees_sparse_rainforest',
-        VEGETAL_DECORATION
-    )
-
-    addFeatures(e,
-        copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:trees_rainforest'),
-        '#kubejs:has_feature/atmospheric_trees_rainforest',
-        VEGETAL_DECORATION
-    )
+    }), '#kubejs:has_feature/atmospheric_sparse_kousa',
+        VEGETAL_DECORATION)
 }

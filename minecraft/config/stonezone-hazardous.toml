@@ -23,7 +23,7 @@
 	#        "biomesoplenty:redwood"		COMMENT: exclude redwood from Stone Mod for any module
 	#    ]
 	#
-	blacklist = ["quark:limestone", "quark:permafrost", "atmospheric:ivory_travertine", "atmospheric:peach_travertine", "atmospheric:persimmon_travertine", "atmospheric:saffron_travertine", "atmospheric:dolerite", "natures_spirit:pink_sandstone"]
+	blacklist = ["quark:limestone", "quark:permafrost", "atmospheric:ivory_travertine", "atmospheric:peach_travertine", "atmospheric:persimmon_travertine", "atmospheric:saffron_travertine", "natures_spirit:pink_sandstone"]
 
 [mudtype]
 	#Exclude MudType from all of Modules
