@@ -1,5 +1,6 @@
 /** @param {$RecipesEventJS_} e */
 function recipes_Core(e) {
+    e.replaceInput({not: {id: 'woodworks:trapped_chest'}}, 'minecraft:chest', '#forge:chests/wooden')
 
     // Logs into chests
     Object.keys(global.WOOD_TYPES).forEach(modId => {
