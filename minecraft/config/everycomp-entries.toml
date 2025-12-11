@@ -17,9 +17,9 @@
 			soul_sandstone = true
 			limestone = false
 			jasper = true
-			shale = true
+			shale = false
 			myalite = true
-			permafrost = true
+			permafrost = false
 
 		[types.stone_type.atmospheric]
 			dolerite = false
@@ -698,8 +698,8 @@
 			polished_limestone = false
 			jasper = true
 			polished_jasper = true
-			shale = true
-			polished_shale = true
+			shale = false
+			polished_shale = false
 			myalite = true
 			polished_myalite = true
 			permafrost = false
@@ -742,7 +742,7 @@
 			tuff_bricks = false
 			limestone_bricks = false
 			jasper_bricks = true
-			shale_bricks = true
+			shale_bricks = false
 			myalite_bricks = true
 
 		[types.cut_block_type.supplementaries]

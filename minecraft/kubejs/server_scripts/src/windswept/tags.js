@@ -3,6 +3,8 @@ function biomeTags_Windswept(e) {
     e.add('kubejs:has_feature/windswept_tundra_moss', 'natures_spirit:tundra')
     e.add('kubejs:has_feature/windswept_lavender', 'natures_spirit:lavender_fields')
     e.add('kubejs:has_feature/windswept_sparse_pine_tree', [
+        'natures_spirit:alpine_highlands',
+        'natures_spirit:coniferous_covert',
         '#natures_spirit:is_alpine',
         'natures_spirit:woody_highlands',
         'minecraft:wooded_badlands'

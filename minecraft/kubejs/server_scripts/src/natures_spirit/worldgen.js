@@ -1,19 +1,3 @@
-STRUCTURE_BLOCK_SWAPPER.set(/natures_spirit:.*coconut.*/, new Map([
-    ['minecraft:chest', 'everycomp:abnww/natures_spirit/coconut_chest']
-]))
-
-STRUCTURE_BLOCK_SWAPPER.set(/natures_spirit:.*adobe.*/, new Map([
-    ['minecraft:chest', 'everycomp:abnww/natures_spirit/joshua_chest']
-]))
-
-STRUCTURE_BLOCK_SWAPPER.set(/natures_spirit:.*cypress.*/, new Map([
-    ['minecraft:chest', 'everycomp:abnww/natures_spirit/cypress_chest']
-]))
-
-STRUCTURE_BLOCK_SWAPPER.set(/natures_spirit:.*wisteria.*/, new Map([
-    ['minecraft:chest', 'everycomp:abnww/natures_spirit/wisteria_chest']
-]))
-
 /** @param {$DataPackEventJS_} e  */
 function worldgen_NaturesSpirit(e) {
     removeFeatures(e, 'natures_spirit:patch_beach_grass', 'natures_spirit:tropical_shores', VEGETAL_DECORATION)

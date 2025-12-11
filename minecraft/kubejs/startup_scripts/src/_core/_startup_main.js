@@ -4,6 +4,7 @@ function postInit() {
     constructWoodTypes()
 
     // Adding items to global.REMOVALS and global swaps
+    removals_Core()
     removals_Atmospheric()
     removals_Autumnity()
     removals_CavernsAndChasms()
@@ -40,6 +41,26 @@ function postInit() {
         console.log('Processed RegExp removals!')
         console.log('Final removals set:')
         console.log(global.REMOVALS.getAsArray())
+
+        let configObj = {
+            removals: global.REMOVALS.getAsArray(),
+            item_swapper: {},
+            block_swapper: {},
+            entity_swapper: {},
+            structure_swapper: {},
+            state_swapper: global.STATE_SWAPPER
+        }
+        // Convert maps to objects
+        global.ITEM_SWAPPER.forEach((value, key) => configObj.item_swapper[key] = value)
+        global.BLOCK_SWAPPER.forEach((value, key) => configObj.block_swapper[key] = value)
+        global.ENTITY_SWAPPER.forEach((value, key) => configObj.entity_swapper[key] = value)
+        global.STRUCTURE_BLOCK_SWAPPER.forEach((value, key) => {
+            configObj.structure_swapper[key] = {}
+            value.forEach((v, k) => {
+                configObj.structure_swapper[key][k] = v
+            })
+        })
+        JsonIO.write('kubejs/config/swaps.json', configObj)
     }
 }
 

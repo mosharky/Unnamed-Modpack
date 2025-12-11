@@ -1,5 +1,8 @@
 /** @param {$DataPackEventJS_} e  */
 function worldgen_Windswept(e) {
+    // Disable icicles
+    removeBiomeModifier(e, 'windswept:add_feature/icicles')
+
     // Disable Lavendar and Tundra biomes
     e.addJson('windswept:blueprint/modded_biome_slices/lavender', disableBiomeSliceJson)
     e.addJson('windswept:blueprint/modded_biome_slices/tundra', disableBiomeSliceJson)

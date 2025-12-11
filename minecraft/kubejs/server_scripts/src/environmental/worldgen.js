@@ -1,7 +1,3 @@
-STRUCTURE_BLOCK_SWAPPER.set('environmental:log_cabin', new Map([
-    ['minecraft:chest', 'windswept:pine_chest']
-]))
-
 /** @param {$DataPackEventJS_} e  */
 function worldgen_Environmental(e) {
     // Disable Marsh and Pine biome

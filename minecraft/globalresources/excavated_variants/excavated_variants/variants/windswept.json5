@@ -1,0 +1,16 @@
+{
+    mod_id: 'windswept',
+    provided_stones: [
+        {
+            id: 'windswept_shale',
+            lang: {
+                en_us: 'Shale'
+            },
+            block_id: 'windswept:shale',
+            types: [
+                'stone'
+            ]
+        }
+    ],
+    provided_ores: []
+}

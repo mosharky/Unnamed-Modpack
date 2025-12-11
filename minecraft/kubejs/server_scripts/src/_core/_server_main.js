@@ -6,6 +6,7 @@ ServerEvents.tags('item', e => {
 
 ServerEvents.tags('block', e => {
     blockTags_Core(e)
+    blockTags_SnowRealMagic(e)
 })
 
 ServerEvents.tags('entity_type', e => {
@@ -77,11 +78,6 @@ LootJS.modifiers(e => {
     
     lootTables_Core(e)
 })
-
-MoreJSEvents.structureLoad(e => {
-    structures_Core(e)
-})
-
 
 // DEBUGGING
 ItemEvents.rightClicked(e => {

@@ -773,8 +773,8 @@
 	"Chorus Vegetation" = true
 	Corundum = true
 	"Fairy Rings" = true
-	"Fallen Logs" = true
-	"Glimmering Weald" = true
+	"Fallen Logs" = false
+	"Glimmering Weald" = false
 	"Monster Box" = true
 	"Nether Obsidian Spikes" = false
 	"New Stone Types" = true
@@ -1174,7 +1174,7 @@
 	[world.new_stone_types]
 		"Enable Limestone" = false
 		"Enable Jasper" = true
-		"Enable Shale" = true
+		"Enable Shale" = false
 		"Enable Myalite" = true
 		"Add New Stones To Mason Trades" = true
 

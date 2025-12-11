@@ -10,16 +10,6 @@
             types: [
                 'stone'
             ]
-        },
-        {
-            id: 'quark_shale',
-            lang: {
-                en_us: 'Shale'
-            },
-            block_id: 'quark:shale',
-            types: [
-                'stone'
-            ]
         }
     ],
     provided_ores: []

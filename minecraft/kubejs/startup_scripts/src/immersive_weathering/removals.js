@@ -4,5 +4,6 @@ function removals_ImmersiveWeathering() {
         // 'immersive_weathering:loamy_farmland',
         'immersive_weathering:frosty_grass',
         'immersive_weathering:frosty_fern',
+        /immersive_weathering:.*earthen_clay.*/
     ])
 }
