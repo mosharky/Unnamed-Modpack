@@ -1,0 +1,16 @@
+filename = 'call_of_yucutan-1.0.13-forge-1.20.1.jar'
+name = 'Call of Yucatán'
+side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'c4d4be64d3a2b48f9c16fce581d5a338e4c9f2d24a2f0e884bb01d87e3d650a7fa7ae5f71696a530dd36ae628a8c8f73fc2ad8d0cc393159282e894e823639b6'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/RV4ezinu/versions/s49dr29b/call_of_yucutan-1.0.13-forge-1.20.1.jar'
+
+[update.modrinth]
+mod-id = 'RV4ezinu'
+version = 's49dr29b'

@@ -51,6 +51,23 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
+  "jadeaddons": {
+    "equipment_requirement": ""
+  },
+  "jadeaddons.create": {
+    "filter": true,
+    "backtank_capacity": true,
+    "goggles.requires_goggles": true,
+    "goggles": false,
+    "blaze_burner": true,
+    "exact_block": true,
+    "goggles.detailed": false,
+    "placard": true
+  },
+  "exposure": {
+    "lightroom": true,
+    "photograph_frame": true
+  },
   "collectorsreap": {
     "crop_progress": true
   },
@@ -63,7 +80,22 @@
     "block_face": false,
     "coordinates": false,
     "registry_name": "OFF",
-    "mod_name": false
+    "mod_name": true
+  },
+  "fossil": {
+    "feeder_status": true
+  },
+  "goety": {
+    "block_owner": true,
+    "soul_energy": true,
+    "raider_leader": true,
+    "servant_mode": true,
+    "capture_mode": true,
+    "zombie_villager": true,
+    "villager_profession": true,
+    "train_to": true,
+    "summon_lifespan": true,
+    "trainable": true
   },
   "balm": {
     "jade": true

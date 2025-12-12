@@ -1,6 +1,8 @@
 function blockTags_SnowRealMagic(e) {
     e.add('snowrealmagic:containables', [
         'environmental:dwarf_spruce',
-        'windswept:dry_moss_sprouts'
+        'environmental:dwarf_spruce_plant',
+        'windswept:dry_moss_sprouts',
+        'windswept:wild_berry_bush'
     ])
 }

@@ -1,0 +1,16 @@
+filename = 'goety_cataclysm-1.20-1.6.2.jar'
+name = 'Goety Cataclysm'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '87cd19e34da912f04ba669c010d6c1b4e7e773a100c83982227d2fd7a0000a3fa3c37b933f17dd394ea3ceb77007557155708005a31237d5327352e1288818a1'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/YwmuwbXi/versions/UdWr3syd/goety_cataclysm-1.20-1.6.2.jar'
+
+[update.modrinth]
+mod-id = 'YwmuwbXi'
+version = 'UdWr3syd'

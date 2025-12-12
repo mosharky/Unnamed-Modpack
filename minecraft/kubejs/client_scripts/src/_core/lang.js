@@ -25,4 +25,7 @@ ClientEvents.lang('en_us', e => {
     // Darker Depths
     rename('darkerdepths:ash_block', 'Darkslate Ash Block')
     rename('darkerdepths:ash', 'Darkslate Ash')
+
+    // Holler missing lang
+    e.add('doom_and_gloom', 'entity.doom_and_gloom.holler', 'Holler')
 })
