@@ -1,0 +1,32 @@
+/** @param {$DataPackEventJS_} e  */
+function enchants_Backpacked(e) {
+    e.addJson('immersiveenchanting:enchantment_costs/backpacked/funnelling', {
+        levels: {
+            '1': { item: 'minecraft:diamond', amount: 4 },
+        }
+    })
+    
+    e.addJson('immersiveenchanting:enchantment_costs/backpacked/repairman', {
+        levels: {
+            '1': { item: 'minecraft:diamond', amount: 4 },
+        }
+    })
+
+    e.addJson('immersiveenchanting:enchantment_costs/backpacked/looted', {
+        levels: {
+            '1': { item: 'minecraft:diamond', amount: 4 },
+        }
+    })
+
+    e.addJson('immersiveenchanting:enchantment_costs/backpacked/imbued_hide', {
+        levels: {
+            '1': { item: 'minecraft:diamond', amount: 4 },
+        }
+    })
+
+    e.addJson('immersiveenchanting:enchantment_costs/backpacked/marksman', {
+        levels: {
+            '1': { item: 'minecraft:diamond', amount: 4 },
+        }
+    })
+}

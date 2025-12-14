@@ -1,152 +1,36 @@
 function removals_Cataclysm() {
     global.REMOVALS.add([
-        'cataclysm:pointed_icicle'
+        'cataclysm:pointed_icicle',
+        'cataclysm:stone_pillar',
+        'cataclysm:end_stone_pillar',
+        'cataclysm:blackstone_pillar',
+        'cataclysm:chiseled_end_stone_bricks',
+        /cataclysm:.*(chorus|stone_tile).*/,
+        /cataclysm:(?!.*void.*).*purpur.*/,
+        'cataclysm:blackstone_pillar',
+        'cataclysm:prismarine_brick_wall'
     ])
 
-    global.STATE_SWAPPER.push(
-        {
-            new: {
-                Name: 'immersive_weathering:icicle',
-                Properties: {
-                    thickness: 'tip',
-                    vertical_direction: 'down',
-                    waterlogged: 'false'
-                }
-            },
-            old: {
-                Name: 'cataclysm:pointed_icicle',
-                Properties: {
-                    thickness: 'tip',
-                    vertical_direction: 'down',
-                    waterlogged: 'false'
-                }
-            }
-        },
-        {
-            new: {
-                Name: 'immersive_weathering:icicle',
-                Properties: {
-                    thickness: 'frustum',
-                    vertical_direction: 'down',
-                    waterlogged: 'false'
-                }
-            },
-            old: {
-                Name: 'cataclysm:pointed_icicle',
-                Properties: {
-                    thickness: 'frustum',
-                    vertical_direction: 'down',
-                    waterlogged: 'false'
-                }
-            }
-        },
-        {
-            new: {
-                Name: 'immersive_weathering:icicle',
-                Properties: {
-                    thickness: 'middle',
-                    vertical_direction: 'down',
-                    waterlogged: 'false'
-                }
-            },
-            old: {
-                Name: 'cataclysm:pointed_icicle',
-                Properties: {
-                    thickness: 'middle',
-                    vertical_direction: 'down',
-                    waterlogged: 'false'
-                }
-            }
-        },
-        {
-            new: {
-                Name: 'immersive_weathering:icicle',
-                Properties: {
-                    thickness: 'base',
-                    vertical_direction: 'down',
-                    waterlogged: 'false'
-                }
-            },
-            old: {
-                Name: 'cataclysm:pointed_icicle',
-                Properties: {
-                    thickness: 'base',
-                    vertical_direction: 'down',
-                    waterlogged: 'false'
-                }
-            }
-        },
-        {
-            new: {
-                Name: 'immersive_weathering:icicle',
-                Properties: {
-                    thickness: 'tip',
-                    vertical_direction: 'up',
-                    waterlogged: 'false'
-                }
-            },
-            old: {
-                Name: 'cataclysm:pointed_icicle',
-                Properties: {
-                    thickness: 'tip',
-                    vertical_direction: 'up',
-                    waterlogged: 'false'
-                }
-            }
-        },
-        {
-            new: {
-                Name: 'immersive_weathering:icicle',
-                Properties: {
-                    thickness: 'frustum',
-                    vertical_direction: 'up',
-                    waterlogged: 'false'
-                }
-            },
-            old: {
-                Name: 'cataclysm:pointed_icicle',
-                Properties: {
-                    thickness: 'frustum',
-                    vertical_direction: 'up',
-                    waterlogged: 'false'
-                }
-            }
-        },
-        {
-            new: {
-                Name: 'immersive_weathering:icicle',
-                Properties: {
-                    thickness: 'middle',
-                    vertical_direction: 'up',
-                    waterlogged: 'false'
-                }
-            },
-            old: {
-                Name: 'cataclysm:pointed_icicle',
-                Properties: {
-                    thickness: 'middle',
-                    vertical_direction: 'up',
-                    waterlogged: 'false'
-                }
-            }
-        },
-        {
-            new: {
-                Name: 'immersive_weathering:icicle',
-                Properties: {
-                    thickness: 'base',
-                    vertical_direction: 'up',
-                    waterlogged: 'false'
-                }
-            },
-            old: {
-                Name: 'cataclysm:pointed_icicle',
-                Properties: {
-                    thickness: 'base',
-                    vertical_direction: 'up',
-                    waterlogged: 'false'
-                }
-            }
-        },
-    )
+    global.BLOCK_SWAPPER.set('cataclysm:stone_pillar', 'create:andesite_pillar')
+    global.BLOCK_SWAPPER.set('cataclysm:pointed_icicle', 'immersive_weathering:icicle')
+    global.BLOCK_SWAPPER.set('cataclysm:end_stone_pillar', 'unusualend:endstone_pillar')
+    global.BLOCK_SWAPPER.set('cataclysm:chiseled_end_stone_bricks', 'unusualend:chiseled_endstone_dragon')
+    global.BLOCK_SWAPPER.set('cataclysm:chorus_stem', 'goety:chorus_log')
+    global.BLOCK_SWAPPER.set('cataclysm:chorus_planks', 'goety:chorus_planks')
+    global.BLOCK_SWAPPER.set('cataclysm:chorus_slab', 'goety:chorus_slab')
+    global.BLOCK_SWAPPER.set('cataclysm:chorus_stairs', 'goety:chorus_stairs')
+    global.BLOCK_SWAPPER.set('cataclysm:chorus_fence', 'goety:chorus_fence')
+    global.BLOCK_SWAPPER.set('cataclysm:chorus_trapdoor', 'goety:chorus_trapdoor')
+    global.BLOCK_SWAPPER.set('cataclysm:chiseled_purpur_block', 'unusualend:chiseled_polished_purpur_tiles')
+    global.BLOCK_SWAPPER.set('cataclysm:purpur_tiles', 'unusualend:polished_purpur_tiles')
+    global.BLOCK_SWAPPER.set('cataclysm:purpur_tile_slab', 'unusualend:polished_purpur_tiles_slab')
+    global.BLOCK_SWAPPER.set('cataclysm:purpur_tile_stairs', 'unusualend:polished_purpur_tiles_stairs')
+    global.BLOCK_SWAPPER.set('cataclysm:purpur_tile_wall', 'unusualend:polished_raw_purpur_brick_wall')
+    global.BLOCK_SWAPPER.set('cataclysm:purpur_tile_pillar', 'minecraft:purpur_pillar')
+    global.BLOCK_SWAPPER.set('cataclysm:blackstone_pillar', 'netherexp:polished_blackstone_pillar')
+    global.BLOCK_SWAPPER.set('cataclysm:stone_tiles', 'supplementaries:stone_tile')
+    global.BLOCK_SWAPPER.set('cataclysm:stone_tiles_stairs', 'supplementaries:stone_tile_stairs')
+    global.BLOCK_SWAPPER.set('cataclysm:stone_tiles_slab', 'supplementaries:stone_tile_slab')
+    global.BLOCK_SWAPPER.set('cataclysm:stone_tiles_wall', 'supplementaries:stone_tile_wall')
+    global.BLOCK_SWAPPER.set('cataclysm:prismarine_brick_wall', 'immersive_weathering:prismarine_brick_wall')
 }

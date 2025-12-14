@@ -1,5 +1,13 @@
 // priority: -1
 
+Platform.setModName('kubejs', 'Momo Did This')
+Platform.setModName('numismaticoverhaul', 'Numismatic Overhaul')
+Platform.setModName('cataclysm', 'Cataclysm')
+Platform.setModName('vanillabackport', 'Minecraft')
+Platform.setModName('createarmory', 'Create: Armory')
+Platform.setModName('raccompat', 'Relics: Alex\'s Caves')
+Platform.setModName('ramcompat', 'Relics: Alex\'s Mobs')
+
 function postInit() {
     constructWoodTypes()
 
@@ -7,15 +15,19 @@ function postInit() {
     removals_Core()
     removals_Atmospheric()
     removals_Autumnity()
+    removals_Cataclysm()
     removals_CavernsAndChasms()
     removals_Darkerdepths()
+    removals_Embers()
     removals_Environmental()
-    removals_EvenBetterNether()
+    // removals_EvenBetterNether()
+    removals_FarmersDelight()
     removals_Galosphere()
     removals_ImmersiveWeathering()
     removals_NaturesSpirit()
     removals_Oreganized()
     removals_Quark()
+    removals_Relics()
     removals_SnowySpirit()
     removals_Windswept()
     removals_Woodworks()

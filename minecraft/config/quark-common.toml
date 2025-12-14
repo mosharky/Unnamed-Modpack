@@ -340,7 +340,7 @@
 [tools]
 	Abacus = true
 	"Ambient Discs" = true
-	"Ancient Tomes" = true
+	"Ancient Tomes" = false
 	"Beacon Redirection" = true
 	"Bottled Cloud" = true
 	"Color Runes" = true
@@ -1352,7 +1352,7 @@
 	Foxhound = false
 	Shiba = false
 	Stonelings = true
-	Toretoise = false
+	Toretoise = true
 	Wraith = false
 
 	[mobs.crabs]

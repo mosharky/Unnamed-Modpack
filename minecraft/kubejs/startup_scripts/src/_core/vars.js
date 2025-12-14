@@ -14,6 +14,7 @@ global.BLOCKSWAP_CONFIG = {
     state_swapper: [],
     swapper: new Map()  // becomes an Object after processBlockswapConfig()
 }
+global.ENTITY_REMOVALS = []
 global.REMOVALS = {
     all: new Set(),
     add: function (entry) {

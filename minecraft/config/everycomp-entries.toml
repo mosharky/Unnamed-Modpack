@@ -86,10 +86,6 @@
 			darkslate = true
 			grimestone = true
 
-		[types.stone_type.enlightened_end]
-			void_shale = true
-			palerock = true
-
 		[types.stone_type.goety]
 			shade_stone = true
 			crypt_stone = true
@@ -99,14 +95,17 @@
 		[types.stone_type.aetherworks]
 			suevite = true
 
-		[types.stone_type.fossil]
-			ancient_stone = true
-
 		[types.stone_type.alexscaves]
 			galena = true
 			radrock = true
 			abyssmarine = true
 			guanostone = true
+
+		[types.stone_type.unusualend]
+			gneiss = true
+			gloopstone = true
+			gloopslate = true
+			warped_stone = true
 
 	[types.wood_type]
 
@@ -114,9 +113,6 @@
 			azalea = false
 			ancient = false
 			blossom = false
-
-		[types.wood_type.vanillabackport]
-			pale_oak = true
 
 		[types.wood_type.upgrade_aquatic]
 			driftwood = true
@@ -201,19 +197,6 @@
 		[types.wood_type.cataclysm]
 			chorus = true
 
-		[types.wood_type.enlightened_end]
-			indigo = true
-			cerulean = true
-
-		[types.wood_type.fossil]
-			ancient_wood = true
-			calamites = true
-			cordaites = true
-			mutant_tree = true
-			palm = true
-			sigillaria = true
-			tempskya = true
-
 		[types.wood_type.alexscaves]
 			pewen = true
 			thornwood = true
@@ -222,10 +205,17 @@
 			runewood = true
 			soulwood = true
 
-	[types.leaves_type]
+		[types.wood_type.unusual_prehistory]
+			ginkgo = true
+			lepidodendron = true
 
-		[types.leaves_type.vanillabackport]
+		[types.wood_type.unusualend]
+			chorus_nest = true
+
+		[types.wood_type.minecraft]
 			pale_oak = true
+
+	[types.leaves_type]
 
 		[types.leaves_type.quark]
 			ancient = false
@@ -319,13 +309,6 @@
 			chorus = true
 			chorus_blossom = true
 
-		[types.leaves_type.fossil]
-			calamites = true
-			cordaites = true
-			mutant_tree = true
-			palm = true
-			sigillaria = true
-
 		[types.leaves_type.alexscaves]
 			ancient = true
 
@@ -334,6 +317,14 @@
 			azure_runewood = true
 			soulwood = true
 			budding_soulwood = true
+
+		[types.leaves_type.unusual_prehistory]
+			ginkgo = true
+			golden_ginkgo = true
+			lepidodendron = true
+
+		[types.leaves_type.minecraft]
+			pale_oak = true
 
 	[types.cake]
 
@@ -369,10 +360,6 @@
 			lucuma_cake = true
 
 	[types.cut_block_type]
-
-		[types.cut_block_type.vanillabackport]
-			pale_oak = true
-			resin_brick = true
 
 		[types.cut_block_type.immersive_weathering]
 			mossy_brick = true
@@ -1013,34 +1000,6 @@
 			azure_seastone_brick = true
 			polished_azure_seastone = true
 
-		[types.cut_block_type.enlightened_end]
-			smooth_purpur = true
-			end_stone = true
-			end_stone_tile = true
-			palerock = true
-			polished_palerock = true
-			palerock_brick = true
-			palerock_tile = true
-			void_shale = true
-			polished_void_shale = true
-			void_shale_brick = true
-			void_shale_tile = true
-			indigo = true
-			cerulean = true
-			glacium_brick = true
-			polished_malachite = true
-			malachite_brick = true
-			malachite_tile = true
-			irradium_brick = true
-			depleted_irradium_brick = true
-			bismuth_sheet = true
-			waxed_bismuth_sheet = true
-			verdant_bismuth_sheet = true
-			poise_bismuth_sheet = true
-			ethereal_bismuth_sheet = true
-			serene_bismuth_sheet = true
-			iridescent_bismuth_sheet = true
-
 		[types.cut_block_type.createdeco]
 			short_red_brick = true
 			tiled_red_brick = true
@@ -1107,18 +1066,6 @@
 			jade_tile = true
 			ancient_gold = true
 
-		[types.cut_block_type.fossil]
-			ancient_stone = true
-			ancient_wood = true
-			volcanic_brick = true
-			volcanic_tile = true
-			calamites = true
-			cordaites = true
-			mutant_tree = true
-			palm = true
-			sigillaria = true
-			tempskya = true
-
 		[types.cut_block_type.alexscaves]
 			galena = true
 			galena_brick = true
@@ -1175,10 +1122,31 @@
 			soulwood_tiles = true
 			rustic_soulwood_tiles = true
 
-	[types.mud_type]
+		[types.cut_block_type.unusual_prehistory]
+			cobbled_fossilized_bone = true
+			polished_petrified_wood = true
+			ginkgo = true
+			lepidodendron = true
 
-		[types.mud_type.enlightened_end]
-			chorloam = true
+		[types.cut_block_type.unusualend]
+			polished_purpur = true
+			chorus_nest = true
+			stripped_chorus_nest = true
+			polished_purpur_tiles = true
+			raw_purpur_block = true
+			polished_purpur_brick = true
+			chorus_nest_mosaic = true
+			polished_gneiss = true
+			gneiss_brick = true
+			polished_gloopstone = true
+			gloopstone_brick = true
+			polished_gloopslate = true
+			gloopslate_bricks = true
+			polished_warped_stone = true
+			warped_stone_bricks = true
+			warped_stone_tiles = true
+			shiny_crystal_tiles = true
+			enderblob_moult_brick = true
 
 #Disables specific entries
 [entries]

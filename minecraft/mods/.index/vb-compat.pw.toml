@@ -1,0 +1,16 @@
+filename = 'vb-compat-1.4 -1.20.1.jar'
+name = 'Vanilla Backport Compat'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge', 'forge', 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'beta'
+
+[download]
+hash = 'ceb6564418fc8812eee220c5a1a5ab0e8419f3b623b6405a1faac7efe0047c4f5eeef64bd36ef2d6a6fcc68162496e182b8555a61542e1bff738d9547d3ba3ab'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/jcYHXHwz/versions/4tYiHNC4/vb-compat-1.4 -1.20.1.jar'
+
+[update.modrinth]
+mod-id = 'jcYHXHwz'
+version = '4tYiHNC4'

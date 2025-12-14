@@ -9,12 +9,12 @@
 	keepBackpackOnDeath = false
 	# The amount of slot rows in the backpack inventory.
 	# Valid range: 1 to 7 (inclusive)
-	backpackInventorySize = 1
+	backpackInventorySize = 6
 
 	[common.wandering_trader]
 		# If enabled, hides the config button from the backpack screen
 		# Valid values: true, false
-		spawnBackpackOnWanderingTraders = true
+		spawnBackpackOnWanderingTraders = false
 		# If true, allows players who are disliked by Wandering Traders to continue to trade normally with them. A player is considered disliked if they are caught when trying to pickpocket a Wandering Trader's backpack.
 		# Valid values: true, false
 		dislikedPlayersCanTrade = false

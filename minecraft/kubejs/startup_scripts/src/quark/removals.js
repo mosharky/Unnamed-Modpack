@@ -1,11 +1,12 @@
 function removals_Quark() {
     global.REMOVALS.add([
         /quark:.*(dirt_bricks|chest|ladder|bookshelf|leaf_carpet|thatch|blossom|permafrost|cobblestone_brick|limestone|andesite_brick|dripstone_bricks|tuff|calcite|shale).*/,
-        /quark:.*(crab|foxhound|shiba|toretoise|wraith).*/,
+        /quark:.*(crab|foxhound|shiba|wraith).*/,
         /quark:.*ancient(?!_tome|_fruit).*/,
         /quark:.*azalea(?!_hedge).*/,
         'quark:gold_bars',
         'quark:chute',
+        'quark:ancient_tome'
     ])
 
     global.ITEM_SWAPPER.set('quark:crab_leg', 'minecraft:cod')
@@ -149,10 +150,15 @@ function removals_Quark() {
     global.BLOCK_SWAPPER.set('quark:chiseled_shale_bricks', 'windswept:chiseled_polished_shale_bricks')
     // Entities
     global.ENTITY_SWAPPER.set('quark:wraith', 'caverns_and_chasms:mime')
-    global.ENTITY_SWAPPER.set('quark:foxhound', 'quark:forgotten')  // TODO: replace with alex's mobs nether bear?
-    global.ENTITY_SWAPPER.set('quark:toretoise', 'quark:forgotten')
+    global.ENTITY_SWAPPER.set('quark:foxhound', 'alexsmobs:dropbear')
     global.ENTITY_SWAPPER.set('quark:shiba', 'minecraft:wolf')
     global.ENTITY_SWAPPER.set('quark:crab', 'minecraft:frog')
+    global.ENTITY_REMOVALS.push(
+        'quark:wraith',
+        'quark:foxhound',
+        'quark:shiba',
+        'quark:crab'
+    )
     // Carpets
     global.BLOCK_SWAPPER.set('quark:red_blossom_leaf_carpet', 'immersive_weathering:natures_spirit/red_maple_leaf_pile')
     global.BLOCK_SWAPPER.set('quark:orange_blossom_leaf_carpet', 'immersive_weathering:natures_spirit/orange_maple_leaf_pile')

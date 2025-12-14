@@ -1,4 +1,5 @@
 {
+  "astages:block_component_provider": null,
   "balm:jade": null,
   "collectorsreap:crop_progress": null,
   "exposure:lightroom": null,
@@ -35,6 +36,7 @@
   "jadeaddons.create:package": null,
   "jadeaddons.create:placard": null,
   "jadeaddons.create:table_cloth": null,
+  "jadeaddons.lootr:info": null,
   "jadeaddons.lootr:inventory": null,
   "minecraft:animal_owner": null,
   "minecraft:armor_stand": null,

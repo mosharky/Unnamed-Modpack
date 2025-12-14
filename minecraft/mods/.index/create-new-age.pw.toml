@@ -1,4 +1,4 @@
-filename = 'create-new-age-1.1.7+forge-mc1.20.1.jar'
+filename = 'create-new-age-1.1.7b+forge-mc1.20.1.jar'
 name = 'Create: New Age'
 side = 'both'
 x-prismlauncher-loaders = [ 'forge' ]
@@ -6,11 +6,11 @@ x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
 
 [download]
-hash = 'ce87f4d793bb04099c7bab06e9994867ba90888f0f9bce4a3a533c6f4e888aac439c6fd31eb026884c632fca21300ef35afa8cf2b901b89bff52f986d4c4a6c2'
+hash = '43f9900ec554fe9c8ef0406b2c99994c27ec06de7c813637b2ec5031b3c3580a5b000a57fea31fe35abb343533e6a5eb83c60d0138f2d936d1f036ce51fe492e'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/FTeXqI9v/versions/23lNs3wj/create-new-age-1.1.7%2Bforge-mc1.20.1.jar'
+url = 'https://cdn.modrinth.com/data/FTeXqI9v/versions/SFEQocaa/create-new-age-1.1.7b%2Bforge-mc1.20.1.jar'
 
 [update.modrinth]
 mod-id = 'FTeXqI9v'
-version = '23lNs3wj'
+version = 'SFEQocaa'

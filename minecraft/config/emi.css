@@ -29,7 +29,7 @@
 	/**
 	 * Whether normal search queries should include the tooltip.
 	 */
-	search-tooltip-by-default: true;
+	search-tooltip-by-default: false;
 
 	/**
 	 * Whether normal search queries should include the mod name.
@@ -114,7 +114,7 @@
 	 * The maximum height the recipe screen will grow to be if space is available in
 	 * pixels.
 	 */
-	maximum-recipe-screen-height: 256;
+	maximum-recipe-screen-height: 300;
 
 	/**
 	 * The minimum width of the recipe screen in pixels. Controls how many tabs there
@@ -212,7 +212,7 @@
 	/**
 	 * How many columns and rows of ingredients to limit the right sidebar to
 	 */
-	right-sidebar-size: 100, 100;
+	right-sidebar-size: 20, 100;
 
 	/**
 	 * How much space to maintain between the right sidebar and obstructions, in pixels

@@ -295,7 +295,9 @@ function registerCliff(event, block) {
         'minecraft:snow_block',
         'minecraft:stone',
         'minecraft:coarse_dirt',
-        'minecraft:andesite'
+        'minecraft:andesite',
+        'immersive_weathering:sandy_dirt',
+        'immersive_weathering:grassy_sandy_dirt',
     ]
 
     registerFeature(event, CONFIGURED, `kubejs:${idString}_cliff`, {

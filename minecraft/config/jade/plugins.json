@@ -68,6 +68,9 @@
     "lightroom": true,
     "photograph_frame": true
   },
+  "jadeaddons.lootr": {
+    "info": true
+  },
   "collectorsreap": {
     "crop_progress": true
   },
@@ -81,9 +84,6 @@
     "coordinates": false,
     "registry_name": "OFF",
     "mod_name": true
-  },
-  "fossil": {
-    "feeder_status": true
   },
   "goety": {
     "block_owner": true,
