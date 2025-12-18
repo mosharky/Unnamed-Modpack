@@ -1,0 +1,11 @@
+{
+    "type": "generikb:candy_cavity_type",
+    "generator": {
+        "type": "minecraft:noise",
+        "settings": "generikb:candy_cavity_settings",
+        "biome_source": {
+            "type": "minecraft:fixed",
+            "biome": "alexscaves:candy_cavity"
+        }
+    }
+}

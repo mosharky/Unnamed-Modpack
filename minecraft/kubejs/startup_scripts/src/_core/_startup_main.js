@@ -1,6 +1,7 @@
 // priority: -1
 
 Platform.setModName('kubejs', 'Momo Did This')
+// Platform.setModName('generikb', 'Momo Did This')
 Platform.setModName('numismaticoverhaul', 'Numismatic Overhaul')
 Platform.setModName('cataclysm', 'Cataclysm')
 Platform.setModName('vanillabackport', 'Minecraft')
@@ -13,24 +14,35 @@ function postInit() {
 
     // Adding items to global.REMOVALS and global swaps
     removals_Core()
+    removals_AlexsCaves()
+    removals_AlexsMobs()
     removals_Atmospheric()
     removals_Autumnity()
     removals_Cataclysm()
     removals_CavernsAndChasms()
+    removals_CreateDeco()
     removals_Darkerdepths()
     removals_Embers()
     removals_Environmental()
-    // removals_EvenBetterNether()
     removals_FarmersDelight()
     removals_Galosphere()
+    removals_Goety()
     removals_ImmersiveWeathering()
+    removals_Malum()
+    removals_MoreMinecarts()
     removals_NaturesSpirit()
+    removals_Neapolitan()
     removals_Oreganized()
     removals_Quark()
+    removals_Railways()
     removals_Relics()
+    removals_ScGuns()
     removals_SnowySpirit()
+    removals_UnusualPrehistory()
+    removals_UpgradeAquatic()
     removals_Windswept()
     removals_Woodworks()
+    // removals_EvenBetterNether()
 
     // Changing blockswap config with KubeJS!
     processBlockswapConfig()
@@ -82,5 +94,6 @@ if (global.INITIALIZED) postInit()
 // postInit because Ingredient needs to wait for mods to load in order to hold anything other than vanilla items
 StartupEvents.postInit(e => {
     postInit()
+    // portals()
     global.INITIALIZED = true
 })

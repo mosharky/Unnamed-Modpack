@@ -7,6 +7,20 @@ ServerEvents.tags('worldgen/biome', e => {
 
 
 /**
+ * Returns coin equivalent ItemStack of given bronze number
+ * 1 Gold = 100 Silver = 10,000 Bronze
+ * 1 Silver = 100 Bronze
+ * @param {Number} num number from 1 - 990,000
+ * @returns {Internal.ItemStack}
+ */
+function currencyItem(num) {
+    if (num > 990000) console.error(`currencyItem returned a value too high: ${num}`)
+    else if (num <= 99) return Item.of('numismaticoverhaul:bronze_coin', num)
+    else if (num > 99 && num < 10000) return Item.of('numismaticoverhaul:silver_coin', Math.ceil(num / 100))
+    else if (num >= 10000) return Item.of('numismaticoverhaul:gold_coin', Math.ceil(num / 10000))
+}
+
+/**
  * Get if a player has a specific advancement
  * @param {$MinecraftServer_} server 
  * @param {$Player_} player 

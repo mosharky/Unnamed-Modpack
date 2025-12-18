@@ -4,6 +4,7 @@ function removals_NaturesSpirit() {
         'natures_spirit:tall_beach_grass',
         /natures_spirit:.*pink_sand.*/,
         /natures_spirit:.*maple(?!_leaves|_sapling).*/,
+        /natures_spirit:chert.*ore/,
     ])
 
 

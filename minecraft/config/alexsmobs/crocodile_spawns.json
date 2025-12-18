@@ -16,14 +16,16 @@
     ],
     [
       {
-        "type": "BIOME_TAG",
+        "type": "REGISTRY_NAME",
         "negate": false,
-        "value": "minecraft:is_river"
-      },
+        "value": "climaterivers:warm_river"
+      }
+    ],
+    [
       {
-        "type": "BIOME_TAG",
-        "negate": true,
-        "value": "forge:is_cold"
+        "type": "REGISTRY_NAME",
+        "negate": false,
+        "value": "climaterivers:lukewarm_river"
       }
     ],
     [

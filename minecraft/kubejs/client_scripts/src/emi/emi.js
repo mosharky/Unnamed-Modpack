@@ -1,5 +1,5 @@
 /** @param {$GenerateClientAssetsEventJS_} e */
-function EMI_Categories(e) {
+function clientData_EMI(e) {
     e.add('emi:category/properties/emi', {
         'minecraft:crafting':           { order: -1000 },
         'minecraft:smelting':           { order: -950 },
@@ -17,6 +17,28 @@ function EMI_Categories(e) {
         'emi:info':                     { order: 950 },
         'emi:tag':                      { order: 1000 }
     })
+
+    // Hide non-max leveled enchantments
+    const enchantedBooks = [];
+    let totalRemoved = 0;
+
+    Utils.getRegistry("enchantment").entrySet().forEach(entry => {
+        const id = entry.key.location();
+        const maxLevel = entry.value.getMaxLevel();
+
+        for (let level = 1; level < maxLevel; level++) {
+            enchantedBooks.push({
+                type: "item",
+                id: "minecraft:enchanted_book",
+                nbt: `{StoredEnchantments:[{id:"${id}",lvl:${level}s}]}`
+            });
+
+            totalRemoved++;
+        }
+    });
+
+    e.add("emi:index/stacks/enchanted_books", { removed: enchantedBooks });
+    console.log(`Removed ${totalRemoved} enchanted book stacks`);
 
     // TODO: manage more (see: https://github.com/pafeuu/Druidic-Quest-Main/tree/main/kubejs/assets/emi/category/properties)
 }

@@ -44,3 +44,9 @@ function biomeTags_Neapolitan(e) {
         'natures_spirit:wisteria_forest',
     ])
 }
+
+/** @param {$TagEventJS_} e */
+function itemTags_Neapolitan(e) {
+    e.add('forge:ice_cube', '#forge:ice_cubes')
+    e.add('neapolitan:chocolate_bar', '#supplementaries:chocolate_bars')
+}

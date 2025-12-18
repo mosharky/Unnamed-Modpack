@@ -28,6 +28,13 @@
       {
         "type": "REGISTRY_NAME",
         "negate": false,
+        "value": "natures_spirit:scorched_dunes"
+      }
+    ],
+    [
+      {
+        "type": "REGISTRY_NAME",
+        "negate": false,
         "value": "terralith:arid_highlands"
       }
     ],

@@ -70,16 +70,20 @@ global.COLOURS = [
 
 // Collect all strings in a nested object with recursion
 function collectStrings(obj) {
-    let strings = []
-    for (const key in obj) {
-        const value = obj[key]
+    const result = []
+
+    const recurse = (value) => {
         if (typeof value === "string") {
-            strings.push(value)
-        } else if (value === Object(value) && value !== null) {
-            strings = strings.concat(collectStrings(value))
+            result.push(value)
+        } else if (value && typeof value === "object") {
+            for (const key in value) {
+                recurse(value[key])
+            }
         }
     }
-    return strings
+
+    recurse(obj);
+    return result;
 }
 
 /**
@@ -90,7 +94,9 @@ function collectStrings(obj) {
 function swapWoodType(woodTypeFrom, woodTypeTo) {
     Object.keys(woodTypeFrom).forEach(entry => {
         Object.keys(woodTypeFrom[entry]).forEach(woodenBlock => {
-            global.BLOCK_SWAPPER.set(woodTypeFrom[entry][woodenBlock], woodTypeTo[entry][woodenBlock])
+            if (woodTypeFrom[entry][woodenBlock] != undefined && woodTypeTo[entry][woodenBlock] != undefined) {
+                global.BLOCK_SWAPPER.set(woodTypeFrom[entry][woodenBlock], woodTypeTo[entry][woodenBlock])
+            }
         })
     })
 }
@@ -109,14 +115,12 @@ const woodTypesToConstruct = {
         cherry: true,
         crimson: true,
         warped: true,
+        pale_oak: true,  // vanilla backport's mod id changed
     },
     quark: {
         azalea: false,
         ancient: false,
         blossom: false,
-    },
-    vanillabackport: {
-        pale_oak: true,
     },
     upgrade_aquatic: {
         driftwood: true,
@@ -169,5 +173,48 @@ const woodTypesToConstruct = {
         holly: true,
         chestnut: true,
         pine: true
-    }
+    },
+    darkerdepths: {
+        petrified: true,
+    },
+    mynethersdelight: {
+        powdery: true,
+    },
+    gardens_of_the_dead: {
+        whistlecane: true,
+        soulblight: true,
+    },
+    collectorsreap: {
+        lucuma: true,
+    },
+    netherexp: {
+        claret: true,
+        smokestalk: true,
+    },
+    goety: {
+        haunted: true,
+        rotten: true,
+        windswept: true,
+        pine: false,
+        chorus: true,
+        corrupt_chorus: true,
+    },
+    cataclysm: {
+        chorus: false,
+    },
+    alexscaves: {
+        pewen: true,
+        thornwood: true,
+    },
+    malum: {
+        runewood: true,
+        soulwood: true,
+    },
+    unusual_prehistory: {
+        ginkgo: true,
+        lepidodendron: true,
+    },
+    unusualend: {
+        chorus_nest: true,
+    },
 }

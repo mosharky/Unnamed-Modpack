@@ -9,7 +9,11 @@
     "mekanism",
     "galosphere",
     "caverns_and_chasms",
-    "oreganized"
+    "oreganized",
+    "call_of_yucutan",
+    "goety",
+    "alexscaves",
+    "scguns"
   ],
   "stoneStrata": [
     "stone",
@@ -109,7 +113,8 @@
     "tin",
     "tungsten",
     "uranium",
-    "zinc"
+    "zinc",
+    "jade"
   ],
   "priorityOverrides": {},
   "customTags": {},

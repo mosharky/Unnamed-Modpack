@@ -6,11 +6,16 @@ function removals_Quark() {
         /quark:.*azalea(?!_hedge).*/,
         'quark:gold_bars',
         'quark:chute',
-        'quark:ancient_tome'
+        'quark:ancient_tome',
+        'quark:berry_sack',
+        'quark:glowberry_sack',
+        'quark:pipe',
+        'quark:pathfinders_quill'
     ])
 
     global.ITEM_SWAPPER.set('quark:crab_leg', 'minecraft:cod')
     global.ITEM_SWAPPER.set('quark:crab_shell', 'minecraft:cod')
+    global.ITEM_SWAPPER.set('quark:pathfinders_quill', 'minecraft:map')
 
     // IDAS structures need these swapped out
     global.BLOCK_SWAPPER.set('quark:thatch', 'environmental:grass_thatch')
@@ -148,6 +153,9 @@ function removals_Quark() {
     global.BLOCK_SWAPPER.set('quark:shale_bricks_vertical_slab', 'v_slab_compat:windswept/polished_shale_brick_vertical_slab')
     global.BLOCK_SWAPPER.set('quark:shale_bricks_stairs', 'windswept:polished_shale_brick_stairs')
     global.BLOCK_SWAPPER.set('quark:chiseled_shale_bricks', 'windswept:chiseled_polished_shale_bricks')
+    global.BLOCK_SWAPPER.set('quark:berry_sack', 'berry_good:sweet_berry_basket')
+    global.BLOCK_SWAPPER.set('quark:glowberry_sack', 'berry_good:glow_berry_basket')
+    global.BLOCK_SWAPPER.set('quark:pipe', 'minecraft:air')
     // Entities
     global.ENTITY_SWAPPER.set('quark:wraith', 'caverns_and_chasms:mime')
     global.ENTITY_SWAPPER.set('quark:foxhound', 'alexsmobs:dropbear')
@@ -213,5 +221,5 @@ function removals_Quark() {
 
     swapWoodType(global.DISABLED_WOOD_TYPES.quark.blossom, global.WOOD_TYPES.environmental.plum)
     swapWoodType(global.DISABLED_WOOD_TYPES.quark.azalea, global.WOOD_TYPES.caverns_and_chasms.azalea)
-    swapWoodType(global.DISABLED_WOOD_TYPES.quark.ancient, global.WOOD_TYPES.vanillabackport.pale_oak)
+    swapWoodType(global.DISABLED_WOOD_TYPES.quark.ancient, global.WOOD_TYPES.minecraft.pale_oak)
 }

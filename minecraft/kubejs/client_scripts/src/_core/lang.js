@@ -26,6 +26,15 @@ ClientEvents.lang('en_us', e => {
     rename('darkerdepths:ash_block', 'Darkslate Ash Block')
     rename('darkerdepths:ash', 'Darkslate Ash')
 
-    // Holler missing lang
+    // Doom and Gloom missing lang
     e.add('doom_and_gloom', 'entity.doom_and_gloom.holler', 'Holler')
+    e.add('doom_and_gloom', 'entity.minecraft.villager.gravetender', 'Gravetender')
+
+    // AE2 missing lang
+    e.add('ae2', 'entity.minecraft.villager.fluix_researcher', 'Fluix Researcher')
+
+    // More Minecarts missing lang
+    rename('moreminecarts:maglev_hologram_rail', 'Maglev Holograph Rail')
+    rename('moreminecarts:wooden_hologram_rail', 'Wooden Holograph Rail')
+    rename('moreminecarts:hologram_rail', 'Holograph Rail')
 })

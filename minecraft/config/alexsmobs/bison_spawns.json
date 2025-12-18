@@ -2,24 +2,16 @@
   "biomes": [
     [
       {
-        "type": "BIOME_TAG",
+        "type": "REGISTRY_NAME",
         "negate": false,
-        "value": "minecraft:is_overworld"
-      },
+        "value": "natures_spirit:marigold_meadows"
+      }
+    ],
+    [
       {
-        "type": "BIOME_TAG",
+        "type": "REGISTRY_NAME",
         "negate": false,
-        "value": "forge:is_plains"
-      },
-      {
-        "type": "BIOME_TAG",
-        "negate": true,
-        "value": "minecraft:is_savanna"
-      },
-      {
-        "type": "BIOME_TAG",
-        "negate": true,
-        "value": "forge:is_hot/overworld"
+        "value": "natures_spirit:prairie"
       }
     ],
     [

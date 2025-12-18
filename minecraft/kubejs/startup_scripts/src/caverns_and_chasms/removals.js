@@ -2,6 +2,7 @@ function removals_CavernsAndChasms() {
     global.REMOVALS.add([
         /caverns_and_chasms:silver_(?!shovel|pickaxe|axe|hoe|sword|bars).*/,
         /caverns_and_chasms:(raw|deepslate)_silver.*/,
+        'caverns_and_chasms:copper_nugget'
     ])
 
     global.ITEM_SWAPPER.set('caverns_and_chasms:silver_ingot', 'galosphere:silver_ingot')

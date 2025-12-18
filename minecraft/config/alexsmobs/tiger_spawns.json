@@ -11,6 +11,20 @@
       {
         "type": "REGISTRY_NAME",
         "negate": false,
+        "value": "environmental:blossom_valleys"
+      }
+    ],
+    [
+      {
+        "type": "REGISTRY_NAME",
+        "negate": false,
+        "value": "environmental:blossom_woods"
+      }
+    ],
+    [
+      {
+        "type": "REGISTRY_NAME",
+        "negate": false,
         "value": "biomesoplenty:bamboo_grove"
       }
     ],

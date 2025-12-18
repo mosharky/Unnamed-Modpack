@@ -15,6 +15,7 @@ minecraft/config/cpm.json
 minecraft/config/everycomp-hazardous.properties
 minecraft/config/asyncparticles/asyncparticles-mixin.properties
 minecraft/config/packetfixer.properties
+minecraft/config/structurify/*backup*
 
 # mods
 minecraft/mods/.connector/
@@ -41,6 +42,9 @@ minecraft/.cache/
 minecraft/.vscode/
 minecraft/mod_data/
 minecraft/.mixin.out/
+minecraft/xaero/
+minecraft/ESM/
+minecraft/backups/
 
 # root files
 minecraft/knownkeys.txt
@@ -62,6 +66,7 @@ minecraft/fabricloader.log
 minecraft/emi.json
 minecraft/irisUpdateInfo.json
 minecraft/.qmenu_opened.marker
+minecraft/snr_favorite_styles.nbt
 
 # dev environment stuff
 .probe/

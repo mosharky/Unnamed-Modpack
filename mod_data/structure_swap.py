@@ -22,6 +22,7 @@ log = logging.getLogger()
 modsPath = Path('minecraft/mods')
 extrasPath = Path('mod_data/extras')
 generatedDir = Path('mod_data/generated')
+overridesDir = Path('mod_data/overrides')
 
 swapsJson = json.load(open('minecraft/kubejs/config/swaps.json', 'r'))
 swaps = {
@@ -399,6 +400,7 @@ def main():
     # clearGeneratedDir()
     # gatherStructures(extrasPath)
     # gatherStructures(modsPath)
+    # gatherStructures(overridesDir)
     # swapLoop(generatedDir / 'data')
     zipStructures(Path('minecraft/kubejs/data/structures.zip'))
 

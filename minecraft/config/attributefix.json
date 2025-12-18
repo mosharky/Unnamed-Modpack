@@ -55,6 +55,17 @@
         "value": 2048
       }
     },
+    "scguns:spread_multiplier": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 1000,
+        "value": 1000
+      }
+    },
     "forge:entity_gravity": {
       "enabled": false,
       "min": {
@@ -64,6 +75,17 @@
       "max": {
         "default": 8,
         "value": 8
+      }
+    },
+    "scguns:projectile_speed": {
+      "enabled": false,
+      "min": {
+        "default": 0.01,
+        "value": 0.01
+      },
+      "max": {
+        "default": 100,
+        "value": 100
       }
     },
     "malum:soul_ward_recovery_rate": {
@@ -143,17 +165,6 @@
         "value": 1024
       }
     },
-    "goety:geomancy_potency": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 2048,
-        "value": 2048
-      }
-    },
     "galosphere:illager_resistance": {
       "enabled": false,
       "min": {
@@ -165,6 +176,17 @@
         "value": 10
       }
     },
+    "goety:geomancy_potency": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 2048,
+        "value": 2048
+      }
+    },
     "goety:storm_potency": {
       "enabled": false,
       "min": {
@@ -174,6 +196,17 @@
       "max": {
         "default": 2048,
         "value": 2048
+      }
+    },
+    "scguns:additional_bullet_damage": {
+      "enabled": false,
+      "min": {
+        "default": -1000,
+        "value": -1000
+      },
+      "max": {
+        "default": 10000,
+        "value": 10000
       }
     },
     "goety:soul_discount": {
@@ -253,22 +286,22 @@
         "value": 1000000
       }
     },
-    "goety:spell_burning": {
+    "lodestone:magic_resistance": {
       "enabled": false,
       "min": {
-        "default": 0,
-        "value": 0
+        "default": 1,
+        "value": 1
       },
       "max": {
         "default": 2048,
         "value": 2048
       }
     },
-    "lodestone:magic_resistance": {
+    "goety:spell_burning": {
       "enabled": false,
       "min": {
-        "default": 1,
-        "value": 1
+        "default": 0,
+        "value": 0
       },
       "max": {
         "default": 2048,
@@ -440,6 +473,17 @@
         "value": 1024
       }
     },
+    "scguns:reload_speed": {
+      "enabled": false,
+      "min": {
+        "default": 0.01,
+        "value": 0.01
+      },
+      "max": {
+        "default": 1000,
+        "value": 1000
+      }
+    },
     "goety:spell_range": {
       "enabled": false,
       "min": {
@@ -515,6 +559,17 @@
       "max": {
         "default": 2048,
         "value": 2048
+      }
+    },
+    "scguns:bullet_damage_multiplier": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 1000,
+        "value": 1000
       }
     },
     "minecraft:generic.armor": {
@@ -693,17 +748,6 @@
         "value": 1
       }
     },
-    "caverns_and_chasms:experience_boost": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 30,
-        "value": 30
-      }
-    },
     "lodestone:magic_damage": {
       "enabled": false,
       "min": {
@@ -713,6 +757,17 @@
       "max": {
         "default": 2048,
         "value": 2048
+      }
+    },
+    "caverns_and_chasms:experience_boost": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 30,
+        "value": 30
       }
     },
     "goety:necromancy_potency": {

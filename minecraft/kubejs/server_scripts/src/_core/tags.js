@@ -14,7 +14,39 @@ function blockTags_Core(e) {
         /natures_spirit:.*wisteria_vines/
     ])
 
-    // e.add('minecraft:logs', ['natures_spirit:alluaudia', 'natures_spirit:stripped_alluaudia'])
+    /*
+    e.add('generikb:magnetic_caves_blocks', [
+        'alexscaves:azure_neodymium_pillar',
+        'alexscaves:scarlet_neodymium_pillar',
+        'alexscaves:azure_neodymium_node',
+        'alexscaves:scarlet_neodymium_node',
+        'alexscaves:galena',
+        'alexscaves:galena_iron_ore',
+        'alexscaves:energized_galena_azure',
+        'alexscaves:energized_galena_scarlet',
+        'alexscaves:energized_galena_neutral',
+        'alexscaves:metal_swarf',
+        'alexscaves:galena_spire',
+        'alexscaves:tesla_bulb',
+        'create_new_age:magnetite_block',
+        'minecraft:bedrock',
+        'minecraft:lava'
+    ])
+    e.add('generikb:toxic_caves_blocks', [
+        'alexscaves:radrock',
+        'alexscaves:acidic_radrock',
+        'alexscaves:radrock_uranium_ore',
+        'alexscaves:underweed',
+        'alexscaves:sulfur',
+        'alexscaves:sulfur_bud_small',
+        'alexscaves:sulfur_bud_medium',
+        'alexscaves:sulfur_bud_large',
+        'alexscaves:sulfur_cluster',
+        'alexscaves:acid',
+        'minecraft:bedrock',
+        'minecraft:mud'
+    ])
+    */
 }
 
 /** @param {$TagEventJS_} e */
@@ -25,6 +57,23 @@ function entityTags_Core(e) {
 
 /** @param {$TagEventJS_} e */
 function biomeTags_Core(e) {
+    e.add('forge:is_sandy', [
+        '#atmospheric:is_dunes',
+        '#natures_spirit:is_adobe',
+        'natures_spirit:scorched_dunes'
+    ])
+    e.add('forge:is_dry/overworld', [
+        '#atmospheric:is_dunes',
+        'natures_spirit:scorched_dunes'
+    ])
+    e.add('forge:is_coniferous', [
+        '#natures_spirit:is_alpine',
+        'natures_spirit:heather_fields',
+        'natures_spirit:fir_forest',
+        'natures_spirit:snowy_fir_forest',
+        'natures_spirit:boreal_taiga',
+    ])
+
     e.add('kubejs:has_feature/sparse_maple_tree', [
         'minecraft:forest',
         'minecraft:windswept_forest',

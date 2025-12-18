@@ -107,6 +107,9 @@
 			gloopslate = true
 			warped_stone = true
 
+		[types.stone_type.scguns]
+			phosphorite = true
+
 	[types.wood_type]
 
 		[types.wood_type.quark]
@@ -176,9 +179,6 @@
 			whistlecane = true
 			soulblight = true
 
-		[types.wood_type.evenbetternether]
-			mushroom = true
-
 		[types.wood_type.collectorsreap]
 			lucuma = true
 
@@ -190,12 +190,12 @@
 			haunted = true
 			rotten = true
 			windswept = true
-			pine = true
+			pine = false
 			chorus = true
 			corrupt_chorus = true
 
 		[types.wood_type.cataclysm]
-			chorus = true
+			chorus = false
 
 		[types.wood_type.alexscaves]
 			pewen = true
@@ -305,7 +305,7 @@
 			hardened = true
 			rotten = true
 			windswept = true
-			pine = true
+			pine = false
 			chorus = true
 			chorus_blossom = true
 
@@ -422,8 +422,8 @@
 			blue_ice_brick = true
 			snow = true
 			snow_brick = true
-			gingerbread_brick = true
-			glazed_gingerbread_brick = true
+			gingerbread_brick = false
+			glazed_gingerbread_brick = false
 			lunalite = true
 			cut_lunalite = true
 			cut_lunalite_brick = true
@@ -721,7 +721,7 @@
 			honeycomb_tile = true
 
 		[types.cut_block_type.snowyspirit]
-			gingerbread = true
+			gingerbread = false
 
 		[types.cut_block_type.atmospheric]
 			rosewood = true
@@ -866,16 +866,6 @@
 		[types.cut_block_type.mynethersdelight]
 			powdery = true
 			powdery_mosaic = true
-
-		[types.cut_block_type.evenbetternether]
-			mushroom = true
-			pyrite_tile = true
-			pyrite_roofing = true
-			carved_pyrite = true
-			pyrite_brick = true
-			nether_reed = true
-			polished_nether_brick = true
-			smooth_netherrack = true
 
 		[types.cut_block_type.gardens_of_the_dead]
 			soulblight = true
@@ -1147,6 +1137,24 @@
 			warped_stone_tiles = true
 			shiny_crystal_tiles = true
 			enderblob_moult_brick = true
+
+		[types.cut_block_type.ae2]
+			sky_stone_brick = true
+			sky_stone_small_brick = true
+			smooth_quartz = true
+			quartz_brick = true
+			quartz_pillar = true
+
+		[types.cut_block_type.scguns]
+			cut_diamond_steel = true
+			diamond_steel_tiles = true
+			cut_anthralite = true
+			anthralite_tiles = true
+			cut_treated_iron = true
+			phosphorite_brick = true
+			asgharian_brick = true
+			cut_treated_brass = true
+			treated_brass_tiles = true
 
 #Disables specific entries
 [entries]

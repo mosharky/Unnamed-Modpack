@@ -1,7 +1,7 @@
 
 [general]
 	#Whether all players should get an Animal Dictionary when joining the world for the first time.
-	giveBookOnStartup = true
+	giveBookOnStartup = false
 	#Lava Opacity for the Lava Vision Potion.
 	#Range: 0.01 ~ 1.0
 	lavaVisionOpacity = 0.65
@@ -41,10 +41,10 @@
 	#Whether soul vulture spawns should be restricted solely to the nether fossil structure or to whatever biome is specified in their respective biome config.
 	soulVultureSpawnOnFossil = true
 	#Whether acacia blossoms should drop from blocks tagged with #alexsmobs:drops_acacia_blossoms
-	acaciaBlossomsDropFromLeaves = true
+	acaciaBlossomsDropFromLeaves = false
 	#1 out of this number chance for leaves to drop an acacia when broken. Fortune is automatically factored in
 	#Range: > 0
-	acaciaBlossomChance = 130
+	acaciaBlossomChance = 0
 	#Whether wandering traders offer items like acacia blossoms, mosquito larva, crocodile egg, etc.
 	wanderingTraderOffers = true
 	#0 = no mungus biome transformation. 1 = mungus changes blocks, but not chunk's biome. 2 = mungus transforms blocks and biome of chunk.
@@ -66,7 +66,7 @@
 	#Range: 0.0 ~ 1.0
 	emuPantsDodgeChance = 0.45
 	#Whether cachalots can destroy wood blocks if angry.
-	cachalotDestruction = true
+	cachalotDestruction = false
 	#Relative volume of cachalot whales compared to other animals. Note that irl they are the loudest animal. Turn this down if you find their clicks annoying.
 	#Range: 0.0 ~ 10.0
 	cachalotVolume = 3.0

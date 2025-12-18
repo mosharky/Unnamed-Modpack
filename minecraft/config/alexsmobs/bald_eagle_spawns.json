@@ -21,6 +21,13 @@
       {
         "type": "REGISTRY_NAME",
         "negate": false,
+        "value": "natures_spirit:alpine_highlands"
+      }
+    ],
+    [
+      {
+        "type": "REGISTRY_NAME",
+        "negate": false,
         "value": "minecraft:grove"
       }
     ],

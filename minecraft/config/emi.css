@@ -46,12 +46,12 @@
 	/**
 	 * Which action should be performed when clicking the recipe book.
 	 */
-	recipe-book-action: toggle-craftables;
+	recipe-book-action: toggle-visibility;
 
 	/**
 	 * Where to display status effects in the inventory.
 	 */
-	effect-location: top;
+	effect-location: left-compressed;
 
 	/**
 	 * Whether to display a gray overlay when hovering over a stack.
@@ -141,7 +141,7 @@
 	/**
 	 * Whether recipes should have a button to set as default.
 	 */
-	recipe-default-button: true;
+	recipe-default-button: false;
 
 	/**
 	 * Whether recipes should have a button to show the recipe tree.
@@ -167,7 +167,7 @@
 	/**
 	 * The pages in the left sidebar
 	 */
-	left-sidebar-pages: favorites;
+	left-sidebar-pages: craftables, favorites;
 
 	/**
 	 * The subpanels in the left sidebar
@@ -177,7 +177,7 @@
 	/**
 	 * How many columns and rows of ingredients to limit the left sidebar to
 	 */
-	left-sidebar-size: 12, 100;
+	left-sidebar-size: 8, 7;
 
 	/**
 	 * How much space to maintain between the left sidebar and obstructions, in pixels
@@ -202,7 +202,7 @@
 	/**
 	 * The pages in the right sidebar
 	 */
-	right-sidebar-pages: index, craftables;
+	right-sidebar-pages: index;
 
 	/**
 	 * The subpanels in the right sidebar
@@ -232,7 +232,7 @@
 	/**
 	 * Which theme to use for the right sidebar
 	 */
-	right-sidebar-theme: transparent;
+	right-sidebar-theme: modern;
 
 	/**
 	 * The pages in the top sidebar
@@ -247,7 +247,7 @@
 	/**
 	 * How many columns and rows of ingredients to limit the top sidebar to
 	 */
-	top-sidebar-size: 9, 9;
+	top-sidebar-size: 12, 4;
 
 	/**
 	 * How much space to maintain between the top sidebar and obstructions, in pixels
@@ -257,12 +257,12 @@
 	/**
 	 * Where to position the top sidebar
 	 */
-	top-sidebar-align: center, center;
+	top-sidebar-align: left, top;
 
 	/**
 	 * Whether to render the header buttons and page count for the top sidebar
 	 */
-	top-sidebar-header: visible;
+	top-sidebar-header: invisible;
 
 	/**
 	 * Which theme to use for the top sidebar

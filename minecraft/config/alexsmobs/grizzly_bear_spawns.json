@@ -15,6 +15,16 @@
         "type": "REGISTRY_NAME",
         "negate": true,
         "value": "minecraft:sparse_jungle"
+      },
+      {
+        "type": "BIOME_TAG",
+        "negate": true,
+        "value": "natures_spirit:is_tropical_woods"
+      },
+      {
+        "type": "BIOME_TAG",
+        "negate": true,
+        "value": "atmospheric:is_rainforest"
       }
     ],
     [

@@ -11,5 +11,6 @@ function worldgen_Core(e) {
         'minecraft:ore_granite_upper',
         'minecraft:ore_andesite_lower',
         'minecraft:ore_andesite_upper',
+        'minecraft:ore_diorite_upper',
     ], '#minecraft:is_overworld', UNDERGROUND_ORES)
 }

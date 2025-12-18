@@ -6,6 +6,13 @@
         "negate": false,
         "value": "minecraft:dark_forest"
       }
+    ],
+    [
+      {
+        "type": "REGISTRY_NAME",
+        "negate": false,
+        "value": "minecraft:pale_garden"
+      } 
     ]
   ]
 }

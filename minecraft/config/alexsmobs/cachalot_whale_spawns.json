@@ -9,19 +9,12 @@
       {
         "type": "BIOME_TAG",
         "negate": false,
-        "value": "minecraft:is_ocean"
+        "value": "minecraft:is_deep_ocean"
       },
       {
         "type": "BIOME_TAG",
         "negate": false,
         "value": "forge:is_cold/overworld"
-      }
-    ],
-    [
-      {
-        "type": "REGISTRY_NAME",
-        "negate": false,
-        "value": "minecraft:lukewarm_ocean"
       }
     ],
     [

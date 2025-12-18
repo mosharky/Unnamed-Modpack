@@ -1,0 +1,16 @@
+filename = 'playerlocatorplusreforged-1.0.1.jar'
+name = 'Player Locator Reforged'
+side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '53d5a805228a1b567106df552054e3ec5fcd526ab0ffa51a9d8eb2bee6612c456fef2c81788b19882caaacae6871772d2d76753d278af799f8e14b3c1726ce52'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/sGvIum2l/versions/UbzxmIm6/playerlocatorplusreforged-1.0.1.jar'
+
+[update.modrinth]
+mod-id = 'sGvIum2l'
+version = 'UbzxmIm6'
