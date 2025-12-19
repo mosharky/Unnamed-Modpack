@@ -5,5 +5,6 @@ function blockTags_SnowRealMagic(e) {
         'environmental:cup_lichen',
         'windswept:dry_moss_sprouts',
         'windswept:wild_berry_bush',
+        'windswept:snowy_sprouts',
     ])
 }

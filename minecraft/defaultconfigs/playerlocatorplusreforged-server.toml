@@ -1,0 +1,49 @@
+
+#Server-side configuration for Player Locator Plus
+[server]
+	#Is the mod enabled server-side?
+	enabled = true
+	#Send the server config to clients that opt in?
+	sendServerConfig = true
+	#Send distance information together with direction?
+	sendDistance = true
+	#Maximum distance at which markers are visible (0 = unlimited).
+	#Range: 0 ~ 1000000
+	maxDistance = 0
+	#Precision factor for far-away players. Higher = smoother but easier to triangulate.
+	#Range: 2.0 ~ 2048.0
+	directionPrecision = 300.0
+	#Ticks between network updates. Lower = more frequent updates.
+	#Range: 0 ~ 200
+	ticksBetweenUpdates = 5
+	#Should sneaking hide players from the locator?
+	sneakingHides = true
+	#Should wearing a carved pumpkin hide players?
+	pumpkinHides = true
+	#Should wearing a mob/player head hide players?
+	mobHeadsHide = true
+	#Should invisibility hide players?
+	invisibilityHides = true
+	#How to determine marker colors.
+	#Allowed Values: UUID, TEAM_COLOR, CUSTOM, CONSTANT
+	colorMode = "UUID"
+	#Hex color (0xRRGGBB) used when color mode is CONSTANT.
+	#Range: 0 ~ 16777215
+	constantColor = 16777215
+
+	#Client style overrides applied when sendServerConfig is enabled.
+	[server.clientOverrides]
+		visible = true
+		visibleEmpty = false
+		fadeMarkers = true
+		#Range: 0.0 ~ 1000000.0
+		fadeStart = 100.0
+		#Range: 0.0 ~ 1000000.0
+		fadeEnd = 1000.0
+		#Range: 0.0 ~ 1.0
+		fadeEndOpacity = 0.3
+		showHeight = true
+		alwaysShowHeads = false
+		showHeadsOnTab = true
+		showNamesOnTab = true
+

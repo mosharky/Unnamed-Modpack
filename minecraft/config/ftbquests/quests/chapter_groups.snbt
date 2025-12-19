@@ -1,0 +1,6 @@
+{
+	chapter_groups: [
+		{ id: "1A1DF8B77E8F858C", title: "Introduction" }
+		{ id: "3C34E6BAEF95F131", title: "ATM 9" }
+	]
+}

@@ -15,5 +15,11 @@ function removals_Goety() {
     global.BLOCK_SWAPPER.set('goety:jade_stairs', 'call_of_yucutan:jade_stairs')
     global.BLOCK_SWAPPER.set('goety:jade_slab', 'call_of_yucutan:jade_slab')
 
+    global.BLOCK_SWAPPER.set('goety:compacted_pine_planks', 'windswept:pine_boards')
+    global.BLOCK_SWAPPER.set('goety:compacted_pine_slab', 'windswept:pine_slab')
+    global.BLOCK_SWAPPER.set('goety:thatched_pine_planks', 'windswept:pine_boards')
+    global.BLOCK_SWAPPER.set('goety:pine_lantern', 'minecraft:lantern')
+    global.BLOCK_SWAPPER.set('goety:pine_leaves', 'windswept:pine_leaves')
+
     swapWoodType(global.DISABLED_WOOD_TYPES.goety.pine, global.WOOD_TYPES.windswept.pine)
 }

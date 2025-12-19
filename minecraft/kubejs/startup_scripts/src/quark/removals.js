@@ -7,8 +7,13 @@ function removals_Quark() {
         'quark:gold_bars',
         'quark:chute',
         'quark:ancient_tome',
-        'quark:berry_sack',
-        'quark:glowberry_sack',
+        /quark:.*sack/,
+        'quark:golden_apple_crate',
+        'quark:apple_crate',
+        'quark:potato_crate',
+        'quark:carrot_crate',
+        'quark:golden_carrot_crate',
+        'quark:beetroot_crate',
         'quark:pipe',
         'quark:pathfinders_quill'
     ])
@@ -153,8 +158,17 @@ function removals_Quark() {
     global.BLOCK_SWAPPER.set('quark:shale_bricks_vertical_slab', 'v_slab_compat:windswept/polished_shale_brick_vertical_slab')
     global.BLOCK_SWAPPER.set('quark:shale_bricks_stairs', 'windswept:polished_shale_brick_stairs')
     global.BLOCK_SWAPPER.set('quark:chiseled_shale_bricks', 'windswept:chiseled_polished_shale_bricks')
-    global.BLOCK_SWAPPER.set('quark:berry_sack', 'berry_good:sweet_berry_basket')
-    global.BLOCK_SWAPPER.set('quark:glowberry_sack', 'berry_good:glow_berry_basket')
+    global.BLOCK_SWAPPER.set('quark:cocoa_beans_sack', 'packedup:cocoa_bean_bag')
+    global.BLOCK_SWAPPER.set('quark:nether_wart_sack', 'packedup:nether_wart_bag')
+    global.BLOCK_SWAPPER.set('quark:gunpowder_sack', 'packedup:gunpowder_crate')
+    global.BLOCK_SWAPPER.set('quark:berry_sack', 'packedup:sweet_berry_basket')
+    global.BLOCK_SWAPPER.set('quark:glowberry_sack', 'packedup:glow_berry_basket')
+    global.BLOCK_SWAPPER.set('quark:golden_apple_crate', 'packedup:golden_apple_basket')
+    global.BLOCK_SWAPPER.set('quark:apple_crate', 'packedup:apple_basket')
+    global.BLOCK_SWAPPER.set('quark:potato_crate', 'farmersdelight:potato_crate')
+    global.BLOCK_SWAPPER.set('quark:carrot_crate', 'farmersdelight:carrot_crate')
+    global.BLOCK_SWAPPER.set('quark:golden_carrot_crate', 'farmersdelight:golden_carrot_crate')
+    global.BLOCK_SWAPPER.set('quark:beetroot_crate', 'farmersdelight:beetroot_crate')
     global.BLOCK_SWAPPER.set('quark:pipe', 'minecraft:air')
     // Entities
     global.ENTITY_SWAPPER.set('quark:wraith', 'caverns_and_chasms:mime')

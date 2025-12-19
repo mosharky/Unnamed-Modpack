@@ -14,5 +14,12 @@ function lootReplacements_Core(all) {
 /** @param {$LootModificationEventJS_} e */
 function lootTables_Core(e) {
     e.addEntityLootModifier('minecraft:ravager')
+        .randomChance(0.3)
+        .addLoot('kubejs:ravager_hide')
+    e.addEntityLootModifier('goety:ravager')
+        .randomChance(0.3)
+        .addLoot('kubejs:ravager_hide')
+    e.addEntityLootModifier('goety:trampler')
+        .randomChance(0.3)
         .addLoot('kubejs:ravager_hide')
 }

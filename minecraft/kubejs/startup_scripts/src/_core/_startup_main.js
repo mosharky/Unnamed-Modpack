@@ -42,6 +42,7 @@ function postInit() {
     removals_UpgradeAquatic()
     removals_Windswept()
     removals_Woodworks()
+    removals_EndRem()
     // removals_EvenBetterNether()
 
     // Changing blockswap config with KubeJS!

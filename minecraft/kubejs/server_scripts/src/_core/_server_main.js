@@ -19,6 +19,8 @@ ServerEvents.tags('entity_type', e => {
     entityTags_Atmospheric(e)
     entityTags_Environmental(e)
     entityTags_Galosphere(e)
+    entityTags_Supplementaries(e)
+    entityTags_NumismaticOverhaul(e)
 })
 
 ServerEvents.tags('worldgen/biome', e => {
@@ -75,11 +77,12 @@ ServerEvents.loaded(e => {
 ServerEvents.highPriorityData(e => {
     advancements_Core(e)
 
+    numismaticTrades_Core(e)
     moonlightTrades_Supplementaries(e)
     moonlightTrades_Sawmill(e)
 
     enchants_ImmersiveEnchanting(e)
-    enchants_Aileron(e)
+    // enchants_Aileron(e)
     enchants_AlexsMobs(e)
     enchants_Allurement(e)
     enchants_Backpacked(e)
@@ -120,6 +123,10 @@ LootJS.modifiers(e => {
     // Replacements
     const all = e.addLootTableModifier(/.*/)
     lootReplacements_Core(all)
+    lootReplacements_ImmersiveEnchanting(all)
+    lootRemovals_EndRem(all)
 
     lootTables_Core(e)
+    lootTables_EndRem(e)
+    lootTables_ImmersiveEnchanting(e)
 })

@@ -1,0 +1,568 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "the_end"
+	group: ""
+	icon: "minecraft:ender_eye"
+	id: "2274EFC0AC683218"
+	images: [
+		{
+			height: 1.0d
+			image: "minecraft:block/end_portal_frame_top"
+			rotation: 0.0d
+			width: 1.0d
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			height: 1.0d
+			image: "minecraft:block/end_portal_frame_top"
+			rotation: 0.0d
+			width: 1.0d
+			x: 1.0d
+			y: -2.0d
+		}
+		{
+			height: 1.0d
+			image: "minecraft:block/end_portal_frame_top"
+			rotation: 0.0d
+			width: 1.0d
+			x: -1.0d
+			y: -2.0d
+		}
+		{
+			height: 1.0d
+			image: "minecraft:block/end_portal_frame_top"
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: -1.0d
+		}
+		{
+			height: 1.0d
+			image: "minecraft:block/end_portal_frame_top"
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			height: 1.0d
+			image: "minecraft:block/end_portal_frame_top"
+			rotation: 0.0d
+			width: 1.0d
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			height: 1.0d
+			image: "minecraft:block/end_portal_frame_top"
+			rotation: 0.0d
+			width: 1.0d
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			height: 1.0d
+			image: "minecraft:block/end_portal_frame_top"
+			rotation: 0.0d
+			width: 1.0d
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			height: 1.0d
+			image: "minecraft:block/end_portal_frame_top"
+			rotation: 0.0d
+			width: 1.0d
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			height: 1.0d
+			image: "minecraft:block/end_portal_frame_top"
+			rotation: 0.0d
+			width: 1.0d
+			x: 1.0d
+			y: 2.0d
+		}
+		{
+			height: 1.0d
+			image: "minecraft:block/end_portal_frame_top"
+			rotation: 0.0d
+			width: 1.0d
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			height: 1.0d
+			image: "minecraft:block/end_portal_frame_top"
+			rotation: 0.0d
+			width: 1.0d
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			height: 3.5d
+			image: "minecraft:textures/entity/end_portal.png"
+			rotation: 0.0d
+			width: 3.5d
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				Count: 1
+				id: "endrem:black_eye"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "0B7DB18658592E17"
+			size: 0.75d
+			tasks: [
+				{
+					entity: "alexscaves:hullbreaker"
+					id: "71DE59B3A7A9C6D1"
+					optional_task: true
+					type: "kill"
+					value: 1L
+				}
+				{
+					consume_items: false
+					id: "3DB396E580D40088"
+					item: {
+						Count: 1
+						id: "endrem:black_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			icon: {
+				Count: 1
+				id: "endrem:cold_eye"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "191043E25D47751F"
+			size: 0.75d
+			tasks: [
+				{
+					entity: "mowziesmobs:frostmaw"
+					id: "28E864A538859C10"
+					optional_task: true
+					type: "kill"
+					value: 1L
+				}
+				{
+					consume_items: false
+					id: "28B257E3DC8F687D"
+					item: {
+						Count: 1
+						id: "endrem:cold_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 1.0d
+			y: -2.0d
+		}
+		{
+			icon: {
+				Count: 1
+				id: "endrem:corrupted_eye"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "1A743BF11CCA7BB0"
+			size: 0.75d
+			tasks: [
+				{
+					entity: "scguns:blunderer"
+					id: "22E45C4E628D4118"
+					optional_task: true
+					type: "kill"
+					value: 1L
+				}
+				{
+					consume_items: false
+					id: "00C835884514F3D1"
+					item: {
+						Count: 1
+						id: "endrem:corrupted_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: -2.0d
+		}
+		{
+			icon: {
+				Count: 1
+				id: "endrem:lost_eye"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "4CB73DE091DC646F"
+			size: 0.75d
+			tasks: [
+				{
+					id: "77A96B5938DEE3D5"
+					optional_task: true
+					structure: "goety:ominous_blacksmith"
+					title: "Plunder the Ominous Blacksmith"
+					type: "structure"
+				}
+				{
+					consume_items: false
+					id: "62FD75DAD2D8E0D8"
+					item: {
+						Count: 1
+						id: "endrem:lost_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: -1.0d
+		}
+		{
+			icon: {
+				Count: 1
+				id: "endrem:nether_eye"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "0D0CDCAE9B700C82"
+			size: 0.75d
+			tasks: [
+				{
+					entity: "cataclysm:ignis"
+					id: "5FEEF46444F91A25"
+					optional_task: true
+					type: "kill"
+					value: 1L
+				}
+				{
+					consume_items: false
+					id: "0AC1652E74D3745C"
+					item: {
+						Count: 1
+						id: "endrem:nether_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				Count: 1
+				id: "endrem:old_eye"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "68DFAE9027F89C37"
+			size: 0.75d
+			tasks: [
+				{
+					entity: "cataclysm:ancient_remnant"
+					id: "12B6F358ED963C2F"
+					optional_task: true
+					type: "kill"
+					value: 1L
+				}
+				{
+					consume_items: false
+					id: "6C2D509661A3F6A9"
+					item: {
+						Count: 1
+						id: "endrem:old_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			icon: {
+				Count: 1
+				id: "endrem:rogue_eye"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "37F0D5CCAAB35DD9"
+			size: 0.75d
+			tasks: [
+				{
+					entity: "minecraft:warden"
+					icon: "minecraft:sculk_shrieker"
+					id: "3F05EBB30DE022B4"
+					optional_task: true
+					type: "kill"
+					value: 1L
+				}
+				{
+					consume_items: false
+					id: "03D00B95BEA39FA7"
+					item: {
+						Count: 1
+						id: "endrem:rogue_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			icon: {
+				Count: 1
+				id: "endrem:cursed_eye"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "0BC87B5D3D5A10F7"
+			size: 0.75d
+			tasks: [
+				{
+					entity: "cataclysm:netherite_monstrosity"
+					id: "70EE13445704592C"
+					optional_task: true
+					type: "kill"
+					value: 1L
+				}
+				{
+					consume_items: false
+					id: "0AC72376604C9574"
+					item: {
+						Count: 1
+						id: "endrem:cursed_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			icon: {
+				Count: 1
+				id: "endrem:wither_eye"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "690807E33FF50150"
+			size: 0.75d
+			tasks: [
+				{
+					entity: "minecraft:wither"
+					icon: "minecraft:nether_star"
+					id: "257F418371D1FE2B"
+					optional_task: true
+					type: "kill"
+					value: 1L
+				}
+				{
+					consume_items: false
+					id: "6F703334E64F0B11"
+					item: {
+						Count: 1
+						id: "endrem:wither_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 1.0d
+			y: 2.0d
+		}
+		{
+			icon: {
+				Count: 1
+				id: "endrem:undead_eye"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "1FB15196C2A6987D"
+			size: 0.75d
+			tasks: [
+				{
+					entity: "cataclysm:aptrgangr"
+					id: "1987DC5F7CBAD3DD"
+					optional_task: true
+					type: "kill"
+					value: 1L
+				}
+				{
+					consume_items: false
+					id: "76539BB96512F888"
+					item: {
+						Count: 1
+						id: "endrem:undead_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			icon: {
+				Count: 1
+				id: "endrem:exotic_eye"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "28827B34D1EB82A7"
+			size: 0.75d
+			tasks: [
+				{
+					entity: "cataclysm:scylla"
+					id: "2A4A16D88C731EDE"
+					optional_task: true
+					type: "kill"
+					value: 1L
+				}
+				{
+					consume_items: false
+					id: "54E94E3E20DE7930"
+					item: {
+						Count: 1
+						id: "endrem:exotic_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				Count: 1
+				id: "endrem:cryptic_eye"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "0C42CBFE35ACE389"
+			size: 0.75d
+			tasks: [
+				{
+					entity: "alexscaves:luxtructosaurus"
+					id: "40A1C88BD3173C43"
+					optional_task: true
+					type: "kill"
+					value: 1L
+				}
+				{
+					consume_items: false
+					id: "0ABB8628626B7EB5"
+					item: {
+						Count: 1
+						id: "endrem:cryptic_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"0C42CBFE35ACE389"
+				"28827B34D1EB82A7"
+				"1FB15196C2A6987D"
+				"690807E33FF50150"
+				"0BC87B5D3D5A10F7"
+				"37F0D5CCAAB35DD9"
+				"68DFAE9027F89C37"
+				"0D0CDCAE9B700C82"
+				"4CB73DE091DC646F"
+				"1A743BF11CCA7BB0"
+				"0B7DB18658592E17"
+				"191043E25D47751F"
+			]
+			id: "286FAAD6E97B0533"
+			subtitle: "Use the eyes to find your way."
+			tasks: [{
+				dimension: "minecraft:the_end"
+				icon: "minecraft:ender_eye"
+				id: "058ADC196EA48FE5"
+				type: "dimension"
+			}]
+			title: "Enter The Portal"
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	title: "The End"
+}

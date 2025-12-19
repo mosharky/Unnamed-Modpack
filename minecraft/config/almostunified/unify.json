@@ -129,5 +129,5 @@
     "cucumber:shaped_tag"
   ],
   "ignoredRecipes": [],
-  "itemsHidingJeiRei": false
+  "itemsHidingJeiRei": true
 }

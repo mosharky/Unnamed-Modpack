@@ -16,6 +16,7 @@ minecraft/config/everycomp-hazardous.properties
 minecraft/config/asyncparticles/asyncparticles-mixin.properties
 minecraft/config/packetfixer.properties
 minecraft/config/structurify/*backup*
+minecraft/kubejs/config/probe-settings.json
 
 # mods
 minecraft/mods/.connector/
@@ -84,3 +85,4 @@ minecraft/texturepacks/
 minecraft/minecraftinstance.json
 minecraft/.unsup-state.json
 minecraft/.unsup-tmp/
+.packignore

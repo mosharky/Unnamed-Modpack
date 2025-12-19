@@ -1,3 +1,4 @@
+// priority: -1
 ItemEvents.tooltip(e => {
     e.add(global.REMOVALS.getAsArray(), Text.red('DISABLED. Report to momo if you obtained this.').append(Text.darkGray('\nThis item is supposed to be replaced; ignore if found in a menu').italic()))
 })
@@ -55,7 +56,7 @@ JEIEvents.information(e => {
 })
 
 ClientEvents.highPriorityAssets(e => {
-    // e.add('emi:index/stacks/example_hidden_stacks.json', {removed: global.REMOVALS.getAsArray()})
+    e.add('emi:index/stacks/example_hidden_stacks.json', {removed: global.REMOVALS.getAsArray()})
     clientData_EMI(e)
     clientData_Quark(e)
 })

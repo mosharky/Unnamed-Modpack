@@ -1,0 +1,16 @@
+filename = 'dragonfight-1.20.1-4.7.jar'
+name = 'Savage Ender Dragon[Forge/Fabric]'
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '649c0c3493a2373b1298d4b89d8c1723ee67b11f'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6828601
+project-id = 523327

@@ -39,7 +39,7 @@ function recipes_ScGuns(e) {
         'minecraft:charcoal'
     ]).id('scguns:create/peal_from_mixing')
 
-    e.recipes.create.sequenced_assembly(['scguns:gas_grenade_round'], 'scguns:large_brass_casing', [
+    e.recipes.create.sequenced_assembly('scguns:gas_grenade_round', 'scguns:large_brass_casing', [
         e.recipes.createDeploying('scguns:unfinished_gas_grenade_round', ['scguns:unfinished_gas_grenade_round', '#forge:dusts/sulfur']),
         e.recipes.createDeploying('scguns:unfinished_gas_grenade_round', ['scguns:unfinished_gas_grenade_round', 'scguns:advanced_bullet_tips']),
         e.recipes.createPressing('scguns:unfinished_gas_grenade_round', 'scguns:unfinished_gas_grenade_round'),

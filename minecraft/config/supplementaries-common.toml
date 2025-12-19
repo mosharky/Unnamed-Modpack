@@ -137,9 +137,9 @@
 		persistent_mobs = false
 		#Health percentage under which mobs will be allowed to be captured by cages and jars. Leave at 100 to accept any health level
 		#Range: 1 ~ 100
-		health_threshold = 100
+		health_threshold = 33
 		#When on, if a mob is tameable, it will only be capturable when tamed.
-		require_taming = true
+		require_taming = false
 
 	[functional.safe]
 		enabled = true

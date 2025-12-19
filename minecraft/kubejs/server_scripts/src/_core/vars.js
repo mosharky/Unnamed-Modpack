@@ -5,6 +5,14 @@ ServerEvents.tags('worldgen/biome', e => {
     overworldBiomes = e.get('minecraft:is_overworld').getObjectIds()
 })
 
+// Numismatic Overhaul stuff shortened
+const SELL_STACK = 'numismaticoverhaul:sell_stack'
+const SELL_TAG = 'numismaticoverhaul:sell_tag'
+const BUY_STACK = 'numismaticoverhaul:buy_stack'
+const SELL_ENCHANT_ITEM = 'numismaticoverhaul:enchant_item'
+const SELL_SINGLE_ENCHANT_ITEM = 'numismaticoverhaul:sell_single_enchantment'
+const PROCESS_ITEM = 'numismaticoverhaul:process_item'
+
 
 /**
  * Returns coin equivalent ItemStack of given bronze number
@@ -56,7 +64,10 @@ function playSound(server, player, sound, volume, pitch) {
  * @param {Optional | string} advancement
  */
 function antiLoser(e, activationItem, sound, minPlayers, advancement) {
-    if (e.player.mainHandItem.getId() != activationItem && e.player.offHandItem.getId() != activationItem) return
+    if (activationItem instanceof RegExp) {
+        // e.player.mainHandItem.getId()
+    }
+    else if (e.player.mainHandItem.getId() != activationItem && e.player.offHandItem.getId() != activationItem) return
 
     let AABB = e.entity.boundingBox.inflate(150)
     let nearbyPlayers = []

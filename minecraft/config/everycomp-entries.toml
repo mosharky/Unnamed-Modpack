@@ -602,13 +602,13 @@
 			dirt_brick = true
 			dirt_tile = true
 			smooth_mud = true
-			grass_thatch = true
+			grass_thatch = false
 			cattail_thatch = true
 			duckweed_thatch = true
-			willow = true
-			pine = true
+			willow = false
+			pine = false
 			plum = true
-			wisteria = true
+			wisteria = false
 
 		[types.cut_block_type.savage_and_ravage]
 			gloomy_tile = true
@@ -1155,6 +1155,26 @@
 			asgharian_brick = true
 			cut_treated_brass = true
 			treated_brass_tiles = true
+
+		[types.cut_block_type.packedup]
+			book_bundle = false
+			white_book_bundle = false
+			light_gray_book_bundle = false
+			gray_book_bundle = false
+			black_book_bundle = false
+			brown_book_bundle = false
+			red_book_bundle = false
+			orange_book_bundle = false
+			yellow_book_bundle = false
+			lime_book_bundle = false
+			green_book_bundle = false
+			cyan_book_bundle = false
+			light_blue_book_bundle = false
+			blue_book_bundle = false
+			purple_book_bundle = false
+			magenta_book_bundle = false
+			pink_book_bundle = false
+			grass_thatch = true
 
 #Disables specific entries
 [entries]

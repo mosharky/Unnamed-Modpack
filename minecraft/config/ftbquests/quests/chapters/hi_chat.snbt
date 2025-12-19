@@ -1,0 +1,170 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "hi_chat"
+	group: "1A1DF8B77E8F858C"
+	id: "58EACA00B9FFAA4E"
+	order_index: 0
+	quest_links: [ ]
+	quests: [{
+		can_repeat: true
+		description: [
+			"The Akashic Tome holds all modded guides. With it in your hand:"
+			"- Right-click to choose a guide book to read"
+			"- Once a book has been selected, you can right-click to read it"
+			"- Switch back to the Akashic Tome by punching into the air"
+			""
+			"Some mods have their guides in the advancements (press L)."
+		]
+		icon: {
+			Count: 1
+			id: "akashictome:tome"
+			tag: {
+				"akashictome:data": {
+					ae2: {
+						Count: 1
+						id: "ae2:guide"
+						tag: {
+							"akashictome:displayName": {
+								text: "{\"translate\":\"item.ae2.guide\"}"
+							}
+							"akashictome:is_morphing": 1b
+							display: {
+								Name: "{\"translate\":\"akashictome.sudo_name\",\"with\":[{\"color\":\"green\",\"translate\":\"item.ae2.guide\"}]}"
+							}
+						}
+					}
+					alexsmobs: {
+						Count: 1
+						id: "alexsmobs:animal_dictionary"
+					}
+					goety: {
+						Count: 1
+						id: "patchouli:guide_book"
+						tag: {
+							"patchouli:book": "goety:black_book"
+						}
+					}
+					goety_0: {
+						Count: 1
+						id: "patchouli:guide_book"
+						tag: {
+							"akashictome:definedMod": "goety_0"
+							"akashictome:displayName": {
+								text: "{\"translate\":\"info.goety.witch_brew.title\"}"
+							}
+							"akashictome:is_morphing": 1b
+							display: {
+								Name: "{\"translate\":\"akashictome.sudo_name\",\"with\":[{\"color\":\"green\",\"translate\":\"info.goety.witch_brew.title\"}]}"
+							}
+							"patchouli:book": "goety:witches_brew"
+						}
+					}
+					malum: {
+						Count: 1
+						id: "malum:encyclopedia_arcana"
+						tag: {
+							"akashictome:displayName": {
+								text: "{\"translate\":\"item.malum.encyclopedia_arcana\"}"
+							}
+							"akashictome:is_morphing": 1b
+							display: {
+								Name: "{\"translate\":\"akashictome.sudo_name\",\"with\":[{\"color\":\"green\",\"translate\":\"item.malum.encyclopedia_arcana\"}]}"
+							}
+						}
+					}
+					unusual_prehistory: {
+						Count: 1
+						id: "patchouli:guide_book"
+						tag: {
+							"patchouli:book": "unusual_prehistory:paleopedia"
+						}
+					}
+				}
+				"akashictome:is_morphing": 1b
+			}
+		}
+		id: "443A3AEF88769CAB"
+		rewards: [{
+			id: "367594DC9BA1DDD9"
+			item: {
+				Count: 1
+				id: "akashictome:tome"
+				tag: {
+					"akashictome:data": {
+						ae2: {
+							Count: 1
+							id: "ae2:guide"
+							tag: {
+								"akashictome:displayName": {
+									text: "{\"translate\":\"item.ae2.guide\"}"
+								}
+								"akashictome:is_morphing": 1b
+								display: {
+									Name: "{\"translate\":\"akashictome.sudo_name\",\"with\":[{\"color\":\"green\",\"translate\":\"item.ae2.guide\"}]}"
+								}
+							}
+						}
+						alexsmobs: {
+							Count: 1
+							id: "alexsmobs:animal_dictionary"
+						}
+						goety: {
+							Count: 1
+							id: "patchouli:guide_book"
+							tag: {
+								"patchouli:book": "goety:black_book"
+							}
+						}
+						goety_0: {
+							Count: 1
+							id: "patchouli:guide_book"
+							tag: {
+								"akashictome:definedMod": "goety_0"
+								"akashictome:displayName": {
+									text: "{\"translate\":\"info.goety.witch_brew.title\"}"
+								}
+								"akashictome:is_morphing": 1b
+								display: {
+									Name: "{\"translate\":\"akashictome.sudo_name\",\"with\":[{\"color\":\"green\",\"translate\":\"info.goety.witch_brew.title\"}]}"
+								}
+								"patchouli:book": "goety:witches_brew"
+							}
+						}
+						malum: {
+							Count: 1
+							id: "malum:encyclopedia_arcana"
+							tag: {
+								"akashictome:displayName": {
+									text: "{\"translate\":\"item.malum.encyclopedia_arcana\"}"
+								}
+								"akashictome:is_morphing": 1b
+								display: {
+									Name: "{\"translate\":\"akashictome.sudo_name\",\"with\":[{\"color\":\"green\",\"translate\":\"item.malum.encyclopedia_arcana\"}]}"
+								}
+							}
+						}
+						unusual_prehistory: {
+							Count: 1
+							id: "patchouli:guide_book"
+							tag: {
+								"patchouli:book": "unusual_prehistory:paleopedia"
+							}
+						}
+					}
+					"akashictome:is_morphing": 1b
+				}
+			}
+			type: "item"
+		}]
+		subtitle: "Get your goodies :)"
+		tasks: [{
+			id: "76BD0CFE49F324AD"
+			title: "Welcome!"
+			type: "checkmark"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
+	title: "Welcome!"
+}

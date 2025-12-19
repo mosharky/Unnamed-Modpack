@@ -1,0 +1,151 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "progression"
+	group: "1A1DF8B77E8F858C"
+	icon: "alexsmobs:bear_dust"
+	id: "7CC416304D83D4F8"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			icon: "supplementaries:sack"
+			id: "313E04066EAC1559"
+			subtitle: "sorry.."
+			tasks: [
+				{
+					consume_items: false
+					id: "39C8BECEFBB59005"
+					item: "supplementaries:sack"
+					type: "item"
+				}
+				{
+					id: "43AB5701DF4814B4"
+					item: "minecraft:bundle"
+					type: "item"
+				}
+			]
+			title: "Early Storage"
+			x: 0.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["313E04066EAC1559"]
+			icon: "kubejs:ravager_hide"
+			id: "76504D1BACE814F5"
+			tasks: [
+				{
+					advancement: "minecraft:adventure/hero_of_the_village"
+					criterion: ""
+					id: "1019F0F0C6D34D12"
+					type: "advancement"
+				}
+				{
+					consume_items: false
+					id: "1C1E4D46C7064B37"
+					item: "kubejs:ravager_hide"
+					type: "item"
+				}
+			]
+			title: "Save a Village From a Raid"
+			x: 2.5d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"76504D1BACE814F5"
+				"293AB2309C6D1438"
+			]
+			id: "5C620D77D02AF6E7"
+			subtitle: "Open by pressing 'X'"
+			tasks: [{
+				id: "441FEB6B913A382B"
+				item: "backpacked:backpack"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["313E04066EAC1559"]
+			id: "293AB2309C6D1438"
+			tasks: [{
+				consume_items: false
+				count: 3L
+				id: "4BAE51B5D27AC8E3"
+				item: "minecraft:rabbit_hide"
+				type: "item"
+			}]
+			title: "Murder Some Rabbits"
+			x: 2.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5C620D77D02AF6E7"]
+			icon: "ae2:charged_certus_quartz_crystal"
+			id: "3F7B52ED2AD12576"
+			subtitle: "im lazy"
+			tasks: [
+				{
+					consume_items: false
+					id: "2E3E941B626A26BC"
+					item: "ae2:calculation_processor_press"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "3F8985BF224BEA74"
+					item: "ae2:engineering_processor_press"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "68421C1EC5D55332"
+					item: "ae2:logic_processor_press"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "506EDB442FF4A222"
+					item: "ae2:silicon_press"
+					type: "item"
+				}
+				{
+					id: "2162FDDC98DBF93B"
+					item: "ae2:charged_certus_quartz_crystal"
+					type: "item"
+				}
+			]
+			title: "Applied Energistics"
+			x: 6.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5C620D77D02AF6E7"]
+			id: "18FE95855224E7FB"
+			tasks: [{
+				consume_items: false
+				id: "55F889E141C8B98D"
+				item: "create:item_vault"
+				type: "item"
+			}]
+			x: 6.5d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"3F7B52ED2AD12576"
+				"18FE95855224E7FB"
+			]
+			id: "794F0E0186F158BE"
+			tasks: [{
+				id: "28FAB4D130AA1277"
+				item: "minecraft:shulker_box"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 0.0d
+		}
+	]
+	title: "Storage"
+}
