@@ -47,7 +47,7 @@ global.REMOVALS = {
     }
 }
 
-global.DEBUG_MODE = true
+global.DEBUG_MODE = false
 
 global.COLOURS = [
     'white',
