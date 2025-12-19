@@ -15,7 +15,7 @@ function constructWoodTypes() {
             let logSuffix = '_log', woodSuffix = '_wood', barkSuffix = '_bark', plankSuffix = ''
             let logPrefix = '', woodPrefix = ''
             switch (woodType) {
-                case 'warped': case 'crimson': {
+                case 'warped': case 'crimson': case 'soulblight': {
                     logSuffix = '_stem'
                     woodSuffix = '_hyphae'
                     barkSuffix = '_scales'

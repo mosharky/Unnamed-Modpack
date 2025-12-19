@@ -20,9 +20,11 @@ function postInit() {
     removals_Autumnity()
     removals_Cataclysm()
     removals_CavernsAndChasms()
+    removals_CollectorsReap()
     removals_CreateDeco()
     removals_Darkerdepths()
     removals_Embers()
+    removals_EndRem()
     removals_Environmental()
     removals_FarmersDelight()
     removals_Galosphere()
@@ -42,7 +44,7 @@ function postInit() {
     removals_UpgradeAquatic()
     removals_Windswept()
     removals_Woodworks()
-    removals_EndRem()
+    removals_MowziesMobs()
     // removals_EvenBetterNether()
 
     // Changing blockswap config with KubeJS!

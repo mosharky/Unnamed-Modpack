@@ -13,4 +13,6 @@ function removals_Core() {
         ['minecraft:chest', 'woodworks:crimson_chest'],
         ['minecraft:trapped_chest', 'woodworks:crimson_chest'],
     ]))
+
+    global.ITEM_SWAPPER.set('minecraft:enchanted_book', 'minecraft:book')
 }

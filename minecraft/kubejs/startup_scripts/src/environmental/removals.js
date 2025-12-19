@@ -22,6 +22,9 @@ function removals_Environmental() {
 
     global.BLOCK_SWAPPER.set('environmental:pine_leaves', 'windswept:pine_leaves')
     global.BLOCK_SWAPPER.set('environmental:pinecone', 'windswept:pinecone_block')
+    global.BLOCK_SWAPPER.set('environmental:grass_thatch', 'packedup:grass_thatch')
+    global.BLOCK_SWAPPER.set('environmental:grass_thatch_stairs', 'packedup:grass_thatch_stairs')
+    global.BLOCK_SWAPPER.set('environmental:grass_thatch_slab', 'packedup:grass_thatch_slab')
 
     global.ITEM_SWAPPER.set('environmental:pine_sapling', 'windswept:pine_sapling')
 

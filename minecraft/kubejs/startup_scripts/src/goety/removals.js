@@ -9,6 +9,7 @@ function removals_Goety() {
     global.ITEM_SWAPPER.set('goety:ice_cube', 'neapolitan:ice_cube')
     global.ITEM_SWAPPER.set('goety:jade', 'call_of_yucutan:jade')
 
+    global.BLOCK_SWAPPER.set('goety:jade_ore', 'call_of_yucutan:jade_ore')
     global.BLOCK_SWAPPER.set('goety:jade_tiles', 'call_of_yucutan:jade_tiles')
     global.BLOCK_SWAPPER.set('goety:jade_block', 'call_of_yucutan:jade_block')
     global.BLOCK_SWAPPER.set('goety:jade_pillar', 'call_of_yucutan:polished_jade_block')

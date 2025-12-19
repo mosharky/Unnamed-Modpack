@@ -22,7 +22,8 @@ log = logging.getLogger()
 modsPath = Path('minecraft/mods')
 extrasPath = Path('mod_data/extras')
 generatedDir = Path('mod_data/generated')
-overridesDir = Path('mod_data/overrides')
+overridesPath = Path('mod_data/overrides')
+handledStructures = set()
 
 swapsJson = json.load(open('minecraft/kubejs/config/swaps.json', 'r'))
 swaps = {
@@ -133,6 +134,7 @@ def swapLoop(path: Path) -> bool:
                             handlePalette(structureId, palette)
                         if entities is not None and len(entities) > 0:
                             handleEntities(structureId, entities)
+
             except Exception as e:
                 log.error(f'Error processing structure "{structureId}": {e}')
                 log.error(traceback.format_exc())
@@ -141,24 +143,26 @@ def swapLoop(path: Path) -> bool:
     return False  # nothing found in this branch
 
 
-def getCommonSwap(itemToSwap: str) -> String | None:
+def getCommonSwap(structureId: str, itemToSwap: str) -> String | None:
     itemToSwapWith = swaps['common_swapper'].get(itemToSwap, None)
     if itemToSwapWith is not None:
         log.info(f'    Swapping item "{itemToSwap}" to "{itemToSwapWith}"')
+        handledStructures.add(structureId)
         return String(itemToSwapWith)
     return None
 
 
-def getEntitySwap(entityToSwap: str) -> String | None:
+def getEntitySwap(structureId: str, entityToSwap: str) -> String | None:
     entityToSwapWith = swaps['entity_swapper'].get(entityToSwap, None)
     if entityToSwapWith is not None:
         log.info(
             f'    Swapping entity "{entityToSwap}" to "{entityToSwapWith}"')
+        handledStructures.add(structureId)
         return String(entityToSwapWith)
     return None
 
 
-def getStateSwap(stateToSwap: dict) -> dict | None:
+def getStateSwap(structureId: str, stateToSwap: dict) -> dict | None:
     if stateToSwap['Name'] in swaps['state_swappable']:
         for stateToSwapWith in swaps['state_swapper']:
             if stateToSwapWith['old']['Name'] == stateToSwap['Name'] and stateToSwapWith['old'].get('Properties', {}) == stateToSwap.get('Properties', {}):
@@ -170,15 +174,17 @@ def getStateSwap(stateToSwap: dict) -> dict | None:
                 for key, value in copiedNewState['Properties'].items():
                     propertiesDict[key] = String(value)
                 copiedNewState['Properties'] = propertiesDict
+                handledStructures.add(structureId)
                 return copiedNewState
     return None
 
 
-def getSimpleBlockSwap(blockToSwap: str) -> str | None:
+def getSimpleBlockSwap(structureId: str, blockToSwap: str) -> str | None:
     blockToSwapWith = swaps['block_swapper'].get(blockToSwap, None)
     if blockToSwapWith is not None:
         log.info(
             f'    Swapping (simple) block "{blockToSwap}" to "{blockToSwapWith}"')
+        handledStructures.add(structureId)
         return String(blockToSwapWith)
     return None
 
@@ -202,6 +208,7 @@ def getBlockSwap(structureId: str, blockToSwap: str) -> String | None:
     # Return
     if blockToSwapWith is not None:
         log.info(f'    Swapping block "{blockToSwap}" to "{blockToSwapWith}"')
+        handledStructures.add(structureId)
         return String(blockToSwapWith)
 
     return None
@@ -220,7 +227,8 @@ def handleBlocks(structureId: str, blocks: List[Compound]):
 
                 # COPYCAT PANEL/STEP HANDLING
                 if blockId == 'create:copycat':
-                    swapWith = getSimpleBlockSwap(nbt['Item']['id'])
+                    swapWith = getSimpleBlockSwap(
+                        structureId, nbt['Item']['id'])
                     if swapWith is not None:
                         nbt['Item']['id'] = swapWith
                         nbt['Material']['Name'] = swapWith
@@ -242,20 +250,20 @@ def handleBlocks(structureId: str, blocks: List[Compound]):
                     spawnData = nbt.get('SpawnData', None)
                     if spawnData:
                         entityToSwap = spawnData['entity']['id']
-                        entitySwapWith = getEntitySwap(entityToSwap)
+                        entitySwapWith = getEntitySwap(structureId, entityToSwap)
                         if entitySwapWith:
                             spawnData['entity']['id'] = entitySwapWith
                         spawnPotentials = nbt.get('SpawnPotentials', None)
                         if spawnPotentials:
                             for potential in spawnPotentials:
                                 potEntityToSwap = potential['entity']['id']
-                                potEntitySwapWith = getEntitySwap(
+                                potEntitySwapWith = getEntitySwap(structureId,
                                     potEntityToSwap)
                                 if potEntitySwapWith:
                                     potential['entity']['id'] = potEntitySwapWith
 
                 # BLOCK ENTITY HANDLING
-                elif 'chest' in blockId or re.match(r'create:_.*toolbox', blockId) or blockId == 'minecraft:shulker_box' or blockId == 'minecraft:barrel' \
+                elif 'chest' in blockId or re.match(r'create:.*_toolbox', blockId) or blockId == 'minecraft:shulker_box' or blockId == 'minecraft:barrel' \
                         or blockId == 'minecraft:hopper' or blockId == 'supplementaries:flower_box' or blockId == 'supplementaries:sack' \
                         or blockId == 'minecraft:dispenser' or blockId == 'minecraft:dropper' or blockId == 'supplementaries:item_shelf':
 
@@ -264,7 +272,7 @@ def handleBlocks(structureId: str, blocks: List[Compound]):
                         for item in items:
                             if item == {}:
                                 continue
-                            itemSwapWith = getCommonSwap(item['id'])
+                            itemSwapWith = getCommonSwap(structureId, item['id'])
                             if itemSwapWith is not None:
                                 item['id'] = itemSwapWith
                             elif item['id'] in swaps['removals']:
@@ -288,16 +296,16 @@ def handlePalette(structureId: str, palette: List[Compound]):
 
         try:
             if block.get('Properties', None) is not None:
-                stateSwapWith = getStateSwap(block)
+                stateSwapWith = getStateSwap(structureId, block)
                 if stateSwapWith is not None:
                     block['Name'] = stateSwapWith['Name']
                     block['Properties'] = stateSwapWith['Properties']
-            
+
             if block.get('Name', None) is not None:
                 blockSwapWith = getBlockSwap(structureId, block['Name'])
                 if blockSwapWith is not None:
                     block['Name'] = blockSwapWith
-                    
+
             if block.get('Name', None) is not None and block['Name'] in swaps['removals']:
                 log.warning(
                     f' Contains unswapped palette block: "{block['Name']}"')
@@ -321,7 +329,7 @@ def handleEntities(structureId: str, entities: List[Compound]):
                     continue
 
                 # Basic entity ID swap
-                entitySwapWith = getEntitySwap(entityId)
+                entitySwapWith = getEntitySwap(structureId, entityId)
                 if entitySwapWith is not None:
                     nbt['id'] = entitySwapWith
 
@@ -330,7 +338,7 @@ def handleEntities(structureId: str, entities: List[Compound]):
                     for item in nbt['ArmorItems']:
                         if item == {}:
                             continue
-                        itemSwapWith = getCommonSwap(item['id'])
+                        itemSwapWith = getCommonSwap(structureId, item['id'])
                         if itemSwapWith is not None:
                             item['id'] = itemSwapWith
                         elif item['id'] in swaps['removals']:
@@ -341,7 +349,7 @@ def handleEntities(structureId: str, entities: List[Compound]):
                 elif entityId == 'minecraft:item_frame' or entityId == 'minecraft:glow_item_frame' or entityId == 'quark:dyed_item_frame' or entityId == 'quark:glass_frame':
                     item = nbt.get('Item', None)
                     if item is not None:
-                        itemSwapWith = getCommonSwap(item['id'])
+                        itemSwapWith = getCommonSwap(structureId, item['id'])
                         if itemSwapWith is not None:
                             item['id'] = itemSwapWith
                         elif item['id'] in swaps['removals']:
@@ -379,13 +387,16 @@ def zipStructures(outputPath: Path):
         # Zip all files from generatedDir/data
         dataDir = generatedDir / 'data'
         if dataDir.exists():
-            for file in dataDir.rglob('*'):
-                if file.is_file():
-                    # Calculate relative path from generatedDir
-                    arcname = file.relative_to(generatedDir)
-                    zf.write(file, arcname)
+            for structure in handledStructures:
+                structSplit = structure.split(':')
+                structurePath = Path(dataDir.as_posix() + '/' + structSplit[0] + '/structures/' + structSplit[1] + '.nbt')
+                if structurePath.exists():
+                    arcname = structurePath.relative_to(generatedDir)
+                    zf.write(structurePath, arcname)
+        zf.close()
 
     log.info(f'Successfully created data pack zip at: {outputPath}')
+
 
 def clearGeneratedDir():
     """Remove the generated directory and all its contents."""
@@ -396,12 +407,13 @@ def clearGeneratedDir():
     else:
         log.info('Generated directory does not exist, nothing to clear.')
 
+
 def main():
-    # clearGeneratedDir()
-    # gatherStructures(extrasPath)
-    # gatherStructures(modsPath)
-    # gatherStructures(overridesDir)
-    # swapLoop(generatedDir / 'data')
+    clearGeneratedDir()
+    gatherStructures(extrasPath)
+    gatherStructures(modsPath)
+    gatherStructures(overridesPath)
+    swapLoop(generatedDir / 'data')
     zipStructures(Path('minecraft/kubejs/data/structures.zip'))
 
 

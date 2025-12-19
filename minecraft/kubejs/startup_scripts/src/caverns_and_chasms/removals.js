@@ -10,4 +10,6 @@ function removals_CavernsAndChasms() {
     global.ITEM_SWAPPER.set('caverns_and_chasms:silver_ingot', 'galosphere:silver_ingot')
     global.ITEM_SWAPPER.set('caverns_and_chasms:silver_nugget', 'galosphere:silver_nugget')
     global.ITEM_SWAPPER.set('caverns_and_chasms:silver_horse_armor', 'galosphere:sterling_horse_armor')
+
+    global.BLOCK_SWAPPER.set('caverns_and_chasms:raw_silver_block', 'galosphere:raw_silver_block')
 }

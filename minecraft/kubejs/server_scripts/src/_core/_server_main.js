@@ -2,8 +2,14 @@
 
 ServerEvents.tags('item', e => {
     itemTags_Core(e)
-    itemTags_Neapolitan(e)
     itemTags_CallOfYucutan(e)
+    itemTags_Neapolitan(e)
+
+    if (!global.DEBUG_MODE) {
+        e.add('c:hidden_from_recipe_viewers', global.REMOVALS.getAsArray().concat([
+            /excavated_variants:.*/,
+        ]))
+    }
 })
 
 ServerEvents.tags('block', e => {
@@ -19,8 +25,8 @@ ServerEvents.tags('entity_type', e => {
     entityTags_Atmospheric(e)
     entityTags_Environmental(e)
     entityTags_Galosphere(e)
-    entityTags_Supplementaries(e)
     entityTags_NumismaticOverhaul(e)
+    entityTags_Supplementaries(e)
 })
 
 ServerEvents.tags('worldgen/biome', e => {
@@ -44,6 +50,8 @@ ServerEvents.tags('worldgen/biome', e => {
 
 ServerEvents.recipes(e => {
     recipes_Core(e)
+    recipes_Aetherworks(e)
+    recipes_AlexsMobs(e)
     recipes_Atmospheric(e)
     recipes_BrewinAndChewin(e)
     recipes_Cataclysm(e)
@@ -57,10 +65,9 @@ ServerEvents.recipes(e => {
     recipes_Neapolitan(e)
     recipes_Quark(e)
     recipes_ScGuns(e)
+    recipes_SootyChimneys(e)
     recipes_Supplementaries(e)
     recipes_Windswept(e)
-    recipes_AlexsMobs(e)
-    recipes_Aetherworks(e)
 
     // Fully removing any recipe tied to items in REMOVALS
     global.REMOVALS.all.forEach(removal => {
@@ -129,4 +136,5 @@ LootJS.modifiers(e => {
     lootTables_Core(e)
     lootTables_EndRem(e)
     lootTables_ImmersiveEnchanting(e)
+    lootTables_SootyChimneys(e)
 })
