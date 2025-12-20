@@ -12,4 +12,5 @@
 
 ## Packwiz
 - `cd` into `minecraft` folder
+- kind of a mess atm
 - https://packwiz.infra.link/reference/additional-options/
