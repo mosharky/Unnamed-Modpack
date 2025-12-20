@@ -1961,11 +1961,6 @@ file = "kubejs/assets/cataclysm/models/item/purpur_void_rune_trap_block.json"
 hash = "4039cb1b61586b268c05d40f75f352e2abae4da2aa75fab827c61df2a6fb1641"
 
 [[files]]
-file = "kubejs/assets/embers-retextured.pw.toml"
-hash = "2548f7accc1a4fb5421e8d631ff6eb3f7301a5f5a2b37a20cf7fa615ec882869"
-metafile = true
-
-[[files]]
 file = "kubejs/assets/emi-create-cobble-gen-compat.pw.toml"
 hash = "ce8343e483f2783a5a11b3b6ff49460a3cdd2f37b5aa95717154e61094a290df"
 metafile = true
@@ -2030,6 +2025,10 @@ metafile = true
 file = "kubejs/assets/music-and-melody.pw.toml"
 hash = "32241726bc3be7bafc106d965837565e41d08a61a49d75d0da407cde8a656e12"
 metafile = true
+
+[[files]]
+file = "kubejs/assets/special-Embers Retextured (1.20.1) 5.0.zip"
+hash = "fbfa38e72ab562ac64329ab8470d24a9e270b800223f15a43f5808f814e93b77"
 
 [[files]]
 file = "kubejs/assets/special-cac_textures.zip"
@@ -2665,12 +2664,12 @@ metafile = true
 
 [[files]]
 file = "mods/alexs-mobs-neapolitan-compat.pw.toml"
-hash = "e82875bbd6234c0d0d36933f9fbce178abe0b4e0cc2832c5451f842137d00dac"
+hash = "22f81841bea873690469f7cab557268c61b20baa13659f9bff8b202e1aa043ab"
 metafile = true
 
 [[files]]
 file = "mods/alexs-mobs.pw.toml"
-hash = "5e1239fd67c97c042d09cf38664698c9d1a3cfbc50d779fc550c461cf6aeb565"
+hash = "e1016eb125a5a41a10f80847eb00affae0e539e703846f303949ed5d82b7f1bf"
 metafile = true
 
 [[files]]
@@ -2761,16 +2760,6 @@ metafile = true
 [[files]]
 file = "mods/better-advancements.pw.toml"
 hash = "11cbc9a17ebde92c896e48d802579132919271979bc3b63f08ce47fa9b42b4c2"
-metafile = true
-
-[[files]]
-file = "mods/better-tips-nbt-tag.pw.toml"
-hash = "ed2a498178b191db5803bd699f41c8a31f0737dd351957862bd3480060c77874"
-metafile = true
-
-[[files]]
-file = "mods/bettertab-for-ftb-quest.pw.toml"
-hash = "59d3004094980fbbaef6a1ba0727b595eeeeb0450dcc1c9da915f3bdf6b8ce8a"
 metafile = true
 
 [[files]]
@@ -3080,7 +3069,7 @@ metafile = true
 
 [[files]]
 file = "mods/embeddium.pw.toml"
-hash = "a1575677daaaf6ea6dac12e5a10073e34025e5ca2c35b6d36ad4a5a0edbc0e82"
+hash = "5ec0c37f3f4ad07a40c10376668bca80334ddb7ad2bab06eb4de8f7aac339c8e"
 metafile = true
 
 [[files]]
@@ -3136,6 +3125,11 @@ metafile = true
 [[files]]
 file = "mods/etched.pw.toml"
 hash = "a5a5475c903b195bdd5f90808b178fa9285e334338e18db7447a8c734514f496"
+metafile = true
+
+[[files]]
+file = "mods/euphoria-patches.pw.toml"
+hash = "866b92f2599f2e4058db0fd4583870ace1ad9063e8d3bc71407d3d239bcd1243"
 metafile = true
 
 [[files]]
@@ -3289,6 +3283,11 @@ hash = "740020ce7453a2461be9e15b06826c98bc8c5593ea9282fa16d7f860b5f0265c"
 metafile = true
 
 [[files]]
+file = "mods/geckoanimfix.pw.toml"
+hash = "f78c94f42ffaf5365f45b58f83545ced3dc9ae0cf075412e7710079e163eed28"
+metafile = true
+
+[[files]]
 file = "mods/geckolib.pw.toml"
 hash = "88f142bda6bfa6aff4f4d4e12b8ba7581aa40e3f163039a533f09dd6d634e093"
 metafile = true
@@ -3305,7 +3304,7 @@ metafile = true
 
 [[files]]
 file = "mods/gputape.pw.toml"
-hash = "3519d01e4490de15f682c67333b67bd4b7057ba25937d9aaa517c76854f73ef7"
+hash = "5e9d7c8fe15e7342aee0070e7e6dbf24659fe6d44fdc06c161f39830a98dce50"
 metafile = true
 
 [[files]]
@@ -3394,6 +3393,11 @@ hash = "9e3c25c23c702d64a9e826e8cea8e2e941d2252eeabe72d94d73a25fde7904b3"
 metafile = true
 
 [[files]]
+file = "mods/iris-flw-compat.pw.toml"
+hash = "e9b05dcf29f12335bcbf61bbbc019cee3d5b983c49433e3fc23fcf4afe12e9d1"
+metafile = true
+
+[[files]]
 file = "mods/item-filters.pw.toml"
 hash = "ff92eddb2bf6f1afe9fa7fc73d63ea9419e0cff77fbd4fd2936b51525fe9340c"
 metafile = true
@@ -3430,7 +3434,7 @@ metafile = true
 
 [[files]]
 file = "mods/kotlin-for-forge.pw.toml"
-hash = "1678327ac50408273c1828b631929128d3fdfd54cda7b2e823ce9352495a68ff"
+hash = "70a4ecd9d0c04ad20aeb976c1ee28933ce48a0a1f43df42deafaeb2ad7235297"
 metafile = true
 
 [[files]]
@@ -3645,7 +3649,7 @@ metafile = true
 
 [[files]]
 file = "mods/neapolitan.pw.toml"
-hash = "7bb01abc93a90da48ae8452f501ba60e32c468438c0f864e6bc7ef1b5746c712"
+hash = "bf2f88caa86cf5f54de608794fa1ca696e873c9021d2fafbfd694df1fbde695d"
 metafile = true
 
 [[files]]
@@ -3676,6 +3680,11 @@ metafile = true
 [[files]]
 file = "mods/octo-lib.pw.toml"
 hash = "320c4d3a50b1f2f45d64d2f88c8c16473bc85b95d67e54ff93205ac9d2ead3cf"
+metafile = true
+
+[[files]]
+file = "mods/oculus.pw.toml"
+hash = "f83b253ca6a8e6f2f847952704da0e1fb00e65cbb10b7c9cb15d1a1780618da0"
 metafile = true
 
 [[files]]
@@ -3919,6 +3928,14 @@ hash = "d0e1a79dbcda8499e0f12f4adaa5503f9bbc84a6274ce07b3a3839476622e8e5"
 metafile = true
 
 [[files]]
+file = "mods/special-Better Tags-1.20.1-1.4.jar"
+hash = "1ca700a5d13bcd512a96341fadebffd4c1c3e71817eb394e8da60f58d02823bf"
+
+[[files]]
+file = "mods/special-Bettertab-1.0.0.jar"
+hash = "2fc565d6445ea898d7a8324955f430fb0a2f0a51b13174424ea6739963ac9779"
+
+[[files]]
 file = "mods/stone-zone.pw.toml"
 hash = "d619f8882dc9f93de3e22cdbeed255fe178d3c60f5df033d249fd079efdfbb73"
 metafile = true
@@ -3941,6 +3958,11 @@ metafile = true
 [[files]]
 file = "mods/supermartijn642s-config-lib.pw.toml"
 hash = "3eede8a7ebafb69840153ff51dbc879b0232799e90a834ab6d71274b1316179f"
+metafile = true
+
+[[files]]
+file = "mods/supplemental-patches.pw.toml"
+hash = "a22169a1890e5489fe3f2ee9e74cf7ef4b036e0c7849e939f9632a410e029198"
 metafile = true
 
 [[files]]
@@ -4112,3 +4134,17 @@ metafile = true
 file = "mods/zeta.pw.toml"
 hash = "a9421a7a29ac8ee6e0598ea20025ad2c30e6198b796324184600621743437c91"
 metafile = true
+
+[[files]]
+file = "shaderpacks/complementary-reimagined.pw.toml"
+hash = "531a8d239c952428d9a633ff99cb03461656ada28decbe2e1ef19f60f7fd5726"
+metafile = true
+
+[[files]]
+file = "shaderpacks/complementary-unbound.pw.toml"
+hash = "134b3cee2ac2b5c5b9d02d8d70e8e4ba32c7c241f5bc51209521831a7c254e22"
+metafile = true
+
+[[files]]
+file = "shaderpacks/special-Bliss-Shader-BSPT-main.zip"
+hash = "1603e367aceaf33317b96ccd39f1f70e1679e99784a9d8123c33809cacf66e11"

@@ -1,11 +1,11 @@
-name = "Distant Horizons: A Level of Detail mod"
+name = "Distant Horizons"
 filename = "DistantHorizons-2.4.2-b-1.20.1-fabric-forge.jar"
 side = "both"
 
 [option]
 optional = true
 default = true
-description = "See farther without nuking your PC, but needs more memory allocated (8-10gb)."
+description = "See farther without melting your PC, but needs more memory allocated (8-10gb). Disable for performance."
 
 [download]
 hash-format = "sha1"

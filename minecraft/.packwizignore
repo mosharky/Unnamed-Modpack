@@ -22,7 +22,17 @@ kubejs/config/probe-settings.json
 mods/.connector/
 mods/.index/
 mods/*.jar
+!mods/special-*
 mods/*.disabled
+
+# resourcepacks
+resourcepacks/*.zip
+!resourcepacks/special-*
+
+# shaderpacks
+shaderpacks/*.zip
+!shaderpacks/special-*
+shaderpacks/*EuphoriaPatches*
 
 # root folders
 not-enough-crashes/
