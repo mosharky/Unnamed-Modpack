@@ -88,5 +88,5 @@ minecraft/.unsup-tmp/
 minecraft/mods/.index/
 
 # packwiz
-kubejs/assets/*.zip
-!kubejs/assets/special-*.zip
+minecraft/kubejs/assets/*.zip
+!minecraft/kubejs/assets/special-*.zip
