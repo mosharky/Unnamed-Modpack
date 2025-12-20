@@ -620,6 +620,10 @@ _version = 3
 				#
 				# Determines the radius Screen Space Ambient Occlusion is applied, measured in blocks.
 				radius = "4.0"
+				#
+				# The distance in blocks from the camera where the SSAO will fade out to. 
+				# This is done to prevent banding and noise at extreme distances.
+				fadeDistanceInBlocks = 1600
 
 			[client.advanced.graphics.noiseTexture]
 				#

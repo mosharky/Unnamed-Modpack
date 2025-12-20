@@ -150,6 +150,8 @@
 		obsidianMonolithSpread = true
 		#Whether unowned Obsidian Monoliths, empowered by Heretics, change Overworld biomes to Nether biomes, Default: true
 		obsidianMonolithBiome = true
+		#Whether unowned Obsidian Monoliths can spawn Mobs, Default: true
+		obsidianMonolithSpawner = true
 
 	[Misc.Apostle]
 		#Whether Apostles causes Villagers within 32 blocks of themselves to have a chance of converting into a Witch or Warlock. Default: true
@@ -168,6 +170,10 @@
 		vizierPersistent = false
 		#Viziers spawn Vexes instead of Irks, Default: false
 		vizierMinion = false
+
+	[Misc.Crone]
+		#Whether Crones inflict thorn damage at attackers, when attacked. Default: true
+		croneThornDefense = true
 
 [Servants]
 	#Owners can't attack or hurt their servants, Default: true

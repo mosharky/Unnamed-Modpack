@@ -974,6 +974,17 @@
 			#Range: 1.0 ~ 1.7976931348623157E308
 			mossySkeletonServantHealth = 20.0
 
+		[Attributes."Summoned Mobs"."Signaler Servant"]
+			#How much Max Health Signaler Servants have, Default: 24.0
+			#Range: 1.0 ~ 1.7976931348623157E308
+			signalerServantHealth = 24.0
+			#How much natural Armor Signaler Servants have, Default: 0.0
+			#Range: 0.0 ~ 1.7976931348623157E308
+			signalerServantArmor = 0.0
+			#How much initial following/detection range Signaler Servants have, Default: 32.0
+			#Range: 0.0 ~ 1.7976931348623157E308
+			signalerServantFollowRange = 32.0
+
 	[Attributes.Illagers]
 		#How much Max Health Conquillager have, Default: 24.0
 		#Range: 1.0 ~ 1.7976931348623157E308

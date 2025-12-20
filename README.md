@@ -12,4 +12,4 @@
 
 ## Packwiz
 - `cd` into `minecraft` folder
-- 
+- https://packwiz.infra.link/reference/additional-options/

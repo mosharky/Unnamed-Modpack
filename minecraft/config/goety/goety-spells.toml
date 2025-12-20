@@ -1669,6 +1669,20 @@
 		#Range: 0 ~ 72000
 		biomineTime = 40
 
+	[Spells."Water Whip Spell"]
+		#Water Whip Spell Cost, Default: 16
+		#Range: > 0
+		waterWhipCost = 16
+		#Time to cast Water Whip Spell, Default: 0
+		#Range: 0 ~ 72000
+		waterWhipTime = 0
+		#Water Whip Spell Cooldown, Default: 10
+		#Range: > 0
+		waterWhipCoolDown = 10
+		#How much base damage the spell deals, Default: 4.0
+		#Range: 1.0 ~ 1.7976931348623157E308
+		waterWhipDamage = 4.0
+
 [Enchantments]
 	#Soul Eater Maximum Enchantment Level, Default: 5
 	#Range: 1 ~ 10
