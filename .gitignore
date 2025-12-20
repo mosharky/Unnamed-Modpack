@@ -17,6 +17,8 @@ minecraft/config/asyncparticles/asyncparticles-mixin.properties
 minecraft/config/packetfixer.properties
 minecraft/config/structurify/*backup*
 minecraft/kubejs/config/probe-settings.json
+minecraft/kubejs/config/oculus.properties
+minecraft/kubejs/config/ftbqoptimizer.snbt
 
 # mods
 minecraft/mods/.connector/
@@ -31,6 +33,7 @@ minecraft/resourcepacks/*.zip
 # shaderpacks
 minecraft/shaderpacks/*.zip
 !minecraft/shaderpacks/special-*
+minecraft/shaderpacks/*EuphoriaPatches*
 
 # root folders
 minecraft/not-enough-crashes/

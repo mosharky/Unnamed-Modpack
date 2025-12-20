@@ -1,6 +1,11 @@
-name = "Oculus"
+name = "SHADERS - Oculus"
 filename = "oculus-mc1.20.1-1.8.0.jar"
 side = "client"
+
+[option]
+optional = true
+default = false
+description = "Enable all mods labeled with 'SHADERS' if you select this. Leave disabled for performance."
 
 [download]
 url = "https://cdn.modrinth.com/data/GchcoXML/versions/iQ1SwGc3/oculus-mc1.20.1-1.8.0.jar"

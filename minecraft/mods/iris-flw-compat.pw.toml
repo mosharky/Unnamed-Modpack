@@ -1,6 +1,11 @@
-name = "Iris & Oculus Flywheel Compat"
+name = "SHADERS - Iris & Oculus Flywheel Compat"
 filename = "oculus-flywheel-compat-Forge-2.0.3.jar"
 side = "client"
+
+[option]
+optional = true
+default = false
+description = "Enable all mods labeled with 'SHADERS' if you select this. Leave disabled for performance."
 
 [download]
 url = "https://cdn.modrinth.com/data/ndHYMY2K/versions/dE1A45cG/oculus-flywheel-compat-Forge-2.0.3.jar"

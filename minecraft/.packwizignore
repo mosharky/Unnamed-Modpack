@@ -32,6 +32,7 @@ resourcepacks/*.zip
 # shaderpacks
 shaderpacks/*.zip
 !shaderpacks/special-*
+shaderpacks/*EuphoriaPatches*
 
 # root folders
 not-enough-crashes/

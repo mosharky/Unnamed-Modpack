@@ -3128,6 +3128,11 @@ hash = "a5a5475c903b195bdd5f90808b178fa9285e334338e18db7447a8c734514f496"
 metafile = true
 
 [[files]]
+file = "mods/euphoria-patches.pw.toml"
+hash = "866b92f2599f2e4058db0fd4583870ace1ad9063e8d3bc71407d3d239bcd1243"
+metafile = true
+
+[[files]]
 file = "mods/every-compat.pw.toml"
 hash = "7e2fb62f8f972ee92174e4e7e5d97dfbae675de068b31a7558aad7188a467851"
 metafile = true

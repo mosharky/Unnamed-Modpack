@@ -1,6 +1,11 @@
-name = "Iris/Oculus & GeckoLib Compat"
+name = "SHADERS - Iris/Oculus & GeckoLib Compat"
 filename = "GeckoLibOculusCompat-Forge-1.0.1.jar"
 side = "client"
+
+[option]
+optional = true
+default = false
+description = "Enable all mods labeled with 'SHADERS' if you select this. Leave disabled for performance."
 
 [download]
 url = "https://cdn.modrinth.com/data/TbriQCWD/versions/uWXuMaW4/GeckoLibOculusCompat-Forge-1.0.1.jar"

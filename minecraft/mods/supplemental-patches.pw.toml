@@ -1,6 +1,11 @@
-name = "Supplemental Patches"
+name = "SHADERS - Supplemental Patches"
 filename = "supplemental_patches-0.7.1-beta.jar"
 side = "client"
+
+[option]
+optional = true
+default = false
+description = "Enable all mods labeled with 'SHADERS' if you select this. Leave disabled for performance."
 
 [download]
 url = "https://cdn.modrinth.com/data/7G5M8xtj/versions/UnQ0Hx8D/supplemental_patches-0.7.1-beta.jar"
