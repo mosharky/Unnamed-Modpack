@@ -1,0 +1,13 @@
+name = "Locator"
+filename = "locator-1.20.2-1.1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "7a3c6d03ecaffa7c482cb854ac5d8cf8e5ca9b6f"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5087859
+project-id = 958430

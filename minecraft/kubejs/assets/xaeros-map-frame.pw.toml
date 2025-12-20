@@ -1,0 +1,13 @@
+name = "Xaero's Map Frame"
+filename = "§eXaero's-Map-Frame-Frilled.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/KXiQUWqJ/versions/6JMFJNGW/%C2%A7eXaero%27s-Map-Frame-Frilled.zip"
+hash-format = "sha512"
+hash = "341031455ccf8a04d94d17abc47cec418cee72351a5660717422074706980c0d375e15b11c9f539ecff34de0353d4eee00e7209364d13446eee4e6e87cdd2bc4"
+
+[update]
+[update.modrinth]
+mod-id = "KXiQUWqJ"
+version = "6JMFJNGW"

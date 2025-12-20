@@ -1,0 +1,13 @@
+name = "Doom & Gloom"
+filename = "doom_and_gloom-forge-2.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "b8143840b3fadae2e3fe6becee3a4a6435d13768"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7196885
+project-id = 1130903

@@ -1,0 +1,13 @@
+name = "Immersive Enchanting"
+filename = "forge-1.20.1-immersiveenchanting-2.2.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "91dcdd2f30c4e82c36c8b0f11fd014b9503847aa"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7332842
+project-id = 1354719

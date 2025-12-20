@@ -1,0 +1,13 @@
+name = "Scorched Guns: Caverns & Chasms Compat"
+filename = "scguns_cnc-1.2.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "1b6d73e8e1f1b19f3ec3923eff54f5ef4c357524"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7218658
+project-id = 1369675

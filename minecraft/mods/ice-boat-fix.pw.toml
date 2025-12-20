@@ -1,0 +1,13 @@
+name = "Ice Boat Fix"
+filename = "iceboatnerf-1.1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "dce10a78d1da172b1972d059bf3d801f061e5ffa"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6941242
+project-id = 1337196

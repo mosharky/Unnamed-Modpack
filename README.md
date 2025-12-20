@@ -10,5 +10,6 @@
         - `minecraft/kubejs/config/client.properties`
         - `minecraft/kubejs/config/common.properties`
 
-## Resources
-- [Ideas](https://hackmd.io/@AYc_eXKqT3ONStt-IXa8Fw/unnamed-modpack) (HackMD)
+## Packwiz
+- `cd` into `minecraft` folder
+- 

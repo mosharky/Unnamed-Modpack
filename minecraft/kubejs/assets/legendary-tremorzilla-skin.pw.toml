@@ -1,0 +1,13 @@
+name = "Alex's Caves - Legendary Tremorzilla Skin"
+filename = "Legendary-Tremorzilla-Skin.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/8ZtjX36M/versions/4BfqWPGa/Legendary-Tremorzilla-Skin.zip"
+hash-format = "sha512"
+hash = "67a2de54754b9eaf3ae7fc35cbcde45214ce681aae002e9add862738c2c9f40cc511daf00080a5be3775795444b419d35b02b2010e1ea7691156cd7ab8554880"
+
+[update]
+[update.modrinth]
+mod-id = "8ZtjX36M"
+version = "4BfqWPGa"

@@ -1,0 +1,13 @@
+name = "Alpha Particles - Trasparent Particles"
+filename = "Alpha_Particles-1.16.2-1.21.9.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/lTw6uEKZ/versions/K8e28aQB/Alpha_Particles-1.16.2-1.21.9.zip"
+hash-format = "sha512"
+hash = "b6d3d2cd74849687e78e4c7eb60d2cb01b7be36b1393cd2cec867d5627242f47036033b523108bd9b0ccb9e6f4349f0a5ac1ebef3f14b6ef6831cdf2ebf088a2"
+
+[update]
+[update.modrinth]
+mod-id = "lTw6uEKZ"
+version = "K8e28aQB"

@@ -63,7 +63,18 @@
         "**/minecraft/mod_data/": true,
         "**/minecraft/.cache/": true,
         "**/minecraft/.vscode/": true,
-        "**/minecraft/globalresources/": true,
-        "minecraft/minecraftinstance.json": true
+        "minecraft/minecraftinstance.json": true,
+        "minecraft/config/structurify/*backup*": true,
+        "**/minecraft/cache/": true,
+        "**/minecraft/.mixin.out/": true,
+        "**/minecraft/xaero/": true,
+        "**/minecraft/ESM/": true,
+        "**/minecraft/backups/": true,
+        "minecraft/resourcepacks/Goety Old Textures.zip": true,
+        "minecraft/snr_favorite_styles.nbt": true,
+        "**/mod_data/__pycache__/": true,
+        "mod_data/mod_data.log": true,
+        "minecraft/.unsup-state.json": true,
+        "**/minecraft/.unsup-tmp/": true,
     }
 }

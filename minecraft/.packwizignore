@@ -1,0 +1,89 @@
+# config 
+config/jei/world/
+config/blockswap/known_states/
+config/voicechat/username-cache.json
+config/voicechat/voicechat-volumes.properties
+config/voicechat/voicechat-server.properties
+config/voicechat/voicechat-client.properties
+config/Obscuria/Data/
+config/indium-renderer.properties
+config/fabric/indigo-renderer.properties
+config/spark/activity.json
+config/embeddium-fingerprint.json
+config/mc2discord.toml
+config/cpm.json
+config/everycomp-hazardous.properties
+config/asyncparticles/asyncparticles-mixin.properties
+config/packetfixer.properties
+config/structurify/*backup*
+kubejs/config/probe-settings.json
+
+# mods
+mods/.connector/
+mods/.index/
+mods/*.jar
+mods/*.disabled
+
+# root folders
+not-enough-crashes/
+crash-reports/
+screenshots/
+saves/
+logs/
+data/
+local/
+patchouli_books/
+schematics/
+XaeroWorldMap/
+XaeroWaypoints*/
+modernfix/
+worldicons/
+.lazyyyyy/
+cache/
+.cache/
+.vscode/
+.probe/
+mod_data/
+.mixin.out/
+xaero/
+ESM/
+backups/
+
+# root files
+knownkeys.txt
+options.txt
+resourcepacks/Quark Programmer Art.zip
+resourcepacks/Goety Old Textures.zip
+realms_persistence.json
+TrashSlotSaveState.json
+usercache.json
+usernamecache.json
+patchouli_data.json
+o_prof
+enigmatic_persistence.dat
+reauth.toml
+servers.dat
+rhino.local.properties
+seamless.txt
+fabricloader.log
+emi.json
+irisUpdateInfo.json
+.qmenu_opened.marker
+snr_favorite_styles.nbt
+
+# launcher-related
+.curseclient
+icon.png
+server-resource-packs/
+coremods/
+texturepacks/
+minecraftinstance.json
+.unsup-state.json
+.unsup-tmp/
+
+# packwiz related
+kubejs/wip_data/
+globalresources/excavated_variants/
+# assets
+kubejs/assets/*.zip
+!kubejs/assets/special-*.zip

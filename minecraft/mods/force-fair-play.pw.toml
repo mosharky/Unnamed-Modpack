@@ -1,0 +1,13 @@
+name = "Force Fair-Play"
+filename = "force_fairplay-1.0.0-forge-1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/FOayEoLI/versions/pSkqZxXb/force_fairplay-1.0.0-forge-1.20.1.jar"
+hash-format = "sha512"
+hash = "17bbfd65478f35fc3c4a541dfe2932bd3d3d48e1f2733efee0309107ab076c9d7840e2af6ad258da189efc2b93e615e758e2e8b80e4bf9a56967acd9f77cd3ab"
+
+[update]
+[update.modrinth]
+mod-id = "FOayEoLI"
+version = "pSkqZxXb"

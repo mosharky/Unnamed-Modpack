@@ -1,0 +1,13 @@
+name = "Caves Delight"
+filename = "caves_delight-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "8516afd57a67a21b6d11b9058e2eccdd138f8ab3"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7298345
+project-id = 1398688

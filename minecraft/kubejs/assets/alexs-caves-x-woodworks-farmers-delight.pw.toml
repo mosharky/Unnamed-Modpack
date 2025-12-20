@@ -1,0 +1,13 @@
+name = "Alex's Caves X Woodworks/FD"
+filename = "Alex's Caves Compat 1.0.0.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/RJY0EzVU/versions/uZfgkZyl/Alex%27s%20Caves%20Compat%201.0.0.zip"
+hash-format = "sha512"
+hash = "5f26703867144b6f28e3f04383f4bdd890504579f1b82862c8716e6f3b02ecec45c2973bca625e1a9482f00683f70fc0c200df8da6a4e23fa080800cf37cdcc0"
+
+[update]
+[update.modrinth]
+mod-id = "RJY0EzVU"
+version = "uZfgkZyl"

@@ -1,0 +1,13 @@
+name = "Better View"
+filename = "Better View.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/PGZ4kn35/versions/zfCPRWA6/Better%20View.zip"
+hash-format = "sha512"
+hash = "3a41000c5b115f1d6cc8b6120ce9b93e4171f759cf00e06481ec09c321dca8718a91de9a7c8b57791dd4f884da9f9809040f98d965d2cb2e6dfb481e2a89a9bf"
+
+[update]
+[update.modrinth]
+mod-id = "PGZ4kn35"
+version = "zfCPRWA6"

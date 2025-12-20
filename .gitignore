@@ -85,4 +85,7 @@ minecraft/texturepacks/
 minecraft/minecraftinstance.json
 minecraft/.unsup-state.json
 minecraft/.unsup-tmp/
-.packignore
+
+# packwiz
+kubejs/assets/*.zip
+!kubejs/assets/special-*.zip

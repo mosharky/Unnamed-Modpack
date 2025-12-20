@@ -1,0 +1,13 @@
+name = "Villager Trading Plus"
+filename = "villager-trading-plus-1.2+1.20.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "243da0fbe0bfa7419a06ee8d9309bb3e906589fd"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6348311
+project-id = 1107609

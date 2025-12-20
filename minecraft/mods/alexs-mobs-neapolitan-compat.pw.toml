@@ -1,0 +1,13 @@
+name = "Alex's Mobs - Neapolitan Compat"
+filename = "Compat_AlexsMobs-Neapolitan.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "48cb0c338daafa41cde01f9759f505561d5b1661"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6915976
+project-id = 1150235

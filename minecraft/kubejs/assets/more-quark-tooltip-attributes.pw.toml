@@ -1,0 +1,13 @@
+name = "More Quark Tooltip Attributes"
+filename = "More Quark Tooltip Attributes.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/83qRtMGG/versions/6U9vGnpt/More%20Quark%20Tooltip%20Attributes.zip"
+hash-format = "sha512"
+hash = "58fbf38edc93c9b45a61a060322a2c8dcc3bd754700ffaaa336f65080bf8d22e895da73b519870f93ba38d96d805367ce13a5db90813430987ad8443fe926718"
+
+[update]
+[update.modrinth]
+mod-id = "83qRtMGG"
+version = "6U9vGnpt"

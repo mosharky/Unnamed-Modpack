@@ -1,0 +1,13 @@
+name = "No Recipe Advancements"
+filename = "no-recipe-advancements-1.1.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/IGnRrWzc/versions/vNuAbJnn/no-recipe-advancements-1.1.0.jar"
+hash-format = "sha512"
+hash = "7ef98f79d4a196767491fd0122e33ac646bf83cbfe7877fa722f2b2a852e1bb2e89f8b0c9844d27dc89d08ffe0f5c94f08330760891fedde73dd4467d85b16ac"
+
+[update]
+[update.modrinth]
+mod-id = "IGnRrWzc"
+version = "vNuAbJnn"

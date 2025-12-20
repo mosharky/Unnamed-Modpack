@@ -1,0 +1,13 @@
+name = "L_Ender 's Cataclysm Reimagined"
+filename = "Cataclysm Reimagined v1.3.1 for Forge.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/jLzGG7fO/versions/QczpXHKm/Cataclysm%20Reimagined%20v1.3.1%20for%20Forge.zip"
+hash-format = "sha512"
+hash = "08251ee6117652d9d2c92c816e87f0a7a2f308ad84dc4b36f6770e4fe3fac4dc5bf25d1ea2307515a46525c4dbea59bfd1155c484476936260ecd46f35ab3812"
+
+[update]
+[update.modrinth]
+mod-id = "jLzGG7fO"
+version = "QczpXHKm"

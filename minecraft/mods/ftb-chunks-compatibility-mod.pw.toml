@@ -1,0 +1,13 @@
+name = "FTB Chunks Compatibility"
+filename = "ftbchunkscompatibility-forge-1.20.1-1.0.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "efcb40c12b188f6b72fd3fafee0125a8a41edd97"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6532246
+project-id = 1265806

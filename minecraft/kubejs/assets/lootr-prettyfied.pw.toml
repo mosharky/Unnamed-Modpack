@@ -1,0 +1,13 @@
+name = "Lootr Prettyfied"
+filename = "Lootr Prettyfied - Gold Edition 1.0.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/ilKNKA7J/versions/sK0hgcuh/Lootr%20Prettyfied%20-%20Gold%20Edition%201.0.zip"
+hash-format = "sha512"
+hash = "69255eeff43969f02b5cd0f0aebc3c83e4f25bf6d67e175527f611e4d944cab24cd42d62d109001be404d078a62bb6cc36d009053698a1474119e6796da9b0a4"
+
+[update]
+[update.modrinth]
+mod-id = "ilKNKA7J"
+version = "sK0hgcuh"

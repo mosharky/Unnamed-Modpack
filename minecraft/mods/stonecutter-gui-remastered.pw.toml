@@ -1,0 +1,13 @@
+name = "Stonecutter GUI Remastered"
+filename = "StonecutterRemastered-1.1.1-1.20.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/ODkrKaq7/versions/dCfVV07z/StonecutterRemastered-1.1.1-1.20.jar"
+hash-format = "sha512"
+hash = "1dfc41a4a2c71ff74c9276b05d57b10102504f3de838c1d087d1bec5621f41194b28f0342a5d9a59ba235761b55dad1761915ee4c9bb05507a214c3dad7128c9"
+
+[update]
+[update.modrinth]
+mod-id = "ODkrKaq7"
+version = "dCfVV07z"

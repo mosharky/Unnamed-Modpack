@@ -1,0 +1,13 @@
+name = "FTB Chunks x Xaero's Compat"
+filename = "ftbxaerocompat-forge-1.0.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "473acb16c009d0d5a2ae236ef029619a54850c82"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7096291
+project-id = 1357724
