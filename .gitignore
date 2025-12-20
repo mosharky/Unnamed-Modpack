@@ -85,6 +85,7 @@ minecraft/texturepacks/
 minecraft/minecraftinstance.json
 minecraft/.unsup-state.json
 minecraft/.unsup-tmp/
+minecraft/mods/.index/
 
 # packwiz
 kubejs/assets/*.zip
