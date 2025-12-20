@@ -21,7 +21,16 @@ minecraft/kubejs/config/probe-settings.json
 # mods
 minecraft/mods/.connector/
 minecraft/mods/*.jar
+!minecraft/mods/special-*
 minecraft/mods/*.disabled
+
+# resourcepacks
+minecraft/resourcepacks/*.zip
+!minecraft/resourcepacks/special-*
+
+# shaderpacks
+minecraft/shaderpacks/*.zip
+!minecraft/shaderpacks/special-*
 
 # root folders
 minecraft/not-enough-crashes/
@@ -50,8 +59,8 @@ minecraft/backups/
 # root files
 minecraft/knownkeys.txt
 minecraft/options.txt
-minecraft/resourcepacks/Quark Programmer Art.zip
-minecraft/resourcepacks/Goety Old Textures.zip
+# minecraft/resourcepacks/Quark Programmer Art.zip
+# minecraft/resourcepacks/Goety Old Textures.zip
 minecraft/realms_persistence.json
 minecraft/TrashSlotSaveState.json
 minecraft/usercache.json

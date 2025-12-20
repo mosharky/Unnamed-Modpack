@@ -1,0 +1,13 @@
+name = "Supplemental Patches"
+filename = "supplemental_patches-0.7.1-beta.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/7G5M8xtj/versions/UnQ0Hx8D/supplemental_patches-0.7.1-beta.jar"
+hash-format = "sha512"
+hash = "d640bccbbd4034a8d48ddb225bfda4004c4f67c7f38689c82e52f30cda9ff06aa5e864468406ed84cd2eba11adc1c5517c1f20176588d8bd20591fab422510d1"
+
+[update]
+[update.modrinth]
+mod-id = "7G5M8xtj"
+version = "UnQ0Hx8D"

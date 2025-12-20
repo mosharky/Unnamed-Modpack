@@ -3,11 +3,11 @@ filename = "Compat_AlexsMobs-Neapolitan.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "48cb0c338daafa41cde01f9759f505561d5b1661"
-mode = "metadata:curseforge"
+url = "https://cdn.modrinth.com/data/NBb3xMaq/versions/dTly6UlC/Compat_AlexsMobs-Neapolitan.jar"
+hash-format = "sha512"
+hash = "fc932b9124f86985a563468ade206d211bf1176cca10139dce72f1ebdbecd2d0404f76965fd6a60e7db8cec9a8c9ff3e7eb9c919ec0ea965ff5e192a414bf8d8"
 
 [update]
-[update.curseforge]
-file-id = 6915976
-project-id = 1150235
+[update.modrinth]
+mod-id = "NBb3xMaq"
+version = "dTly6UlC"
