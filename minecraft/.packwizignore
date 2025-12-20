@@ -17,6 +17,8 @@ config/asyncparticles/asyncparticles-mixin.properties
 config/packetfixer.properties
 config/structurify/*backup*
 kubejs/config/probe-settings.json
+kubejs/config/oculus.properties
+kubejs/config/ftbqoptimizer.snbt
 
 # mods
 mods/.connector/

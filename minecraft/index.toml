@@ -857,6 +857,10 @@ file = "config/etched-client.toml"
 hash = "f2ba2f9022471e4b945cf7ed31a3392dd2c62bbee46f4776c47dcc5a812a5915"
 
 [[files]]
+file = "config/euphoria_patcher.properties"
+hash = "415f9152120e0e3576632a2d490f1498f5614ffbf84956ba464b940e0a81e523"
+
+[[files]]
 file = "config/everycomp-client.toml"
 hash = "c868e4a51a63df55559537615761232bc26fdecbb5aa940eb328e30e077c4c63"
 
@@ -963,10 +967,6 @@ hash = "230eecc36c73698cf4b0b8c2afd405244fb382beef76ddd03f6b73738d8b2ba6"
 [[files]]
 file = "config/ftbbackups2.json"
 hash = "f803d4d6793302aa200831ef95f5cc84fce0e85f5ba0a9cec10e0ebd02a50e59"
-
-[[files]]
-file = "config/ftbqoptimizer.snbt"
-hash = "23f85b5221e0921098e346e5f9b75582227c8803b0ce3c58d5ced6e3ed18b7d6"
 
 [[files]]
 file = "config/ftbquests/quests/chapter_groups.snbt"
@@ -1162,7 +1162,7 @@ hash = "326b4f9b813ca8183bfaeee184cf7248c7a75c4d85b59322e349c0e964c253f3"
 
 [[files]]
 file = "config/jei/recipe-category-sort-order.ini"
-hash = "6a8f3f8828af24792dd522791a08cd22feaee7a6fb63f92671610867c460ae9c"
+hash = "8b6da333e4a58a4d4c001679358ebd3fa9088dc2f40a83e8dba5ac39c21bd774"
 
 [[files]]
 file = "config/kiwi-client.yaml"
@@ -1319,10 +1319,6 @@ hash = "b52168cd5470bfbcea6759a8cf5ea087fbb0f1a737abf5487bf60b478fb60be8"
 [[files]]
 file = "config/nvidium-config.json"
 hash = "5d8c0a477a68a2f68ae3e55491c9981e79089836b9fbb1a64de14de7fb5b29f3"
-
-[[files]]
-file = "config/oculus.properties"
-hash = "a1960d5c2aa1a930879c9105f62b85045ae403a00b1a45fa6f62d9ca1c5ed0c4"
 
 [[files]]
 file = "config/oreganized-client.toml"
@@ -1802,7 +1798,7 @@ hash = "f7aa8751fc1e3ba087b92cb3ff178efa5433f232ed19f340017c3a324b400c8f"
 
 [[files]]
 file = "config/xaerominimap_entities.json"
-hash = "8ec85ecdff2a7b60389a80cbffa420876fcf83b3a72120e3564076da50dc3fca"
+hash = "19e74c37aa28585387c195c9ae4dc38880851b2473d6ddc0e03748759cdd9f65"
 
 [[files]]
 file = "config/xaeropatreon.txt"
@@ -3019,7 +3015,7 @@ metafile = true
 
 [[files]]
 file = "mods/distant-horizons.pw.toml"
-hash = "b6512eddd039abdbc3218f9fd566bcce6abd965e9388aac167badeaf9cfbdf8f"
+hash = "ba9ab052060148b825279aaa06f0fc13d9d448adf75bab5b95ea2ea1e0247acc"
 metafile = true
 
 [[files]]
@@ -3129,7 +3125,7 @@ metafile = true
 
 [[files]]
 file = "mods/euphoria-patches.pw.toml"
-hash = "866b92f2599f2e4058db0fd4583870ace1ad9063e8d3bc71407d3d239bcd1243"
+hash = "da36844e0ac79740ec91d682ef7347bae1c569f71a915e3c5cb13aad0fbc23f4"
 metafile = true
 
 [[files]]
@@ -3284,7 +3280,7 @@ metafile = true
 
 [[files]]
 file = "mods/geckoanimfix.pw.toml"
-hash = "f78c94f42ffaf5365f45b58f83545ced3dc9ae0cf075412e7710079e163eed28"
+hash = "61b403447b71effd33be76c2ecfa8eba93084a46cba9906d6fec63de1ae163f9"
 metafile = true
 
 [[files]]
@@ -3394,7 +3390,7 @@ metafile = true
 
 [[files]]
 file = "mods/iris-flw-compat.pw.toml"
-hash = "e9b05dcf29f12335bcbf61bbbc019cee3d5b983c49433e3fc23fcf4afe12e9d1"
+hash = "aa822d3498d50e635a83a230ed4f3d0b6aeaf78b98d61371e769a8396121dd22"
 metafile = true
 
 [[files]]
@@ -3684,7 +3680,7 @@ metafile = true
 
 [[files]]
 file = "mods/oculus.pw.toml"
-hash = "f83b253ca6a8e6f2f847952704da0e1fb00e65cbb10b7c9cb15d1a1780618da0"
+hash = "da306c30b9f01bb0961828da951d30c1d3cfb05818608d32cd76e8b402f2331e"
 metafile = true
 
 [[files]]
@@ -3962,7 +3958,7 @@ metafile = true
 
 [[files]]
 file = "mods/supplemental-patches.pw.toml"
-hash = "a22169a1890e5489fe3f2ee9e74cf7ef4b036e0c7849e939f9632a410e029198"
+hash = "9b221e83867f37b703111cfbd4c6b009b2b896b63b30dc6742ec719a417cbf46"
 metafile = true
 
 [[files]]
