@@ -6,7 +6,7 @@ hash = "d86beab1176c367beeed3b8fb8a2a8dfbd8a1db7293f067c01bc38c73020e398"
 
 [[files]]
 file = "config/DistantHorizons.toml"
-hash = "153b2480a37b71ae2f66267fb87eee5dd96cfe5a9226f7df32599e40ed19ebcf"
+hash = "9d244c070d9ae2b2cbdf0f07328364412988fe5086641fa5b86ac343b28716cb"
 
 [[files]]
 file = "config/MouseTweaks.cfg"
@@ -1042,11 +1042,11 @@ hash = "92a767e2f453c2036ab0e626b999721c2428217d0c02226d07a51767790721b9"
 
 [[files]]
 file = "config/goety/goety-attributes.toml"
-hash = "65ae42eec70e5741636395585979773f1449cb5bf7b9479ebb23e0a0bf42c7ca"
+hash = "55865f65428709eea70581e028e6a864ae01323558777c1174e6f678cbdf4078"
 
 [[files]]
 file = "config/goety/goety-brews.toml"
-hash = "97327d740ec8492a945fa06876fb6f16cdfa758bb61e7a066056855d7a23c56b"
+hash = "c0f15f3eac8925a647cd0853409668a9627e6e258586790161b9d8e5924d8780"
 
 [[files]]
 file = "config/goety/goety-items.toml"
@@ -1054,11 +1054,11 @@ hash = "9369467bd410e2754b4214e782f517c1098927373a75cc1b0fc5f2eded92b4a8"
 
 [[files]]
 file = "config/goety/goety-mobs.toml"
-hash = "8725566890277a33fbd6cb508a565f6caa22c862bfedc9b8560197fc5b695fa5"
+hash = "b6d1db6b6a5845bed7301834e7891ab388adeebd233cc2a9d91534a3d1e80f72"
 
 [[files]]
 file = "config/goety/goety-spells.toml"
-hash = "0e0b2e96a2d45b3a944d3e3c45c9e100ee949efb96d516e1e5053eb93868596a"
+hash = "6f736d6e5e384fbeae9229d7029f8a2f898b80412b127bc6af7976517da4a21f"
 
 [[files]]
 file = "config/goety/goety.toml"
@@ -3030,7 +3030,7 @@ metafile = true
 
 [[files]]
 file = "mods/distant-horizons.pw.toml"
-hash = "7361ed7886976b6acc3baa3753bcbe96a162952b86b2ac7156daaa954e4365a4"
+hash = "b6512eddd039abdbc3218f9fd566bcce6abd965e9388aac167badeaf9cfbdf8f"
 metafile = true
 
 [[files]]
@@ -3910,7 +3910,7 @@ metafile = true
 
 [[files]]
 file = "mods/sound.pw.toml"
-hash = "3fff9456c0ef97caab6584a10517f20822e138b627da4b26c8c46e6330d7e7cd"
+hash = "b5827f3b59922923b17e465d65fd045ccfcc20db48ee9758b2d0998b11ba17da"
 metafile = true
 
 [[files]]
